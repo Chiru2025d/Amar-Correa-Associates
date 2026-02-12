@@ -121,7 +121,7 @@ export default function Hero() {
 
         {/* RIGHT SIDE TEXT (Left side removed as image fills background) */}
         <div className="hero-right">
-          {/* {slides[currentIndex].type === "default" && (
+          {slides[currentIndex].type === "default" && (
             <>
               <h1 className="law-title">LAW FIRM</h1>
               <button className="hero-btn">Practice Areas →</button>
@@ -133,7 +133,7 @@ export default function Hero() {
               <h2 className="overlay-title">{slides[currentIndex].title}</h2>
               <h3 className="overlay-subtitle" style={{ whiteSpace: 'pre-line' }}>{slides[currentIndex].subtitle}</h3>
             </div>
-          )} */}
+          )}
 
         </div>
 
