@@ -193,7 +193,7 @@ h6 {
 } */
 
 /* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo-img {
     width: 160px;
     height: auto;
@@ -698,30 +698,31 @@ h6 {
 
 @media (max-width: 1024px) {
   .header-nav {
-    align-items: flex-start;
+    align-items: center;
     padding-left: 24px;
     padding-right: 24px;
+    justify-content: center;
   }
 
   .header-nav a {
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
   }
 
   .mobile-parent-link {
-    text-align: left;
+    text-align: center;
   }
 
   .mobile-submenu {
-    text-align: left;
+    text-align: center;
   }
 
   .mobile-submenu button {
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
 
   .mobile-submenu-items a {
-    text-align: left;
+    text-align: center;
   }
 }
