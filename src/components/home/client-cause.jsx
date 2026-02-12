@@ -9,9 +9,9 @@ export default function Culture() {
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
 
-  // Detect mobile viewport
+  // Detect mobile viewport (only phones, not tablets)
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 480);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);

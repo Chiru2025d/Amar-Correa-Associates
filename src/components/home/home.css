@@ -989,8 +989,38 @@
     }
 }
 
-/* --- Mobile (Max Width: 768px) --- */
-@media screen and (max-width: 768px) {
+/* --- Tablet Medium (481px - 768px) --- */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .culture-section {
+        padding: 40px 20px;
+    }
+
+    .culture-outer {
+        max-width: 700px;
+        margin: 0 auto;
+        transform: scale(0.85);
+    }
+
+    .culture-card {
+        height: 280px;
+    }
+
+    .culture-card.active {
+        flex: 1.2;
+    }
+
+    .normal-inner p {
+        font-size: 11px;
+    }
+
+    .active-right p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+
+/* --- Mobile (Max Width: 480px) --- */
+@media screen and (max-width: 480px) {
     .culture-section {
         padding: 40px 20px !important;
         background-color: #f0e8df;
