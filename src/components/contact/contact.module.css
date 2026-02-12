@@ -309,7 +309,7 @@
 /* TEAM MEMBER ROLE – Figma Exact */
 
 .teamRole {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 300;
   font-size: 14.4px;
   line-height: 28.8px;
@@ -319,7 +319,7 @@
   margin: 0 0 6px 0;
 }
 .teamContact {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 300;
   font-size: 14.4px;
   line-height: 28.8px;
@@ -427,8 +427,19 @@
 
   .teamName {
     font-size: 17px;
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: 600;
   }
-    /* FIX ICON ALIGNMENT (LOCATION / EMAIL / PHONE) */
+
+  .teamRole {
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: 300;
+  }
+
+  .teamContact {
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: 300;
+  }
 
   .officeRow {
     align-items: flex-start; /* allow multi-line text */
