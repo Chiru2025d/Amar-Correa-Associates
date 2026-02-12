@@ -28,7 +28,7 @@ export default function Hero() {
       type: "text-overlay",
       styleId: "frame-3",
       title: "Driven by a Culture",
-      subtitle: "Committed to the\nClient’s Cause"
+      subtitle: "Committed to Our\nClient's Cause"
     }
   ];
 
