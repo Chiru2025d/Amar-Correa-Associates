@@ -93,7 +93,7 @@ export default function Header() {
           <div className="nav-item-with-dropdown">
             {/* Parent */}
             <button
-              className="mobile-parent-link navItem"
+              className={`mobile-parent-link navItem ${openParent === "expertise" ? "active" : ""}`}
               onClick={() =>
                 setOpenParent(openParent === "expertise" ? null : "expertise")
               }
@@ -123,6 +123,7 @@ export default function Header() {
               {/* Corporate Law */}
               <div className="mobile-submenu">
                 <button
+                  className={`mobile-submenu-btn ${openChild === "Areas of Practice" ? "active" : ""}`}
                   onClick={() =>
                     setOpenChild(openChild === "Areas of Practice" ? null : "Areas of Practice")
                   }
@@ -154,6 +155,7 @@ export default function Header() {
               {/* Litigation */}
               <div className="mobile-submenu">
                 <button
+                  className={`mobile-submenu-btn ${openChild === "Professional Services" ? "active" : ""}`}
                   onClick={() =>
                     setOpenChild(openChild === "Professional Services" ? null : "Professional Services")
                   }
@@ -164,11 +166,11 @@ export default function Header() {
                 <div className={`mobile-submenu-items ${openChild === "Professional Services" ? "open" : ""}`}>
                   <Link href="/expertise">Legal Consultation & Counsel Services</Link>
                   <Link href="/expertise">Legal Opinion</Link>
-                  <Link href="/expertise">Drafting and Assistancetowards initiating the legal processes</Link>
+                  <Link href="/expertise">Drafting and Assistance towards initiating the legal processes</Link>
                   <Link href="/expertise">Representation Before High Court</Link>
                   <Link href="/expertise">Senior Advocate Engagements</Link>
                   <Link href="/expertise">Supreme Court Matters</Link>
-                  <Link href="/expertise">Police Station – Assistance</Link>
+                  <Link href="/expertise">Police Station - Assistance</Link>
                 </div>
               </div>
 
