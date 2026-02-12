@@ -79,8 +79,8 @@ export default function Culture() {
         <div className="culture-mobile-images">
           <Image src="/images/A Core Culture.png" alt="A Core Culture" width={720} height={840} className="culture-mobile-card" />
           <Image src="/images/A Core Services.png" alt="A Core Services" width={720} height={840} className="culture-mobile-card" />
-          <Image src="/images/Across the Board.png" alt="Across the Board" width={720} height={840} className="culture-mobile-card" />
           <Image src="/images/Our Core Expertise.png" alt="Our Core Expertise" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/Across the Board.png" alt="Across the Board" width={720} height={840} className="culture-mobile-card" />
         </div>
       ) : (
         /* Desktop: Show interactive cards - Original */
