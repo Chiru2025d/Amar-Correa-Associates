@@ -40,10 +40,10 @@ export default function Hero() {
   // Auto-play
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, []); // Remove currentIndex dependency to prevent interval reset
 
   // Detect mobile viewport (client-side only)
   useEffect(() => {
