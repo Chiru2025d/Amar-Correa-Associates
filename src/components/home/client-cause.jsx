@@ -56,12 +56,16 @@ export default function Culture() {
     return () => observer.disconnect();
   }, []);
 
-  /* ⏸️ Auto rotate disabled for manual editing */
+  /* Auto rotate cards when visible */
   useEffect(() => {
-    if (isVisible) {
-      setActiveIndex(0);
-    }
-  }, [isVisible]);
+    if (!isVisible || isMobile) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % cards.length);
+    }, 3000); // Change card every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isVisible, isMobile, cards.length]);
 
 
   return (
