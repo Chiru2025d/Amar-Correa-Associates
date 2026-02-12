@@ -119,22 +119,9 @@ export default function Hero() {
       {/* Content Overlay */}
       <div className="hero-content container">
 
-        {/* RIGHT SIDE TEXT (Left side removed as image fills background) */}
+        {/* RIGHT SIDE TEXT */}
         <div className="hero-right">
-          {slides[currentIndex].type === "default" && (
-            <>
-              <h1 className="law-title">LAW FIRM</h1>
-              <button className="hero-btn">Practice Areas →</button>
-            </>
-          )}
-
-          {slides[currentIndex].type === "text-overlay" && (
-            <div className={`hero-text-overlay ${slides[currentIndex].styleId || ''}`}>
-              <h2 className="overlay-title">{slides[currentIndex].title}</h2>
-              <h3 className="overlay-subtitle" style={{ whiteSpace: 'pre-line' }}>{slides[currentIndex].subtitle}</h3>
-            </div>
-          )}
-
+          {/* Text overlay removed */}
         </div>
 
         <div className="hero-cta-group">
