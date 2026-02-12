@@ -62,7 +62,7 @@ export default function Culture() {
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % cards.length);
-    }, 3000); // Change card every 3 seconds
+    }, 8000); // Change card every 8 seconds
 
     return () => clearInterval(interval);
   }, [isVisible, isMobile, cards.length]);
