@@ -50,28 +50,28 @@ export default function Founder() {
 
                         <div className="founder-bio-container">
                             <p className="founder-bio">
-                                Amar Correa, heads ACA Juris. A professional journey extending over 25 years, which began with engagements
+                                Amar Correa, heads ACA Juris.A professional journey extending over 25 years, which began with engagements
                                 in criminal litigations at the grass roots level, before the Courts of Magistrates.
                                 His practice gradually progressed to representing, defending and prosecuting
                                 clients in serious Sessions Cases and matters pertaining to Special Laws. Over
                                 time, there has been a consistent focus on practising primarily before the High
-                                Court of Karnataka, while also maintaining representation in cases before the
+                                Court and thet of Karnataka, while also maintaining representation in cases before the
                                 Sessions Courts and the Magistrate Courts.
                             </p>
                             <p className="founder-bio">
                                 In addition to his extensive experience in conducting sessions trials, Amar
                                 Correa has represented and defended clients in difficult and complex trials
                                 before CBI Courts in cases involving financial frauds of high magnitude, cyber
-                                crimes, extradition proceedings, cases under Organised Crime Acts, miningrelated offences, offences under the Narcotics Drugs and Psychotropic
+                                crimes, extradition proceedings, cases under Organised Crime Acts, miningrelated
+                                offences, offences under the Narcotics Drugs and Psychotropic
                                 Substances Act, prosecutions under the Company’s Law investigated by the
                                 SFIO and general offences under the Indian Penal Code.
                             </p>
                             <p className="founder-bio">
                                 Amar Correa has routinely handled Matrimonial matters like Divorce, Child
-                                Amar Correa has routinely handled Matrimonial matters like Divorce, Child
                                 Custody and Maintenance. He has represented before High Court as well as
                                 Family courts in matters involving Foreign Court orders on Divorce and Child
-                                Custody, including filing of Habeas Corpus Petitions before High Court.      </p>
+                                Custody, including filing of Habeas Corpus Petitions before High Court.     </p>
                             <p className="founder-bio">
                                 The practice before the Karnataka High Court has mostly involved habeas
                                 corpus petitions, criminal appeals, criminal revision petitions, petitions for bails,
@@ -88,7 +88,7 @@ export default function Founder() {
                             <p className="founder-bio">
                                 He has represented the State of Karnataka as Special Public Prosecutor in
                                 select cases, and has likewise been appointed Amicus Curiae before both the
-                                Sessions Courts and the High Court.     </p>
+                                Sessions Courts and the High Court.    </p>
                         </div>
                     </div>
 

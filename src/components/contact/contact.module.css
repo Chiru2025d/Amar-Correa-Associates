@@ -19,7 +19,7 @@
 
 .contactPage {
   padding: 90px 0;
-  background: #F4F2EE;
+  background: #fdfbf7;
 }
 
 .container {
@@ -267,6 +267,12 @@
 /* Optional hover (clean & professional) */
 .submitBtn:hover {
   opacity: 0.9;
+}
+
+.submitBtn:active {
+  background: #000000;
+  border-color: #000000;
+  transform: scale(0.98);
 }
 
 /* ===============================

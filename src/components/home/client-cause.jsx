@@ -13,18 +13,19 @@ export default function Culture() {
       title: <>A Core<br />Culture</>,
       icon: "/icons/culture.svg",
       desc:
-        "… crafted and embraced- that drives the Firm’s Associates to focus on the Client’s cause with unwavering commitment.",
+        "… crafted and embraced- that drives the Firm’s Associates to pursue each client's cause with unwavering commitment.",
+    },
+    {
+      title: <>Our Core<br />Expertise</>,
+      icon: "/icons/expertise.svg",
+      desc:
+        "… being Criminal Law, ACAJuris is noted as having familiarity with arduous criminal litigations and recognised as Criminal Law Attorneys.",
     },
     {
       title: <>Our Core<br />Services</>,
       icon: "/icons/services.svg",
       desc:
         "… cover every stage and platform of criminal litigation—from prelitigation counsel to case closure.",
-    },
-    {
-      title: <>Our Core<br />Expertise</>,
-      icon: "/icons/expertise.svg",desc:
-        "… being Criminal Law, ACAJuris is noted as having familiarity with arduous criminal litigations and recognised as Criminal Law Attorneys.",
     },
   ];
 
