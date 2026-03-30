@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 22, 30, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  width: 616px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #254367;
+  padding: 0;
+  margin-top: 0;
+}
+
+.logoWrap {
+  width: 100%;
+  padding: 30px 34px 18px;
+}
+
+.logo {
+  height: auto;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  background: rgba(242, 242, 242, 1);
+  padding: 22px 50px 32px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #000;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.textBlock {
+  display: flex;
+  width: 522.928px;
+  height: 333.071px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  margin: 0 0 18px;
+  color: rgba(0, 0, 0, 1);
+  text-align: justify;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.agreeRow {
+  margin-top: 6px;
+  align-items: center;
+  gap: 10px;
+  color: #6f7780;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.agreeRow input {
+  width: 16px;
+  height: 16px;
+}
+
+.proceedBtn {
+  color: #d4b886;
+  cursor: pointer;
+  opacity: 1.1;
+  background-color: #142c44;
+  border: .8px solid #ddcdb0;
+  border-radius: 5px;
+  width: 32%;
+  display: block;
+  margin-top: 12px;
+  padding: 12px 3px;
+  font-size: 12px;
+}
+
+.proceedBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 92%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .logoWrap {
+    padding: 24px 22px 12px;
+  }
+
+  .content {
+    padding: 18px 22px 26px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .textBlock {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .agreeRow {
+    font-size: 15px;
+  }
+}

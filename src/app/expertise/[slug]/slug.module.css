@@ -1,0 +1,234 @@
+/* ── Hero Banner ── */
+.heroBanner {
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20,44,68,0.92) 0%, rgba(10,24,44,0.78) 100%);
+  z-index: 0;
+}
+
+
+
+/* ── Detail Section ── */
+.detailSection {
+  background: #ffffff;
+  padding: 64px 24px 72px;
+  position: relative;
+}
+
+.detailInner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.practiceTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #173E62;
+  margin: 0 0 22px 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.practiceDescription {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #555f6a;
+  margin: 0 0 36px 0;
+  text-align: left;
+}
+
+/* ── Bullet List ── */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.bulletDot {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #C5A065;
+  margin-top: 3px;
+}
+
+.bulletIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-top: 3px;
+}
+
+.bulletText {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #173E62;
+}
+
+/* ── Related Cards Strip ── */
+.relatedSection {
+  background: #F5F3EF;
+  padding: 56px 24px 64px;
+}
+
+.relatedInner {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.relatedHeading {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #173E62;
+  text-align: center;
+  margin: 0 0 36px 0;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+/* Card ── kept consistent with expertise.module.css */
+.card {
+  background: #ffffff;
+  border: 1px solid #e4dfd7;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.10);
+  transform: translateY(-3px);
+}
+
+.cardIconArea {
+  position: relative;
+  background: #F5EFE4;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.acaWatermark {
+  position: absolute;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: rgba(197, 160, 101, 0.18);
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 6px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cardIcon {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
+}
+
+.cardContent {
+  padding: 16px 18px 20px;
+  border-top: 2px solid #C5A065;
+}
+
+.cardTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #173E62;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.cardTitle:hover {
+  color: #C5A065;
+}
+
+.cardExcerpt {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #6B7680;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.viewAllWrap {
+  text-align: center;
+}
+
+.viewAllLink {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13px;
+  color: #173E62;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+
+.viewAllLink:hover {
+  color: #C5A065;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .practiceTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 580px) {
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroBanner {
+    padding: 110px 20px 44px;
+  }
+  .detailSection {
+    padding: 44px 20px 52px;
+  }
+
+}

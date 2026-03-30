@@ -1,0 +1,158 @@
+/* ── Hero Banner ── */
+.heroBanner {
+  position: relative;
+  background: #142C44;
+  padding: 130px 24px 56px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20,44,68,0.92) 0%, rgba(10,24,44,0.78) 100%);
+  z-index: 0;
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 1;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+}
+
+/* ── Articles Feed ── */
+.articlesSection {
+  padding: 0;
+}
+
+.article {
+  padding: 52px 24px 60px;
+}
+
+.article:nth-child(odd) {
+  background: #ffffff;
+}
+
+.article:nth-child(even) {
+  background: #F5F3EF;
+}
+
+.articleInner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* timestamp row */
+.articleMeta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.articleDate {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11.5px;
+  color: #888;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.articleDateLine {
+  flex: 0 0 56px;
+  height: 1px;
+  background: #aaa;
+}
+
+.articleDateLabel {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11.5px;
+  color: #888;
+  letter-spacing: 0.3px;
+}
+
+/* quoted title */
+.articleTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #173E62;
+  line-height: 1.3;
+  margin: 0 0 20px 0;
+}
+
+.articleSubheading {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 12px 0;
+}
+
+.articleBody {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: #555;
+  margin: 0 0 18px 0;
+}
+
+.articleBody:last-child {
+  margin-bottom: 0;
+}
+
+/* Bullet within article body */
+.articleBullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bulletDot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #888;
+  margin-top: 7px;
+}
+
+.bulletText {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+  .heroBanner {
+    padding: 110px 20px 44px;
+  }
+  .article {
+    padding: 40px 20px 48px;
+  }
+  .articleTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+  .articleTitle {
+    font-size: 20px;
+  }
+}

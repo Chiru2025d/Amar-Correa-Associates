@@ -1,0 +1,224 @@
+/* ── Hero Banner ── */
+.heroBanner {
+  text-align: center;
+  background: #1e3750;
+  padding: 130px 24px 70px;
+}
+
+.heroLabel {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #C5A065;
+  margin: 0 0 14px 0;
+}
+
+.heroTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 18px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.heroSubtitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ── Cards Section ── */
+.practiceSection {
+  background: #ffffff;
+  padding: 60px 24px 80px;
+}
+
+.sectionInner {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.practiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── "Find more" first cell ── */
+.findMoreCell {
+  display: flex;
+  align-items: center;
+  padding: 28px 20px;
+  background: #ffffff;
+  border: 1px solid #e4dfd7;
+}
+
+.findMoreText {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #173e62;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* ── Individual Card ── */
+.card {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ── Icon Area (top of card) ── */
+.cardIconArea {
+  background: #ffffff;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.acaWatermark {
+  position: static;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: rgba(189, 165, 136, 0.08);
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 4px;
+  line-height: 80px;
+  text-align: left;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.card:hover .acaWatermark {
+  color: #BDA588;
+}
+
+.cardIcon {
+  width: 95px;
+  height: 95px;
+  max-width: 95px;
+  max-height: 95px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.92;
+}
+
+/* ── Card Content ── */
+.cardContent {
+  padding: 6px 44px 36px;
+  text-align: center;
+}
+
+.cardTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #173E62;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.cardTitle:hover {
+  color: #C5A065;
+}
+
+.cardExcerpt {
+  font-family: "Be Vietnam Pro", "Be Vietnam", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #B0B9C1;
+  font-weight: 300;
+  margin: 0;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .practiceGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .heroTitle {
+    font-size: 42px;
+  }
+  .findMoreText {
+    font-size: 22px;
+  }
+  .cardContent {
+    padding: 6px 24px 28px;
+  }
+  .cardTitle {
+    font-size: 16px;
+  }
+  .cardExcerpt {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .practiceGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .heroBanner {
+    padding: 110px 20px 54px;
+  }
+  .heroTitle {
+    font-size: 34px;
+  }
+  .practiceSection {
+    padding: 44px 20px 60px;
+  }
+  .findMoreText {
+    font-size: 20px;
+  }
+  .cardIconArea {
+    height: 140px;
+    gap: 14px;
+  }
+  .acaWatermark {
+    font-size: 54px;
+  }
+  .cardIcon {
+    width: 46px;
+    height: 46px;
+  }
+  .cardContent {
+    padding: 4px 18px 24px;
+  }
+  .cardTitle {
+    font-size: 17px;
+  }
+  .cardExcerpt {
+    font-size: 11px;
+    text-align: center;
+  }
+}
