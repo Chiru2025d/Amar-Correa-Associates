@@ -1,23 +1,24 @@
 /* ── Hero Banner ── */
 .heroBanner {
   position: relative;
-  background: #142C44;
-  padding: 130px 24px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  background-color: #0000;
+  background-image: linear-gradient(#173e62c7, #173e62c7), url("/Page banner/Frame 1984078307.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  padding: 100px 24px;
   text-align: center;
   overflow: hidden;
 }
 
-.heroBanner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(20,44,68,0.92) 0%, rgba(10,24,44,0.78) 100%);
-  z-index: 0;
-}
-
 .heroTitle {
-  position: relative;
-  z-index: 1;
   font-family: "Be Vietnam", sans-serif;
   font-size: 46px;
   font-weight: 400;
@@ -25,6 +26,7 @@
   margin: 0;
   letter-spacing: 0.5px;
   line-height: 1.15;
+  text-align: center;
 }
 
 /* ── Articles Feed ── */
@@ -138,7 +140,8 @@
     font-size: 36px;
   }
   .heroBanner {
-    padding: 110px 20px 44px;
+    min-height: 240px;
+    padding: 72px 20px;
   }
   .article {
     padding: 40px 20px 48px;

@@ -1438,11 +1438,23 @@
     font-size: 12px;
     font-weight: 500;
     text-decoration: none;
-    transition: opacity .2s;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 
 .expertise-view-more-btn:hover {
-    opacity: 0.9;
+    background-color: #173e62;
+    color: #ffffff;
+    border-color: #173e62;
+}
+
+.expertise-view-more-btn:focus-visible {
+    background-color: #173e62;
+    color: #ffffff;
+    border-color: #173e62;
+    outline: 2px solid #173e62;
+    outline-offset: 2px;
 }
 
 .image-card {
@@ -1506,17 +1518,31 @@
 
 /* --- Expertise Content Card --- */
 .expertise-content-card {
-    background-image: url('/images/1920x1080 BG.png');
-    background-position: center;
-    background-size: cover;
     border-radius: 16px;
     flex-direction: column;
     /* flex: 0 0 531px; */
     min-height: 390px;
-    padding: 28px 32px 32px;
     display: flex;
     position: relative;
     overflow: hidden;
+}
+
+.expertise-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scaleY(-1);
+    z-index: 0;
+}
+
+.expertise-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 28px 32px 32px;
 }
 
 .expertise-tabs {
@@ -1557,6 +1583,25 @@
 
 .expertise-slide {
     flex: 1;
+    overflow: hidden;
+}
+
+@keyframes slideInFromRight {
+    from { opacity: 0; transform: translateX(48px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-48px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.expertise-slide-anim-next {
+    animation: slideInFromRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.expertise-slide-anim-prev {
+    animation: slideInFromLeft 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .expertise-slide-title {
@@ -1569,12 +1614,12 @@
 }
 
 .expertise-slide-desc {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.75;
+    color: #fffc;
     margin: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
 }
 
 .expertise-nav {
