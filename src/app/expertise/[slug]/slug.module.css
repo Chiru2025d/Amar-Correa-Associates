@@ -8,8 +8,25 @@
 .detailInner {
   max-width: 860px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   position: relative;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #C5A065;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.backBtn:hover {
+  color: #173E62;
 }
 
 
@@ -21,7 +38,7 @@
   color: #173E62;
   margin: 0 0 22px 0;
   line-height: 1.25;
-  text-align: center;
+  text-align: left;
 }
 
 .practiceDescription {

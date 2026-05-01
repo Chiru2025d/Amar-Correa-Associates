@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../../../components/header.jsx";
 import styles from "./slug.module.css";
 
@@ -267,6 +268,9 @@ export default async function ExpertiseSlugPage({ params }) {
       {/* Detail Content */}
       <section className={styles.detailSection}>
         <div className={styles.detailInner}>
+          <Link href="/expertise" className={styles.backBtn}>
+            ← Back
+          </Link>
           <h2 className={styles.practiceTitle}>{detail.title}</h2>
           <p className={styles.practiceDescription}>{detail.description}</p>
 

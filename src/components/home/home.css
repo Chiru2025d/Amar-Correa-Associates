@@ -1525,15 +1525,14 @@
     display: flex;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45), 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .expertise-card-bg {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center;
-    transform: scaleY(-1);
     z-index: 0;
+    overflow: hidden;
 }
 
 .expertise-card-content {
@@ -1596,12 +1595,30 @@
     to   { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes bgSlideInFromRight {
+    from { opacity: 0; transform: translateX(100%); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bgSlideInFromLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
 .expertise-slide-anim-next {
-    animation: slideInFromRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slideInFromRight 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .expertise-slide-anim-prev {
-    animation: slideInFromLeft 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slideInFromLeft 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.expertise-bg-anim-next {
+    animation: bgSlideInFromRight 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.expertise-bg-anim-prev {
+    animation: bgSlideInFromLeft 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .expertise-slide-title {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const aopItems = [
@@ -125,8 +126,17 @@ export default function ExpertisePreview() {
       setDirection("next");
       setIndex((i) => (i + 1) % items.length);
       setAnimKey((k) => k + 1);
-    }, 4000);
+    }, 8000);
   };
+
+  // Preload all banner images on mount so carousel transitions are instant
+  useEffect(() => {
+    const allBanners = [...new Set([...aopItems, ...slsItems].map((i) => i.banner))];
+    allBanners.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     resetTimer();
@@ -163,9 +173,18 @@ export default function ExpertisePreview() {
 
         <div className="expertise-content-card">
           <div
-            className="expertise-card-bg"
-            style={{ backgroundImage: `url('${current.banner}')` }}
-          />
+            key={animKey}
+            className={`expertise-card-bg expertise-bg-anim-${direction}`}
+          >
+            <Image
+              src={current.banner}
+              alt={current.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover", transform: "scaleY(-1)" }}
+              priority={index === 0}
+            />
+          </div>
           <div className="expertise-card-content">
             <div className="expertise-tabs">
               <button
