@@ -18,12 +18,12 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate2.svg"
-                alt="Legal update 1"
-                width: auto;
-                height: auto;
-                style={{ objectFit: 'auto' }}
-              />
+  src="/images/legalupdate2.svg"
+  alt="Legal update 1"
+  width={300}
+  height={200}
+  style={{ height: "auto", objectFit: "contain" }}
+/>
             </div>
             <div className="legal-content">
               <div className="update-meta">
