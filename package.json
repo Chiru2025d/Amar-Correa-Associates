@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "^16.2.1",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "express": "^5.2.1",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.2.4",
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",

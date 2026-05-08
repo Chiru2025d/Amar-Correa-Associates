@@ -20,9 +20,9 @@ export default function LegalUpdatesPreview() {
               <Image
                 src="/images/legalupdate2.svg"
                 alt="Legal update 1"
-                width={534}
-                height={309}
-                style={{ objectFit: 'cover' }}
+                width: auto;
+                height: auto;
+                style={{ objectFit: 'auto' }}
               />
             </div>
             <div className="legal-content">
