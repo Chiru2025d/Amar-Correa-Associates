@@ -50,27 +50,18 @@ export default function Founder() {
 
                         <div className="founder-bio-container">
                             <p className="founder-bio">
-                                Amar Correa, heads ACA Juris. is a Bangalore-based multidisciplinary law firm with
-a core focus on criminal law. Established in 2002, the firm brings over 25 years of dedicated
-experience in advising and representing individual and corporate clients across all stages of
-criminal litigation—from Magistrate and Sessions Courts to the High Court.
+                                25+ years in criminal law : Practice across Magistrate, Sessions, and High Court, with
+                                specialization in Special Laws and complex CBI trials involving financial frauds, cyber crimes,
+                                extradition, organised crime, narcotics, mining, SFIO prosecutions, and IPC offences.
                             </p>
                             <p className="founder-bio">
-                                ACAJuris offers strategic legal counsel and courtroom representation grounded in practical
-insight. The Firm engages with a wide range of matters, including offences under the Indian
-Penal Code, prosecutions under the Companies Act, infringement of copyright and trademark
-laws, workplace sexual harassment, cheque dishonour under the Negotiable Instruments Act,
-defamation-related litigation and criminal prosecution, extradition proceedings, legal issues
-concerning foreign nationals, cybercrime and digital offences, investigations and prosecutions by
-the Enforcement Directorate, and cases under the Narcotic Drugs and Psychotropic Substances
-Act.
+                                Matrimonial & constitutional litigation : Extensive experience in divorce, child custody,
+                                maintenance, foreign custody orders, habeas corpus petitions, criminal appeals, revisions,
+                                bail, quashing and petitions under Section 482 Cr.P.C., and writs on constitutional rights and
+                                public interest.
                             </p>
-                            <p className="founder-bio">
-                               The firm’s approach to each client’s cause is a reflection of its experience in criminal law—built
-over years of focused practice, not drawn from general legal theory and academic concepts—
-resulting in clarity, diligence, and focus in navigating legal issues.
-                        </p>
-                    </div>                    </div>
+                        </div>
+                    </div>
                     <div className="founder-img-wrap">
                         <span className="hidetext">&nbsp;</span>
                         {/* <h2 className="hidetext">&nbsp;</h2> */}

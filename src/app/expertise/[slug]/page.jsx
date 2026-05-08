@@ -23,229 +23,206 @@ const expertiseContent = {
     title: "Bail",
     icon: "/icons/PracticeList/BailIcon.png",
     description:
-      "Protection from being arrested is the first and foremost legal relief desired by an individual facing a criminal allegation. Our team handles regular bail, anticipatory bail, and cancellation proceedings across Magistrate, Sessions, and High Court forums with a strategy tailored to the case record and urgency.",
+      "Bail is the primary legal relief desired by someone accused of a crime, offering protection from arrest. It is usually advised by lawyers at the stage of FIR registration—the start of a criminal case—or even earlier. Bail operates at different stages of a criminal case, offering protection and relief to the accused in various forms.",
     bullets: [
-      "Anticipatory Bail applications before Sessions Court and High Court.",
-      "Regular Bail after arrest, at all stages of investigation and trial.",
-      "Bail in serious and special offences including NDPS, PMLA, and CBI cases.",
-      "Cancellation of bail and opposing bail applications.",
-      "Bail conditions, modification, and enforcement matters.",
-      "Emergency and urgent bail applications with round-the-clock availability.",
+      "Anticipatory Bail: Sought before arrest, mainly in non-bailable offences.",
+      "Interim Bail: Temporary relief granted when courts find the case deserving.",
+      "Post-arrest Bail: Requested after arrest to secure release from custody.",
     ],
+    closingText: "Relief through bail should ideally be sought promptly, but sometimes it must be carefully timed, such as when applying for anticipatory bail for someone currently abroad. ACAJuris, with over 24 years of experience in criminal litigation, provides expert bail services across diverse laws—including IPC offences (fraud, scams, economic offences, dowry harassment, murder), organised crime statutes, the Foreigners Act, Passport Act, NDPS Act, Cyber Crimes, Companies Act, and more.",
   },
   "cbi-prosecutions-defence-of": {
     title: "CBI Prosecutions – Defence Of",
     icon: "/icons/PracticeList/CBI_Icon.png",
     description:
-      "Major financial scams and frauds are very often investigated by the Central Bureau of Investigation – CBI. We provide structured defence in CBI prosecutions, including charge-stage challenges, trial strategy, witness handling, and appellate remedies in complex criminal prosecutions.",
-    bullets: [
-      "Defence in cases investigated and prosecuted by the Central Bureau of Investigation.",
-      "Challenging CBI jurisdiction and transfer of cases before competent courts.",
-      "Bail applications in CBI cases including cases before Special CBI Courts.",
-      "Charge-framing challenges and discharge applications.",
-      "Cross-examination strategy and trial management over extended trials.",
-      "Appeals and revisions arising from CBI trial court verdicts.",
-    ],
+      "The Central Bureau of Investigation (CBI) is often tasked with probing major financial crimes and scams. The scale of such cases can create systemic biases within the criminal justice process. Effective defence, therefore, requires a meticulous and comprehensive review of the extensive documentation contained in CBI charge sheets.",
+    bullets: [],
   },
   "frauds-financial-business-bank": {
     title: "Frauds – Financial, Business & Bank",
     icon: "/icons/PracticeList/FraudsIcon.png",
     description:
-      "ACAJuris' practice over the years has included representations and appearances in cases involving financial, business, and banking frauds at all stages of investigation, trial, and appeal.",
+      "ACAJuris has extensive experience in financial, corporate, business, and banking fraud cases, representing both complainants and accused individuals, as well as multinational and Indian companies. Our services in this field include -",
     bullets: [
-      "Defence representation in bank fraud prosecutions under IPC and Banking Regulation Act.",
-      "Cases involving cheating, criminal breach of trust and misappropriation of funds.",
-      "SFIO and Enforcement Directorate investigations arising from financial fraud.",
-      "Fraud-linked bail applications and anticipatory bail matters.",
-      "Cross-examination of expert witnesses including chartered accountants and auditors.",
-      "Settlement and compounding proceedings in eligible financial offence matters.",
+      "Consultation & Legal Counsel: Gathering information, assessing fraud or civil wrongs, strategising, researching remedies, and implementing legal action.",
+      "Drafting & Initiation: Preparing and assisting with complaints to police or courts to begin legal proceedings.",
+      "Representation & Trial: Appearing before courts to represent victims or defend accused persons, including conducting trials.",
     ],
   },
   "look-out-circular-passport-related": {
     title: "Look Out Circular | Passport Related Cases",
     icon: "/icons/PracticeList/PassportIcon.png",
     description:
-      "Look Out Circular – LOC is a measure invoked by the investigation agency in an ongoing investigation to prevent an accused or suspect from leaving the country. We assist clients in urgent interim and final relief before competent courts.",
-    bullets: [
-      "Challenging Look Out Circulars (LOC) before the High Court.",
-      "Passport impounding orders – legal challenge and relief.",
-      "Pre-arrest remedies relating to international travel restrictions.",
-      "Cases involving denial or revocation of passport by Passport Authority.",
-      "Surrender, extension, and re-issuance of passports in the context of criminal proceedings.",
-      "Coordination with immigration authorities for urgent travel permissions.",
+      "A Look Out Circular (LOC) is a legal measure issued by investigating agencies or courts during ongoing criminal proceedings to restrict an individual's travel, either preventing departure from the country or detaining them upon arrival. Passport complications often arise in such cases, as issuance or renewal may be withheld while the matter is pending.",
+    paragraphs: [
+      "ACAJuris brings decades of expertise in resolving complex legal challenges, offering clients strategic advice, filing petitions, and securing effective outcomes through diligent representation before the courts.",
+      "ACAJuris offers specialized counsel in matters involving foreigners, citizenship, extradition, and international legislation. Our services include legal opinions, consultations, counsel, and filing of petitions.",
+      "ACAJuris also serves on the panels of select foreign Consulates and High Commissions.",
     ],
+    bullets: [],
   },
   "sexual-harassment-at-workplace": {
     title: "Sexual Harassment At Workplace",
     icon: "/icons/PracticeList/HarassmentIcon.png",
     description:
-      "ACAJuris' exposure to practice over the years includes a wide range of cases in this area, with representation for both complainants and respondents before Internal Committees, Local Committees, and criminal courts.",
+      "Over the years, ACAJuris has represented both victims and accused, delivering comprehensive professional services in this field of practice like -",
     bullets: [
-      "Representation before Internal Complaints Committee (ICC) proceedings.",
-      "Criminal defence in cases arising from workplace harassment allegations.",
-      "Advisory to employers on POSH Act compliance and committee constitution.",
-      "Complaints before Local Complaints Committee (LCC) for unorganised sector.",
-      "Challenging illegal or biased ICC findings before the High Court.",
-      "Appellate remedies arising from POSH Act inquiries.",
+      "Legal Advice: On statutory compliances with respect to prevailing laws in India, more particularly The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.",
+      "Case specific Legal counsel: On the necessary measures to be taken, based on the factual background and prevailing situation.",
+      "Drawing up strategy: On the legal course to be adopted, to a case in point.",
+      "Filing Petition for Bail & Representations before Courts, by addressing arguments for Bail.",
+      "Filing Petition for Quashing: Of the FIR or Charge Sheet or Criminal Proceedings, before High Court and includes Representations and addressing arguments (including other remedies before High Court).",
+      "For Victims: Legal counsel, Representations before Courts during the process of Bail or Quashing and opposing the relief.",
     ],
   },
   "defamation-laws": {
     title: "Defamation Laws",
     icon: "/icons/PracticeList/DefamationIcon.png",
     description:
-      "Defamation – acts that harm a person's reputation. This covers written (libel) and spoken (slander) statements. Our team handles criminal and civil defamation cases, including pre-litigation strategy and reputation-sensitive court representation.",
+      "Defamation refers to acts that damage a person's reputation, whether through written statements (libel) or spoken words (slander). ACAJuris' services in this area of law include -",
     bullets: [
-      "Criminal defamation complaints under Section 356 BNS (formerly Section 499 IPC).",
-      "Defence in criminal defamation cases initiated by public figures and corporations.",
-      "Online and social media defamation – criminal and civil remedies.",
-      "Reputation management advice and pre-litigation strategy.",
-      "Injunctions and interim reliefs to prevent continued defamation.",
-      "Appeals and revisions in defamation proceedings.",
+      "Issuing Legal Notice: As a pre-emptive action to forestall imminent litigation.",
+      "Drafting Complaint: Representations before Courts, in prosecuting the Complaint.",
+      "Representing Accused and Conducting defence, before Courts.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
   },
   "narcotic-drugs": {
     title: "Narcotic Drugs",
     icon: "/icons/PracticeList/NarcoticsIcon.png",
     description:
-      "The Narcotics Drugs and Psychotropic Substances Act, 1985 is the primary legislation governing narcotic drug offences. We represent clients at all stages from arrest, bail, trial, to appeal.",
+      "The NDPS Act, 1985, is India's primary law governing narcotics and psychotropic offences. Violations are treated as among the most serious crimes, with stringent provisions on remand, custody, bail, and trial procedures. ACAJuris' experience in this field of law, includes -",
     bullets: [
-      "Bail applications in NDPS offences including commercial quantity cases.",
-      "Challenging seizure, sampling and NCB/STF investigation procedure.",
-      "Defence in prosecutions involving possession, trafficking, and financing of drug offences.",
-      "Strict compliance challenges to mandatory procedural safeguards under NDPS Act.",
-      "Cross-examination of police and expert witnesses in NDPS trials.",
-      "Appeals before High Court in NDPS conviction and sentence matters.",
+      "Filing Petition for Bail & Representations before Trial Court or High Court, during the process of Bail.",
+      "Conducting defence, during the course of Trial.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & addressing arguments.",
     ],
   },
   "matrimonial-family-laws": {
     title: "Matrimonial & Family Laws",
     icon: "/icons/PracticeList/MatrimonialIcon.png",
     description:
-      "We take up the cause of both women and men – women who are victims of domestic abuse, and men who are victims of misuse of matrimonial laws. We handle matrimonial and family law matters alongside connected criminal proceedings.",
+      "ACAJuris advises and represents clients in divorce, alimony, child custody, guardianship, dowry harassment, and domestic violence matters. We also handle recognition and enforcement of foreign court orders in Indian litigation. ACAJuris offers extensive expertise and a broad range of services in this area of law, particularly in -",
     bullets: [
-      "Domestic violence complaints and defence under the Domestic Violence Act.",
-      "Dowry harassment and Section 498-A IPC defence and prosecution.",
-      "Matrimonial disputes including divorce, maintenance, and custody matters.",
-      "Anticipatory bail and regular bail in matrimonial criminal cases.",
-      "Quashing of criminal proceedings in matrimonial disputes.",
-      "Child custody connected criminal proceedings including abduction cases.",
+      "Counselling and Legal Advice in the direction of Reconciliation.",
+      "Case specific Legal counsel: On the necessary measures to be taken, based on the factual background and prevailing situation.",
+      "Drawing up strategy: On the legal course to be adopted, to a case in point.",
+      "Filing Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Filing Petition for Quashing: Of the FIR or Charge Sheet or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
+      "Participating in Out-of-Court Mediation and also the Legal process of Mediation.",
     ],
   },
   "cheque-dishonour-cases-ni": {
     title: "Cheque Dishonour Cases – NI ACT",
     icon: "/icons/PracticeList/ChequeIcon.png",
     description:
-      "Dishonour of cheques attracts a criminal offence in India under the Negotiable Instruments Act. We handle prosecution and defence in cheque dishonour litigation with focused trial strategy.",
+      "Dishonour of cheques is a criminal offence under India's Negotiable Instruments Act. ACAJuris represents both drawers and drawees, who become accused and complainant in the ensuing litigation and our expertise and experience expands in this area of law, to -",
     bullets: [
-      "Filing and defending complaints under Section 138 of the Negotiable Instruments Act.",
-      "Statutory notice drafting, compliance verification, and legal demand strategy.",
-      "Evidence management including bank communications and cheque forensics.",
-      "Compounding and settlement negotiations in NI Act cases.",
-      "Appeals against acquittals and convictions under Section 138 NI Act.",
-      "Summary trial procedure management before Metropolitan Magistrate courts.",
+      "Issuing Legal Notice: A statutory requirement under law, mandated before initiating prosecution.",
+      "Drafting Complaint: Representations before Courts, in prosecuting the Complaint.",
+      "Representing Accused and Conducting defence, before Courts.",
+      "Filing Petition for Quashing: Of complaints or criminal proceedings before the High Court, with Representations throughout the process including related remedies.",
+      "Representing and opposing Petitions for Quashing filed by the Accused, before the High Court.",
     ],
   },
   "violations-under-information-technology": {
     title: "Violations Under Information Technology",
     icon: "/icons/PracticeList/ViolationIcon.png",
     description:
-      "Otherwise known as cyber crime, the Information Technology Act makes penal certain acts of computer-related violations and online frauds. We advise and defend cyber-offence allegations under the IT regime.",
+      "Commonly termed cybercrime, the Information Technology Act penalizes violations involving computers and the internet. ACAJuris' practice includes -",
     bullets: [
-      "Defence in cases involving hacking, data theft, and cyber intrusion.",
-      "Online fraud and phishing prosecution and defence.",
-      "Social media abuse, identity theft, and morphed-image cases.",
-      "Digital evidence analysis, admissibility challenges, and forensic expert engagement.",
-      "IT Act offences combined with IPC charges – coordinated defence strategy.",
-      "Bail applications and anticipatory bail in cyber crime cases.",
+      "Advancing Legal Counsel: In relation to identifying nature of offences that may arise from IT Act and related offences under other general penal laws.",
+      "Drafting Complaint: Representations before Courts, in prosecuting the Complaint.",
+      "Filing Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Representing Accused and Conducting defence, before Courts - Trials.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
+      "Representing and opposing Petitions for Quashing filed by the Accused, before the High Court.",
     ],
   },
   "prevention-of-corruption": {
     title: "Prevention Of Corruption",
     icon: "/icons/PracticeList/Prevention_Corruption_Icon.png",
     description:
-      "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act spans several decades of dedicated practice in corruption-related prosecutions.",
+      "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act (P.C.Act) is significant. Our practice in this area of criminal law over the years includes -",
     bullets: [
-      "Defence in trap cases and disproportionate assets prosecutions.",
-      "Sanction for prosecution – legal challenge and advisory.",
-      "Anticipatory bail and regular bail in PC Act cases.",
-      "Cross-examination of public witnesses and Lokayukta officers in PC Act trials.",
-      "Appeals and revisions in Central and State vigilance court matters.",
-      "Advisory to public servants on compliance and conflict-of-interest issues.",
+      "Filing Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Legal Assistance, Counsel & Advice: During the stage of investigation.",
+      "Representing Accused and Conducting defence, before Courts - Trials.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
   },
   "prevention-of-money-laundering": {
     title: "Prevention Of Money Laundering",
     icon: "/icons/PracticeList/Money_Laundering_Icon.png",
     description:
-      "PMLA is an act to prevent money-laundering by making penal all actions of indulging in any processes or activities connected with the proceeds of crime. We provide defence and advisory support in PMLA matters.",
+      "PMLA, an act to prevent money-laundering - which means, actions of indulging in any processes or activities connected with proceeds of crime. ACAJuris has the experience and exposure of advising and representing clients in relation to -",
     bullets: [
-      "Bail applications before Special PMLA Courts and High Courts.",
-      "Challenging attachment of property under PMLA provisions.",
-      "Defence in Enforcement Directorate prosecutions under PMLA.",
-      "PMLA summons compliance, responses, and advisory.",
-      "Predicate offence strategy and its interplay with PMLA proceedings.",
-      "Appellate remedies before High Courts in PMLA detention and attachment orders.",
+      "Legal Assistance, Counsel & Advice: During the stage of investigation.",
+      "Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
   },
   "company-law-prosecutions-sfio": {
     title: "Company Law Prosecutions – SFIO",
     icon: "/icons/PracticeList/Company_Law_Icon.png",
     description:
-      "Offences under the Companies Act 2013 are investigated and prosecuted by the Serious Fraud Investigation Office – SFIO. We handle strategic representation in corporate criminal allegations.",
+      "Under the Companies Act 2013, offences involving fraud, such as concealment of facts, abuse of position, deceit, or false statements and accounts, are investigated and prosecuted by the Serious Fraud Investigation Office. ACAJuris has expertise in delivering diverse services in this area of law, particularly -",
     bullets: [
-      "Defence in SFIO investigations and prosecutions under the Companies Act 2013.",
-      "SFIO summons, statements, and document compliance advisory.",
-      "Application for bail in SFIO custody and special court hearings.",
-      "Challenging company law prosecution on procedural and substantive grounds.",
-      "Director and officer liability – individual defence strategy.",
-      "Coordination with NCLT proceedings and criminal court defence.",
+      "Legal Assistance, Counsel & Advice: During the stage of investigation.",
+      "Advancing Legal Counsel: In relation to validity of prosecutions, more particularly issue relating to jurisdiction and applicability of Companies Act 2013 vis-a-vis Companies Act 1956.",
+      "Filing Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
   },
   "copyright-trademark-violation": {
     title: "Copyright & Trademark Violation",
     icon: "/icons/PracticeList/Copywrite_Icon.png",
     description:
-      "Violations of trade marks and/or copyrights can lead to prosecutions under the Trade Marks Act 1999 and the Copyright Act 1957. We handle criminal and related proceedings in this area.",
+      "Trademark and copyright violations may result in prosecution under the Trade Marks Act, 1999 and the Copyright Act, 1957.",
+    paragraphs: [
+      "The Trade Marks Act governs the registration and protection of marks for goods and services, while the Copyright Act safeguards creators of literary, dramatic, musical, and artistic works, as well as producers of films and sound recordings, and prohibits fraudulent use.",
+      "ACAJuris offers professional services in this field to both aggrieved parties and alleged transgressors. Our services include -",
+    ],
     bullets: [
-      "Criminal complaints for trademark and copyright infringement.",
-      "Defence in IP violation prosecutions including raids and seizures.",
-      "Bail applications and anticipatory bail in IP criminal matters.",
-      "Liaison with Customs and enforcement authorities on border protection.",
-      "Search-and-seizure challenge proceedings before criminal courts.",
-      "Advisory on IP infringement risk and preventive enforcement measures.",
+      "Advancing Legal Counsel and Advice: In relation to identifying if there exists a violation or not.",
+      "Legal Notice: As a pre-emptive action to forestall imminent litigation.",
+      "Drafting Complaint: Representations before Courts, in prosecuting the Complaint.",
+      "Representing Accused and Conducting defence, before Courts.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
+      "Representation for the Aggrieved / Complainant, in any proceedings filed for Quashing the Complaint or Criminal Proceedings before High Court and defending the action of filing the Complaint and initiating the legal proceedings.",
     ],
   },
   "extradition-laws": {
     title: "Extradition Laws",
     icon: "/icons/PracticeList/ExtraditionIcon.png",
     description:
-      "Cases arising out of Extradition Laws are rare but significant. As of 2023, India has extradition treaties in force with several countries. We advise on extradition-linked criminal issues.",
+      "Extradition cases are uncommon. As of 2023, India had agreements with 12 countries and treaties with 48 others, though fugitives from non-treaty nations may still be extradited through established procedures. Once extradition is initiated or completed, the provisions of Extradition Laws apply in accordance with the governing agreement, even without a formal treaty. ACAJuris has handled matters involving extradited fugitive, ensuring strict application of the Extradition Act or Agreement. Our professional services in this domain include -",
     bullets: [
-      "Advisory on extradition risk and preventive legal remedies.",
-      "Challenging extradition requests before Indian courts.",
-      "Bail and bail-related applications pending extradition proceedings.",
-      "INTERPOL Red Notice – challenge and removal applications.",
-      "Strategy on dual criminality, specialty rule, and political offence exceptions.",
-      "Liaison with Ministry of External Affairs and diplomatic process representation.",
+      "Legal Counsel and Assistance: During the stage of extradition proceedings.",
+      "Filing Petition and Representation before Courts including High Court: Towards strict compliance of extradition terms.",
     ],
   },
   "motor-vehicle-offences": {
     title: "Motor Vehicle Offences",
     icon: "/icons/PracticeList/Motor_Vehicle_Icon.png",
     description:
-      "Cases arising from motor vehicle accidents include death by negligence, rash and negligent driving, and hit-and-run offences. We represent clients in serious and routine motor vehicle offence matters.",
+      "Motor vehicle accident cases are common, but death by negligence under Section 304-A IPC carries serious consequences. Though legally considered less grave, conviction can still result in a minimum of six months' imprisonment, as mandated by the Supreme Court.",
     bullets: [
-      "Defence in rash and negligent driving cases resulting in death or injury.",
-      "Hit-and-run offence prosecution and defence.",
-      "Accident-linked criminal allegations combined with motor accident claim proceedings.",
-      "Bail applications in motor vehicle accident fatality cases.",
-      "Appeals against conviction and sentence in MV offence matters.",
-      "Evidence gathering from CCTV, forensic reconstruction, and accident reports.",
+      "Filing Petition for Bail & Representations before Courts, during the process of Bail.",
+      "Legal Counsel & Assistance: During the stage of investigation.",
+      "Representing Accused and Conducting defence, before Courts - in Trials.",
+      "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
   },
 };
 
 const expertiseSlugs = Object.keys(expertiseContent);
+
+function boldAca(text) {
+  return text.split(/(ACA)/g).map((part, index) =>
+    part === "ACA" ? <strong key={index}>{part}</strong> : part
+  );
+}
 
 export function generateStaticParams() {
   return expertiseSlugs.map((slug) => ({ slug }));
@@ -272,17 +249,24 @@ export default async function ExpertiseSlugPage({ params }) {
             ← Back
           </Link>
           <h2 className={styles.practiceTitle}>{detail.title}</h2>
-          <p className={styles.practiceDescription}>{detail.description}</p>
+          <p className={styles.practiceDescription}>{boldAca(detail.description)}</p>
+          {detail.paragraphs && detail.paragraphs.map((paragraph, i) => (
+            <p key={i} className={styles.practiceDescription}>{boldAca(paragraph)}</p>
+          ))}
 
           {detail.bullets && detail.bullets.length > 0 && (
             <ul className={styles.bulletList}>
               {detail.bullets.map((b, i) => (
                 <li key={i} className={styles.bulletItem}>
                   <img src="/icons/bullet.png" alt="" className={styles.bulletIcon} />
-                  <span className={styles.bulletText}>{b}</span>
+                  <span className={styles.bulletText}>{boldAca(b)}</span>
                 </li>
               ))}
             </ul>
+          )}
+
+          {detail.closingText && (
+            <p className={styles.practiceDescription}>{boldAca(detail.closingText)}</p>
           )}
         </div>
       </section>

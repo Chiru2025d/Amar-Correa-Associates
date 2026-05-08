@@ -1,0 +1,142 @@
+.page {
+  background: #F4F2EE;
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 24px;
+  background-color: #0b0b0b;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.5)), url("/Page banner/Frame 1984078307.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #F4F2EE;
+  text-align: center;
+}
+
+.services {
+  width: 100%;
+}
+
+.serviceBand {
+  background: #F4F2EE;
+  padding: 92px 24px;
+}
+
+.altBand {
+  background: #EEEAE4;
+}
+
+.serviceInner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 480px) minmax(280px, 1fr);
+  align-items: center;
+  gap: 42px;
+}
+
+.reverse {
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 480px);
+}
+
+.reverse .mediaWrap {
+  order: 2;
+}
+
+.reverse .copy {
+  order: 1;
+}
+
+.mediaWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #DED7D7;
+}
+
+.serviceImage {
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: #DED7D7;
+}
+
+.copy h2 {
+  font-family: "Be Vietnam", sans-serif;
+  color: #173E62;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.22;
+  margin: 0 0 28px;
+}
+
+.copy p {
+  font-family: "Be Vietnam", sans-serif;
+  color: #737982;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.9;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .serviceInner,
+  .reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .reverse .mediaWrap,
+  .reverse .copy {
+    order: initial;
+  }
+
+  .serviceBand {
+    padding: 64px 22px;
+  }
+
+  .copy h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 180px;
+    padding: 56px 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .serviceBand {
+    padding: 46px 20px;
+  }
+
+  .copy h2 {
+    font-size: 22px;
+  }
+
+  .copy p {
+    text-align: left;
+  }
+}

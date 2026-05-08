@@ -7,7 +7,7 @@
   justify-content: center;
   min-height: 320px;
   text-align: center;
-  background-color: #0000;
+  background-color: #F4F2EE;
   background-image: linear-gradient(#173e62c7, #173e62c7), url("/Page banner/Frame 1984078307.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 
 /* ── Cards Section ── */
 .practiceSection {
-  background: #ffffff;
+  background: #F4F2EE;
   padding: 60px 24px 80px;
 }
 
@@ -108,17 +108,18 @@
 
 .acaWatermark {
   position: static;
-  font-family: "Be Vietnam", sans-serif;
+  font-family: "DM Serif Display";
   font-size: 50px;
   font-weight: 400;
   color: rgba(189, 165, 136, 0.08);
   user-select: none;
+  -webkit-user-select: none;
   pointer-events: none;
   letter-spacing: 4px;
   line-height: 80px;
   text-align: left;
   white-space: nowrap;
-  transition: color 0.25s ease;
+  transition: color 0.25s;
 }
 
 .card:hover .acaWatermark {

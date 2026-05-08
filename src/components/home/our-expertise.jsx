@@ -17,77 +17,77 @@ const aopItems = [
   },
   {
     title: "CBI Prosecutions – Defence Of",
-    desc: "Major financial scams and frauds are very often investigated by the Central Bureau of Investigation – CBI. We provide structured defence in such prosecutions.",
+    desc: "The Central Bureau of Investigation (CBI) is often tasked with probing major financial crimes and scams. The scale of such cases can create systemic biases within the criminal justice process. Effective defence, therefore, requires a meticulous and comprehensive review of the extensive documentation contained in CBI charge sheets.",
     banner: "/Banner/Frame 1984078291.png",
   },
   {
     title: "Frauds – Financial, Business & Bank",
-    desc: "ACAJuris' practice over the years has included representations and appearances in cases involving financial, business, and banking frauds at all stages.",
+    desc: "ACAJuris has extensive experience in financial, corporate, business, and banking fraud cases, representing both complainants and accused individuals, as well as multinational and Indian companies. Our services in this field include consultation and legal counsel, drafting and initiation, and representation and trial.",
     banner: "/Banner/Frame 1984078292.png",
   },
   {
     title: "Look Out Circular | Passport Related Cases",
-    desc: "Look Out Circular – LOC is a measure invoked by the investigation agency in an ongoing investigation to prevent an accused or suspect from leaving the country.",
+    desc: "A Look Out Circular (LOC) is a legal measure issued by investigating agencies or courts during ongoing criminal proceedings to restrict an individual's travel, either preventing departure from the country or detaining them upon arrival. ACAJuris brings decades of expertise in resolving complex legal challenges involving LOCs, passports, foreigners, citizenship, extradition, and international legislation.",
     banner: "/Banner/Frame 1984078293.png",
   },
   {
     title: "Sexual Harassment At Workplace",
-    desc: "ACAJuris' exposure to practice over the years includes a wide range of cases in this area, with representation for both complainants and respondents.",
+    desc: "Over the years, ACAJuris has represented both victims and accused, delivering comprehensive professional services in this field of practice, including legal advice on statutory compliances with respect to prevailing laws in India, more particularly The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.",
     banner: "/Banner/Frame 1984078294.png",
   },
   {
     title: "Defamation Laws",
-    desc: "Defamation – acts that harm a person's reputation. This covers written (libel) and spoken (slander) statements. We handle criminal and civil defamation cases.",
+    desc: "Defamation refers to acts that damage a person's reputation, whether through written statements (libel) or spoken words (slander). ACAJuris' services in this area include issuing legal notices, drafting complaints, representing accused persons, and filing petitions for quashing.",
     banner: "/Banner/Frame 1984078295.png",
   },
   {
     title: "Narcotic Drugs",
-    desc: "The Narcotics Drugs and Psychotropic Substances Act, 1985 is the primary legislation governing narcotic drug offences. We represent clients at all stages.",
+    desc: "The NDPS Act, 1985, is India's primary law governing narcotics and psychotropic offences. Violations are treated as among the most serious crimes, with stringent provisions on remand, custody, bail, and trial procedures.",
     banner: "/Banner/Frame 1984078296.png",
   },
   {
     title: "Matrimonial & Family Laws",
-    desc: "We take up the cause of both women and men – women who are victims of domestic abuse, and men who are victims of misuse of matrimonial laws.",
+    desc: "ACAJuris advises and represents clients in divorce, alimony, child custody, guardianship, dowry harassment, and domestic violence matters. We also handle recognition and enforcement of foreign court orders in Indian litigation.",
     banner: "/Banner/Frame 1984078298.png",
   },
   {
     title: "Cheque Dishonour Cases – NI ACT",
-    desc: "Dishonour of cheques attracts a criminal offence in India under the Negotiable Instruments Act. We handle prosecution and defence in such matters.",
+    desc: "Dishonour of cheques is a criminal offence under India's Negotiable Instruments Act. ACAJuris represents both drawers and drawees, who become accused and complainant in the ensuing litigation.",
     banner: "/Banner/Frame 1984078299.png",
   },
   {
     title: "Violations Under Information Technology",
-    desc: "Otherwise known as cyber crime, the Information Technology Act makes penal certain acts of computer-related violations and online frauds.",
+    desc: "Commonly termed cybercrime, the Information Technology Act penalizes violations involving computers and the internet. ACAJuris' practice includes legal counsel, complaint drafting, bail petitions, trial defence, quashing petitions, and opposing quashing petitions.",
     banner: "/Banner/Frame 1984078300.png",
   },
   {
     title: "Prevention Of Corruption",
-    desc: "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act spans over several decades of dedicated practice.",
+    desc: "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act (P.C.Act) is significant. Our practice in this area of criminal law includes bail petitions, investigation-stage assistance, trial defence, and quashing petitions.",
     banner: "/Banner/Frame 1984078301.png",
   },
   {
     title: "Prevention Of Money Laundering",
-    desc: "PMLA – an act to prevent money-laundering by making penal all actions of indulging in any processes or activities connected with the proceeds of crime.",
+    desc: "PMLA is an act to prevent money-laundering, which means actions of indulging in any processes or activities connected with proceeds of crime. ACAJuris advises and represents clients during investigation, bail, and quashing proceedings.",
     banner: "/Banner/Frame 1984078302.png",
   },
   {
     title: "Company Law Prosecutions – SFIO",
-    desc: "Offences under the Companies Act 2013 are investigated and prosecuted by the Serious Fraud Investigation Office – SFIO.",
+    desc: "Under the Companies Act 2013, offences involving fraud, such as concealment of facts, abuse of position, deceit, or false statements and accounts, are investigated and prosecuted by the Serious Fraud Investigation Office.",
     banner: "/Banner/Frame 1984078303.png",
   },
   {
     title: "Copyright & Trademark Violation",
-    desc: "Violations of trade marks and/or copyrights can lead to prosecutions under the Trade Marks Act 1999 and the Copyright Act 1957.",
+    desc: "Trademark and copyright violations may result in prosecution under the Trade Marks Act, 1999 and the Copyright Act, 1957. ACAJuris offers professional services in this field to both aggrieved parties and alleged transgressors.",
     banner: "/Banner/Frame 1984078304.png",
   },
   {
     title: "Extradition Laws",
-    desc: "Cases arising out of Extradition Laws are rare. As of 2023, India has extradition treaties in force with several countries. We advise on such matters.",
+    desc: "Extradition cases are uncommon. As of 2023, India had agreements with 12 countries and treaties with 48 others, though fugitives from non-treaty nations may still be extradited through established procedures.",
     banner: "/Banner/Frame 1984078305.png",
   },
   {
     title: "Motor Vehicle Offences",
-    desc: "Cases arising from motor vehicle accidents include death by negligence, rash driving, and hit-and-run offences. We represent both prosecution and defence.",
+    desc: "Motor vehicle accident cases are common, but death by negligence under Section 304-A IPC carries serious consequences. Though legally considered less grave, conviction can still result in a minimum of six months' imprisonment, as mandated by the Supreme Court.",
     banner: "/Banner/Frame 1984078306.png",
   },
 ];
@@ -166,7 +166,7 @@ export default function ExpertisePreview() {
           <p className="expertise-lead">
             Criminal Law Specialised Multi-Disciplinary Law Firm.
           </p>
-          <Link href="/expertise" className="expertise-view-more-btn">
+          <Link href="/expertise" className="hero-btn primary expertise-view-more-btn">
             View More Practice Areas
           </Link>
         </div>

@@ -56,17 +56,17 @@ export default function DisclaimerModal() {
 
           <div className={styles.textBlock}>
             <p className={styles.text}>
-              ACAJuris has taken great care to ensure that, the contents of this website are merely
-              informational - about the Firm&apos;s lawyers and the Firm&apos;s work. In addition, the website
-              is informational and educative on evolution of laws in India. The website is not legal
-              counsel by any means whatsoever and ACAJuris is not accountable for actions by any
-              individual, relying on the information provided on this website.
+              <strong>ACA</strong>Juris has taken great care to ensure that the contents of this website are merely
+              informational - about the Chambers’ lawyers and work. In addition, the website is informational
+              and educative on legal development in India. The website does not constitute legal advice in any
+              form, and <strong>ACA</strong>Juris shall not be held accountable for any actions taken by individuals relying on
+              the information provided herein.
             </p>
 
             <p className={styles.text}>
-              Your accessing this website, is an acknowledgment and confirmation that, you seek
-              information about ACAJuris, of your own accord, without any solicitation, invitation
-              or advertisement by any of the Associates of the Firm.
+              Your accessing this website is an acknowledgment and confirmation that you are seeking
+              information about <strong>ACA</strong>Juris of your own accord, without any solicitation, invitation, or
+              advertisement by the Chambers or its Associates.
             </p>
           </div>
 

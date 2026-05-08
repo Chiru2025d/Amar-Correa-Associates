@@ -164,15 +164,15 @@ main {
 }
 
 .navItem {
-  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
-  color: #FFFFFF;
-  transition: color 0.3s ease;
-  display: flex;
+  color: #fff;
   align-items: center;
-  gap: 4px;
+  /* gap: 4px; */
+  font-size: 12px;
+  font-weight: 600;
+  transition: color .3s;
+  display: flex;
 }
 
 .header-nav a:hover {
@@ -381,7 +381,7 @@ main {
   display: flex;
   justify-content: center;
   padding: 35px 0;
-  background-color: #142C44;
+  background-color: #FFFFFF;
 }
 
 .contact-fixed-container {
@@ -430,7 +430,7 @@ main {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 40px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #000000;
   margin-bottom: -5px;
 }
 
@@ -450,7 +450,7 @@ main {
 .contact-value {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 15px;
-  color: #FFFFFF;
+  color: #000000;
   line-height: 1.5;
   margin: 0;
   margin-top: -5px;
@@ -464,7 +464,7 @@ main {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 17px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #000000;
   margin-bottom: 5px;
   display: flex;
   align-items: baseline;
@@ -481,7 +481,7 @@ main {
 }
 
 .explore-more:hover {
-  color: #FFFFFF;
+  color: #C5A065;
 }
 
 .contact-link-desc {
@@ -489,7 +489,7 @@ main {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.45;
-  color: #D3DBE3;
+  color: #333333;
   margin: 0;
   max-width: 760px;
 }
@@ -506,9 +506,9 @@ main {
   max-width: 100%;
   height: 54px;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid #d0d0d0;
   background: #FFFFFF;
-  color: #5E5E5E;
+  color: #333333;
   padding: 0 18px;
   font-family: 'Be Vietnam', sans-serif;
   font-size: 16px;
@@ -521,21 +521,30 @@ main {
 }
 
 .newsletter-btn {
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a065;
   cursor: pointer;
-  background-color: #c5a065;
-  border: none;
-  border-radius: 25px;
-  width: 120px;
-  height: 50px;
+  background-color: transparent;
+  border: 0.3px solid #c5a065;
+  border-radius: 6px;
+  min-width: 140px;
+  height: 47px;
+  padding: 0 18px;
   font-family: 'Be Vietnam', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
   transition: all .3s;
 }
 
 .newsletter-btn:hover {
-  opacity: 0.86;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(197, 160, 101, 0.3);
 }
 
 .footer-new {
@@ -544,10 +553,10 @@ main {
 
 /* Top White Nav Bar */
 .footer-nav-bar {
-  background-color: #142C44;
+  background-color: #FFFFFF;
   height: 67px;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -567,7 +576,7 @@ main {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -578,15 +587,15 @@ main {
   color: #C5A065;
 }
 
-/* Bottom Black Bar */
+/* Bottom White Bar */
 .footer-copyright-bar {
-  background-color: #142C44;
+  background-color: #FFFFFF;
   height: 25px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #000000;
   text-align: center;
   width: 100%;
   border-top: 1px solid rgba(197, 160, 101, 0.25);
@@ -621,7 +630,7 @@ main {
 }
 
 .footer-legal-link {
-  color: #FFFFFF;
+  color: #000000;
   text-decoration: none;
   transition: opacity 0.3s;
 }
@@ -765,11 +774,11 @@ main {
 }
 
 .expertise-dropdown .mega-menu {
-  background: #234165;
+  background: #F9F6F3;
 }
 
 .professional-services-dropdown .mega-menu {
-  background: #234165;
+  background: #F9F6F3;
 }
 
 .professional-services-dropdown .mega-column:last-child::before {
@@ -819,20 +828,20 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #4B4F58;
   margin-bottom: 8px;
   text-decoration: none;
 }
 
 .mega-column a::before {
   content: "";
-  width: 10px;
-  height: 10px;
-  flex: 0 0 10px;
-  background-image: url('/icons/bullet.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url(/icons/bullet.png);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 0 0 10px;
+  width: 10px;
+  height: 7px;
 }
 
 .mega-column a:hover {

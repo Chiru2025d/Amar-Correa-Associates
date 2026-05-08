@@ -205,6 +205,14 @@ export default function Header() {
           </div>
 
           <Link
+            href="/professional-services"
+            className={pathname.startsWith("/professional-services") ? "nav-link-active navItem" : "navItem"}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Professional Services
+          </Link>
+
+          <Link
             href="/legalupdates"
             className={pathname.startsWith("/legalupdates") ? "nav-link-active navItem" : "navItem"}
             onClick={() => setIsMobileMenuOpen(false)}

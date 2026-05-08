@@ -1,6 +1,6 @@
 /* ── Detail Section ── */
 .detailSection {
-  background: #ffffff;
+  background: #F4F2EE;
   padding: 64px 24px 72px;
   position: relative;
 }
@@ -46,7 +46,7 @@
   font-size: 14px;
   line-height: 1.85;
   color: #555f6a;
-  margin: 0 0 36px 0;
+  margin: 0 0 12px;
   text-align: left;
 }
 
@@ -54,7 +54,7 @@
 .bulletList {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px 0;
   text-align: left;
 }
 
@@ -62,7 +62,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .bulletDot {
@@ -75,16 +75,16 @@
 }
 
 .bulletIcon {
+  object-fit: contain;
   flex-shrink: 0;
   width: 18px;
-  height: 18px;
-  object-fit: contain;
-  margin-top: 3px;
+  height: 10px;
+  margin-top: 8px;
 }
 
 .bulletText {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.65;
   color: #173E62;
 }

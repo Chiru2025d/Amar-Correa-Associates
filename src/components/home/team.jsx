@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 export default function TeamPreview() {
   const team = [
-    { name: "Shridevi M Bhosale", role: "Senior Associate", img: "/images/shri.svg", phone: "+91 7795611707", email: "shridevi.b@acajuris.com" },
-    { name: "Prasad Maharajpeth", role: "Senior Associate", img: "/images/prasad.jpeg", phone: "+91 88611 93973", email: "prasad.m@acajuris.com" },
+    { name: "Shridevi M Bhosale", role: "Senior Associate", img: "/images/Shri Devi picture.svg", phone: "+91 7795611707", email: "shridevi.b@acajuris.com" },
+    { name: "Prasad Maharajpeth", role: "Senior Associate", img: "/images/prasad.svg", phone: "+91 88611 93973", email: "prasad.m@acajuris.com" },
     { name: "Abhiram K", role: "Associate", img: "/images/abhiram.png", phone: "+91 73382 87915", email: "abhiram.k@acajuris.com" },
-    { name: "Mahindra V T", role: "Associate", img: "/images/Mahindra V T.svg", phone: "+91 80958 51856", email: "mahinda.v@acajuris.com" },
+    { name: "Mahindra V T", role: "Associate", img: "/images/Mahindra.svg", phone: "+91 80958 51856", email: "mahinda.v@acajuris.com" },
   ];
 
   /* 
@@ -118,7 +118,7 @@ export default function TeamPreview() {
                         width={267}
                         height={265}
                         className="team-img"
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'cover', objectPosition: 'center center' }}
                       />
                       <div className="team-overlay">
                         <p className="team-phone">{member.phone}</p>

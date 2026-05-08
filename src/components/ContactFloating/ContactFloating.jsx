@@ -6,7 +6,7 @@ import "./contactFloating.css";
 const ContactFloating = ({
   email = "office@acajuris.com",
   phone = "+919663812090",
-  right = 28,
+  right = 38,
   emailBottom = 180,
   phoneBottom = 120,
 }) => {
