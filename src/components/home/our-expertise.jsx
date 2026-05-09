@@ -7,12 +7,12 @@ import { useState, useEffect, useRef } from "react";
 const aopItems = [
   {
     title: "Quashing Petitions – Inherent Powers",
-    desc: "The High Court, exercising its extraordinary power under Article 226 of the Indian Constitution or the inherent power under Section 482 of the CrPC, may quash criminal proceedings.",
+    desc: "The High Court, exercising its extraordinary power under Article 226 of the Indian Constitution or the inherent powers flowing from Section 482 of Cr.P.C - now Section 528 of Bharatiya Nyaya Sakshya Sanhita - may make such orders, to prevent abuse of process of Court or to secure ends of justice.",
     banner: "/Banner/Frame 1984078289.png",
   },
   {
     title: "Bail",
-    desc: "Protection from being arrested is the first and foremost legal relief desired by an individual facing a criminal allegation. We handle bail at all levels.",
+    desc: "Bail is the primary legal relief desired by someone accused of a crime, offering protection from arrest. It is usually advised by lawyers at the stage of FIR registration—the start of a criminal case—or even earlier.",
     banner: "/Banner/Frame 1984078290.png",
   },
   {
@@ -22,27 +22,27 @@ const aopItems = [
   },
   {
     title: "Frauds – Financial, Business & Bank",
-    desc: "ACAJuris has extensive experience in financial, corporate, business, and banking fraud cases, representing both complainants and accused individuals, as well as multinational and Indian companies. Our services in this field include consultation and legal counsel, drafting and initiation, and representation and trial.",
+    desc: "ACAJuris has extensive experience in financial, corporate, business, and banking fraud cases, representing both complainants and accused individuals, as well as multinational and Indian companies.",
     banner: "/Banner/Frame 1984078292.png",
   },
   {
     title: "Look Out Circular | Passport Related Cases",
-    desc: "A Look Out Circular (LOC) is a legal measure issued by investigating agencies or courts during ongoing criminal proceedings to restrict an individual's travel, either preventing departure from the country or detaining them upon arrival. ACAJuris brings decades of expertise in resolving complex legal challenges involving LOCs, passports, foreigners, citizenship, extradition, and international legislation.",
+    desc: "A Look Out Circular (LOC) is a legal measure issued by investigating agencies or courts during ongoing criminal proceedings to restrict an individual’s travel—either preventing departure from the country or detaining them upon arrival. Passport complications often arise in such cases, as issuance or renewal may be withheld while the matter is pending.",
     banner: "/Banner/Frame 1984078293.png",
   },
   {
     title: "Sexual Harassment At Workplace",
-    desc: "Over the years, ACAJuris has represented both victims and accused, delivering comprehensive professional services in this field of practice, including legal advice on statutory compliances with respect to prevailing laws in India, more particularly The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.",
+    desc: "Over the years, ACAJuris has represented both victims and accused, delivering comprehensive professional services",
     banner: "/Banner/Frame 1984078294.png",
   },
   {
     title: "Defamation Laws",
-    desc: "Defamation refers to acts that damage a person's reputation, whether through written statements (libel) or spoken words (slander). ACAJuris' services in this area include issuing legal notices, drafting complaints, representing accused persons, and filing petitions for quashing.",
+    desc: "Defamation refers to acts that damage a person’s reputation, whether through written statements (libel) or spoken words (slander).",
     banner: "/Banner/Frame 1984078295.png",
   },
   {
     title: "Narcotic Drugs",
-    desc: "The NDPS Act, 1985, is India's primary law governing narcotics and psychotropic offences. Violations are treated as among the most serious crimes, with stringent provisions on remand, custody, bail, and trial procedures.",
+    desc: "The NDPS Act, 1985, is India’s primary law governing narcotics and psychotropic offences. Violations are treated as among the most serious crimes, with stringent provisions on remand, custody, bail, and trial procedures.",
     banner: "/Banner/Frame 1984078296.png",
   },
   {
@@ -52,42 +52,42 @@ const aopItems = [
   },
   {
     title: "Cheque Dishonour Cases – NI ACT",
-    desc: "Dishonour of cheques is a criminal offence under India's Negotiable Instruments Act. ACAJuris represents both drawers and drawees, who become accused and complainant in the ensuing litigation.",
+    desc: "Dishonour of cheques is a criminal offence under India’s Negotiable Instruments Act.",
     banner: "/Banner/Frame 1984078299.png",
   },
   {
     title: "Violations Under Information Technology",
-    desc: "Commonly termed cybercrime, the Information Technology Act penalizes violations involving computers and the internet. ACAJuris' practice includes legal counsel, complaint drafting, bail petitions, trial defence, quashing petitions, and opposing quashing petitions.",
+    desc: "Commonly termed cybercrime, the Information Technology Act penalizes violations involving computers and the intenet.",
     banner: "/Banner/Frame 1984078300.png",
   },
   {
     title: "Prevention Of Corruption",
-    desc: "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act (P.C.Act) is significant. Our practice in this area of criminal law includes bail petitions, investigation-stage assistance, trial defence, and quashing petitions.",
+    desc: "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act (P.C.Act) is significant.",
     banner: "/Banner/Frame 1984078301.png",
   },
   {
-    title: "Prevention Of Money Laundering",
-    desc: "PMLA is an act to prevent money-laundering, which means actions of indulging in any processes or activities connected with proceeds of crime. ACAJuris advises and represents clients during investigation, bail, and quashing proceedings.",
+    title: "Prevention Of Money Laundering ACT (PMLA)",
+    desc: "PMLA, an act to prevent money-laundering - which means, actions of indulging in any processes or activities connected with proceeds of crime.",
     banner: "/Banner/Frame 1984078302.png",
   },
   {
     title: "Company Law Prosecutions – SFIO",
-    desc: "Under the Companies Act 2013, offences involving fraud, such as concealment of facts, abuse of position, deceit, or false statements and accounts, are investigated and prosecuted by the Serious Fraud Investigation Office.",
+    desc: "Under the Companies Act 2013, offences involving fraud—such as concealment of facts, abuse of position, deceit, or false statements and accounts—are investigated and prosecuted by the Serious Fraud Investigation Office.",
     banner: "/Banner/Frame 1984078303.png",
   },
   {
     title: "Copyright & Trademark Violation",
-    desc: "Trademark and copyright violations may result in prosecution under the Trade Marks Act, 1999 and the Copyright Act, 1957. ACAJuris offers professional services in this field to both aggrieved parties and alleged transgressors.",
+    desc: "Trademark and copyright violations may result in prosecution under the Trade Marks Act, 1999 and the Copyright Act, 1957.",
     banner: "/Banner/Frame 1984078304.png",
   },
   {
     title: "Extradition Laws",
-    desc: "Extradition cases are uncommon. As of 2023, India had agreements with 12 countries and treaties with 48 others, though fugitives from non-treaty nations may still be extradited through established procedures.",
+    desc: "Extradition cases are uncommon. As of 2023, India had agreements with 12 countries and treaties with 48 others, though fugitives from non‑treaty nations may still be extradited through established procedures. Once extradition is initiated or completed, the provisions of Extradition Laws apply in accordance with the governing agreement, even without a formal treaty.",
     banner: "/Banner/Frame 1984078305.png",
   },
   {
     title: "Motor Vehicle Offences",
-    desc: "Motor vehicle accident cases are common, but death by negligence under Section 304-A IPC carries serious consequences. Though legally considered less grave, conviction can still result in a minimum of six months' imprisonment, as mandated by the Supreme Court.",
+    desc: "Motor vehicle accident cases are common, but death by negligence under Section 304‑A IPC carries serious consequences. Though legally considered less grave, conviction can still result in a minimum of six months’ imprisonment, as mandated by the Supreme Court.",
     banner: "/Banner/Frame 1984078306.png",
   },
 ];
