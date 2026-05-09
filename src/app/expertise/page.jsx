@@ -140,13 +140,6 @@ export default function ExpertisePage() {
       <section className={styles.practiceSection}>
         <div className={styles.sectionInner}>
           <div className={styles.practiceGrid}>
-            {/* First cell: Find more text */}
-            <div className={styles.findMoreCell}>
-              <p className={styles.findMoreText}>
-                Find more about<br />our practice areas
-              </p>
-            </div>
-
             {expertiseItems.map(({ slug, title, icon, excerpt }) => (
               <div key={slug} className={styles.card}>
                 <div className={styles.cardIconArea}>

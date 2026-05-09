@@ -63,22 +63,7 @@
 }
 
 /* ── "Find more" first cell ── */
-.findMoreCell {
-  display: flex;
-  align-items: center;
-  padding: 28px 20px;
-  background: #ffffff;
-  border: 1px solid #e4dfd7;
-}
 
-.findMoreText {
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 26px;
-  font-weight: 400;
-  color: #173e62;
-  line-height: 1.35;
-  margin: 0;
-}
 
 /* ── Individual Card ── */
 .card {
@@ -183,9 +168,6 @@
   .heroTitle {
     font-size: 42px;
   }
-  .findMoreText {
-    font-size: 22px;
-  }
   .cardContent {
     padding: 6px 24px 28px;
   }
@@ -211,9 +193,6 @@
   }
   .practiceSection {
     padding: 44px 20px 60px;
-  }
-  .findMoreText {
-    font-size: 20px;
   }
   .cardIconArea {
     height: 140px;

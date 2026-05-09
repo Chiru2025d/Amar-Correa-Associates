@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const aopItems = [
   {
@@ -181,7 +181,7 @@ export default function ExpertisePreview() {
               alt={current.title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover", transform: "scaleY(-1)" }}
+              style={{ objectFit: "cover" }}
               priority={index === 0}
             />
           </div>

@@ -1399,7 +1399,7 @@
 
 .expertise-inner {
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
     width: 100%;
     margin: 0px auto;
@@ -1410,16 +1410,17 @@
 .expertise-left {
     flex: 0 0 450px;
     margin-right: auto;
+    align-self: flex-start;
 }
 
 .expertise-left h3 {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    color: #1A1A1A;
+    color: #1a1a1a;
+    text-transform: none;
     margin: 0;
     padding: 0;
-    text-transform: none;
+    font-family: Be Vietnam, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .expertise-lead {
@@ -1428,7 +1429,6 @@
     font-weight: 400;
     line-height: 1.5;
     color: #4F4F4F;
-    padding-right: -10px;
 }
 
 .expertise-view-more-btn {
@@ -1578,7 +1578,6 @@
 .expertise-tab-sls {
     margin-left: auto;
     text-align: right;
-    color: #ffffff;
 }
 
 .expertise-tab.exp-tab-active {
@@ -1681,7 +1680,7 @@
 @media screen and (max-width: 1024px) {
     .expertise-inner {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .expertise-left {
@@ -2488,4 +2487,3 @@
         font-size: 16px;
     }
 }
-
