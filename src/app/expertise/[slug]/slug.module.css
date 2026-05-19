@@ -19,14 +19,14 @@
   font-family: "Be Vietnam", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #C5A065;
+  color: #d4b886;
   text-decoration: none;
   margin-bottom: 24px;
   transition: color 0.2s;
 }
 
 .backBtn:hover {
-  color: #173E62;
+  color: #c5a065;
 }
 
 

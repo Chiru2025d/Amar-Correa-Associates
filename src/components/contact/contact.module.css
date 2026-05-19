@@ -77,7 +77,7 @@
 /* OFFICE ADDRESS – Figma Exact */
 
 .officeAddress {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 26.25px;
@@ -88,7 +88,7 @@
 /* EMAIL & PHONE – Figma Exact */
 
 .officeContact {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 26.25px;
@@ -258,11 +258,11 @@
 .submitBtn {
   height: 47px;
   padding: 0 41px;              /* keeps width flexible */
-  background: #bda588;
-  border: 1px solid #bda588;
+  background: #d4b886;
+  border: 1px solid #d4b886;
   border-radius: 5px;
 
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 1px;

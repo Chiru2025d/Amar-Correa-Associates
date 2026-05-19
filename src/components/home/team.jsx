@@ -81,7 +81,7 @@ export default function TeamPreview() {
             onClick={handlePrev}
             disabled={startIndex === 0}
           >
-            ←
+            <span aria-hidden="true">←</span>
           </button>
 
           <div className="carousel-container">
@@ -141,7 +141,7 @@ export default function TeamPreview() {
             onClick={handleNext}
             disabled={startIndex >= maxIndex}
           >
-            →
+            <span aria-hidden="true">→</span>
           </button>
 
         </div>

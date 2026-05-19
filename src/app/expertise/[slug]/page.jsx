@@ -4,23 +4,23 @@ import styles from "./slug.module.css";
 
 const expertiseContent = {
   "quashing-petitions-inherent-powers": {
-    title: "Quashing Petitions – Inherent Powers",
+    title: "QUASHING PETITIONS - INHERENT POWERS",
     icon: "/icons/PracticeList/Quashing_Petitions_icon.png",
     description:
-      "The High Court, exercising its extraordinary power under Article 226 of the Indian Constitution or the inherent power under Section 482 of the CrPC – now Section 528 of Bharatiya Naaya Sanhita – may make such orders to prevent abuse of process of Court or to secure ends of justice. 'Quashing' is a term under the umbrella of which diverse reliefs can be sought. Relief of 'Quashing' can be sought by a Corporate or Director or Partner or by an individual, to drop criminal proceedings initiated in whatever form. Few of such reliefs that the Firm has had exposure and represented clients in, are:",
+      "The High Court, exercising its extraordinary power under Article 226 of the Indian Constitution or the inherent powers flowing from Section 482 of Cr.P.C - now Section 528 of Bharatiya Nyaya Sakshya Sanhita - may make such orders, to prevent abuse of process of Court or to secure ends of justice. ACAJuris’ practice before the High Court predominantly encompasses litigations arising within this specialized area of law. Illustrative remedies falling within this jurisdiction are -",
     bullets: [
-      "Quashing of FIR, Charge Sheet and entire criminal proceedings, covering comprehensive criminal laws prevailing in India.",
+      "Quashing of FIR, Charge Sheet and entire criminal proceedings.",
       "Directions for transfer of investigation to higher ranked police officer or a different agency.",
       "Directions for Speedy Investigation & Trial.",
       "Directions to police to conduct further investigation, by reason of biased, partial, directionless and incomplete investigation.",
       "Directions with respect to Passport, Look Out Circular, Citizenship and similar matters.",
       "Quashing Police Notices.",
-      "Directions with respect to Extradition Act and implementation of Agreement between two Nations, arising out of it.",
+      "Directions with respect to Extradition Act and implementation of Agreement between two Nations.",
       "Directions with respect to protection of one's Privacy and Right to be Forgotten.",
     ],
   },
   bail: {
-    title: "Bail",
+    title: "BAIL",
     icon: "/icons/PracticeList/BailIcon.png",
     description:
       "Bail is the primary legal relief desired by someone accused of a crime, offering protection from arrest. It is usually advised by lawyers at the stage of FIR registration—the start of a criminal case—or even earlier. Bail operates at different stages of a criminal case, offering protection and relief to the accused in various forms.",
@@ -29,17 +29,17 @@ const expertiseContent = {
       "Interim Bail: Temporary relief granted when courts find the case deserving.",
       "Post-arrest Bail: Requested after arrest to secure release from custody.",
     ],
-    closingText: "Relief through bail should ideally be sought promptly, but sometimes it must be carefully timed, such as when applying for anticipatory bail for someone currently abroad. ACAJuris, with over 24 years of experience in criminal litigation, provides expert bail services across diverse laws—including IPC offences (fraud, scams, economic offences, dowry harassment, murder), organised crime statutes, the Foreigners Act, Passport Act, NDPS Act, Cyber Crimes, Companies Act, and more.",
+    closingText: "Relief through bail should ideally be sought promptly, but at times it must be carefully timed—for example, when applying for anticipatory bail for someone currently abroad. ACAJuris, with over 24 years of experience in criminal litigation, provides expert bail services across diverse laws—including cases under the IPC (fraud, scams, economic offences, dowry harassment, murder), organised crime statutes, the Foreigners Act, Passport Act, NDPS Act, Cyber Crimes, Companies Act, and more.",
   },
   "cbi-prosecutions-defence-of": {
-    title: "CBI Prosecutions – Defence Of",
+    title: "CBI PROSECUTIONS - DEFENCE OF",
     icon: "/icons/PracticeList/CBI_Icon.png",
     description:
       "The Central Bureau of Investigation (CBI) is often tasked with probing major financial crimes and scams. The scale of such cases can create systemic biases within the criminal justice process. Effective defence, therefore, requires a meticulous and comprehensive review of the extensive documentation contained in CBI charge sheets.",
     bullets: [],
   },
   "frauds-financial-business-bank": {
-    title: "Frauds – Financial, Business & Bank",
+    title: "FRAUDS - FINANCIAL, BUSINESS & BANK",
     icon: "/icons/PracticeList/FraudsIcon.png",
     description:
       "ACAJuris has extensive experience in financial, corporate, business, and banking fraud cases, representing both complainants and accused individuals, as well as multinational and Indian companies. Our services in this field include -",
@@ -50,7 +50,7 @@ const expertiseContent = {
     ],
   },
   "look-out-circular-passport-related": {
-    title: "Look Out Circular | Passport Related Cases",
+    title: "LOOK OUT CIRCULAR - PASSPORT RELATED CASES",
     icon: "/icons/PracticeList/PassportIcon.png",
     description:
       "A Look Out Circular (LOC) is a legal measure issued by investigating agencies or courts during ongoing criminal proceedings to restrict an individual's travel, either preventing departure from the country or detaining them upon arrival. Passport complications often arise in such cases, as issuance or renewal may be withheld while the matter is pending.",
@@ -62,7 +62,7 @@ const expertiseContent = {
     bullets: [],
   },
   "sexual-harassment-at-workplace": {
-    title: "Sexual Harassment At Workplace",
+    title: "SEXUAL HARASSMENT AT WORKPLACE",
     icon: "/icons/PracticeList/HarassmentIcon.png",
     description:
       "Over the years, ACAJuris has represented both victims and accused, delivering comprehensive professional services in this field of practice like -",
@@ -76,7 +76,7 @@ const expertiseContent = {
     ],
   },
   "defamation-laws": {
-    title: "Defamation Laws",
+    title: "DEFAMATION LAWS",
     icon: "/icons/PracticeList/DefamationIcon.png",
     description:
       "Defamation refers to acts that damage a person's reputation, whether through written statements (libel) or spoken words (slander). ACAJuris' services in this area of law include -",
@@ -88,7 +88,7 @@ const expertiseContent = {
     ],
   },
   "narcotic-drugs": {
-    title: "Narcotic Drugs",
+    title: "NARCOTIC DRUGS",
     icon: "/icons/PracticeList/NarcoticsIcon.png",
     description:
       "The NDPS Act, 1985, is India's primary law governing narcotics and psychotropic offences. Violations are treated as among the most serious crimes, with stringent provisions on remand, custody, bail, and trial procedures. ACAJuris' experience in this field of law, includes -",
@@ -99,7 +99,7 @@ const expertiseContent = {
     ],
   },
   "matrimonial-family-laws": {
-    title: "Matrimonial & Family Laws",
+    title: "MATRIMONIAL AND FAMILY LAWS",
     icon: "/icons/PracticeList/MatrimonialIcon.png",
     description:
       "ACAJuris advises and represents clients in divorce, alimony, child custody, guardianship, dowry harassment, and domestic violence matters. We also handle recognition and enforcement of foreign court orders in Indian litigation. ACAJuris offers extensive expertise and a broad range of services in this area of law, particularly in -",
@@ -113,7 +113,7 @@ const expertiseContent = {
     ],
   },
   "cheque-dishonour-cases-ni": {
-    title: "Cheque Dishonour Cases – NI ACT",
+    title: "CHEQUE DISHONOUR CASES - NI ACT",
     icon: "/icons/PracticeList/ChequeIcon.png",
     description:
       "Dishonour of cheques is a criminal offence under India's Negotiable Instruments Act. ACAJuris represents both drawers and drawees, who become accused and complainant in the ensuing litigation and our expertise and experience expands in this area of law, to -",
@@ -126,7 +126,7 @@ const expertiseContent = {
     ],
   },
   "violations-under-information-technology": {
-    title: "Violations Under Information Technology",
+    title: "VIOLATIONS UNDER INFORMATION TECHNOLOGY ACT",
     icon: "/icons/PracticeList/ViolationIcon.png",
     description:
       "Commonly termed cybercrime, the Information Technology Act penalizes violations involving computers and the internet. ACAJuris' practice includes -",
@@ -140,7 +140,7 @@ const expertiseContent = {
     ],
   },
   "prevention-of-corruption": {
-    title: "Prevention Of Corruption",
+    title: "PREVENTION OF CORRUPTION ACT",
     icon: "/icons/PracticeList/Prevention_Corruption_Icon.png",
     description:
       "The exposure and experience of ACAJuris in handling cases under the Prevention of Corruption Act (P.C.Act) is significant. Our practice in this area of criminal law over the years includes -",
@@ -152,7 +152,7 @@ const expertiseContent = {
     ],
   },
   "prevention-of-money-laundering": {
-    title: "Prevention Of Money Laundering",
+    title: "PREVENTION OF MONEY LAUNDERING ACT (PMLA)",
     icon: "/icons/PracticeList/Money_Laundering_Icon.png",
     description:
       "PMLA, an act to prevent money-laundering - which means, actions of indulging in any processes or activities connected with proceeds of crime. ACAJuris has the experience and exposure of advising and representing clients in relation to -",
@@ -163,7 +163,7 @@ const expertiseContent = {
     ],
   },
   "company-law-prosecutions-sfio": {
-    title: "Company Law Prosecutions – SFIO",
+    title: "COMPANY LAW PROSECUTIONS - SFIO",
     icon: "/icons/PracticeList/Company_Law_Icon.png",
     description:
       "Under the Companies Act 2013, offences involving fraud, such as concealment of facts, abuse of position, deceit, or false statements and accounts, are investigated and prosecuted by the Serious Fraud Investigation Office. ACAJuris has expertise in delivering diverse services in this area of law, particularly -",
@@ -175,7 +175,7 @@ const expertiseContent = {
     ],
   },
   "copyright-trademark-violation": {
-    title: "Copyright & Trademark Violation",
+    title: "COPYRIGHT AND TRADEMARK VIOLATION",
     icon: "/icons/PracticeList/Copywrite_Icon.png",
     description:
       "Trademark and copyright violations may result in prosecution under the Trade Marks Act, 1999 and the Copyright Act, 1957.",
@@ -193,7 +193,7 @@ const expertiseContent = {
     ],
   },
   "extradition-laws": {
-    title: "Extradition Laws",
+    title: "EXTRADITION LAWS",
     icon: "/icons/PracticeList/ExtraditionIcon.png",
     description:
       "Extradition cases are uncommon. As of 2023, India had agreements with 12 countries and treaties with 48 others, though fugitives from non-treaty nations may still be extradited through established procedures. Once extradition is initiated or completed, the provisions of Extradition Laws apply in accordance with the governing agreement, even without a formal treaty. ACAJuris has handled matters involving extradited fugitive, ensuring strict application of the Extradition Act or Agreement. Our professional services in this domain include -",
@@ -203,7 +203,7 @@ const expertiseContent = {
     ],
   },
   "motor-vehicle-offences": {
-    title: "Motor Vehicle Offences",
+    title: "MOTOR VEHICLE OFFENCES",
     icon: "/icons/PracticeList/Motor_Vehicle_Icon.png",
     description:
       "Motor vehicle accident cases are common, but death by negligence under Section 304-A IPC carries serious consequences. Though legally considered less grave, conviction can still result in a minimum of six months' imprisonment, as mandated by the Supreme Court.",
@@ -213,6 +213,13 @@ const expertiseContent = {
       "Representing Accused and Conducting defence, before Courts - in Trials.",
       "Filing Petition for Quashing: Of the Complaint or Criminal Proceedings, before High Court & Representations through the process (including other remedies before High Court).",
     ],
+  },
+  "other-areas": {
+    title: "OTHER AREAS -",
+    icon: "/icons/PracticeList/Criminal_Trails_Icon.png",
+    description:
+      "Over 25 years of criminal practice, ACA Juris has also dealt with offences under various statutes, including the Wild Life Protection Act, Juvenile Justice (Care and Protection) Act, POCSO Act, Drugs and Cosmetics Act, as well as violations under the Factories Act, Industrial Disputes Act, Karnataka Shops and Commercial Establishments Act, Minimum Wages Act, and Payment of Wages Act, among others.",
+    bullets: [],
   },
 };
 

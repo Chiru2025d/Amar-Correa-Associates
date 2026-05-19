@@ -8,12 +8,11 @@ const DISCLAIMER_KEY = "aca_disclaimer_accepted";
 
 export default function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     const accepted = window.localStorage.getItem(DISCLAIMER_KEY);
     if (accepted !== "true") {
-      setIsOpen(true);
+      queueMicrotask(() => setIsOpen(true));
     }
   }, []);
 
@@ -30,7 +29,6 @@ export default function DisclaimerModal() {
   }, [isOpen]);
 
   const handleProceed = () => {
-    if (!isChecked) return;
     window.localStorage.setItem(DISCLAIMER_KEY, "true");
     setIsOpen(false);
   };
@@ -70,22 +68,12 @@ export default function DisclaimerModal() {
             </p>
           </div>
 
-          <label className={styles.agreeRow}>
-            <input
-              type="checkbox"
-              checked={isChecked}
-              onChange={(e) => setIsChecked(e.target.checked)}
-            />
-            <span>I Agree</span>
-          </label>
-
           <button
             type="button"
             className={styles.proceedBtn}
             onClick={handleProceed}
-            disabled={!isChecked}
           >
-            PROCEED TO WEBSITE
+            I Agree
           </button>
         </div>
       </div>

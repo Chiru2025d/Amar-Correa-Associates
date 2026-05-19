@@ -131,23 +131,24 @@ export default function Header() {
               {/* Corporate Law */}
               <div className="mobile-submenu">
                 <div className="mobile-submenu-items open">
-                  <Link href="/expertise/quashing-petitions-inherent-powers">Quashing Petitions – Inherent Powers</Link>
-                  <Link href="/expertise/bail">Bail</Link>
-                  <Link href="/expertise/cbi-prosecutions-defence-of">CBI Prosecutions – Defence Of</Link>
-                  <Link href="/expertise/frauds-financial-business-bank">Frauds – Financial, Business & Bank</Link>
-                  <Link href="/expertise/look-out-circular-passport-related">Look Out Circular | Passport Related</Link>
-                  <Link href="/expertise/sexual-harassment-at-workplace">Sexual Harassment at Workplace</Link>
-                  <Link href="/expertise/defamation-laws">Defamation Laws</Link>
-                  <Link href="/expertise/narcotic-drugs">Narcotic Drugs</Link>
-                  <Link href="/expertise/matrimonial-family-laws">Matrimonial & Family Laws</Link>
-                  <Link href="/expertise/cheque-dishonour-cases-ni">Cheque Dishonour Cases – NI</Link>
-                  <Link href="/expertise/violations-under-information-technology">Violations Under Information Technology</Link>
-                  <Link href="/expertise/prevention-of-corruption">Prevention of Corruption</Link>
-                  <Link href="/expertise/prevention-of-money-laundering">Prevention of Money Laundering</Link>
-                  <Link href="/expertise/company-law-prosecutions-sfio">Company Law Prosecutions – SFIO</Link>
-                  <Link href="/expertise/copyright-trademark-violation">Copyright & Trademark Violation</Link>
-                  <Link href="/expertise/extradition-laws">Extradition Laws</Link>
-                  <Link href="/expertise/motor-vehicle-offences">Motor Vehicle Offences</Link>
+                  <Link href="/expertise/quashing-petitions-inherent-powers">QUASHING PETITIONS - INHERENT POWERS</Link>
+                  <Link href="/expertise/bail">BAIL</Link>
+                  <Link href="/expertise/cbi-prosecutions-defence-of">CBI PROSECUTIONS - DEFENCE OF</Link>
+                  <Link href="/expertise/frauds-financial-business-bank">FRAUDS - FINANCIAL, BUSINESS & BANK</Link>
+                  <Link href="/expertise/look-out-circular-passport-related">LOOK OUT CIRCULAR - PASSPORT RELATED</Link>
+                  <Link href="/expertise/sexual-harassment-at-workplace">SEXUAL HARASSMENT AT WORKPLACE</Link>
+                  <Link href="/expertise/defamation-laws">DEFAMATION LAWS</Link>
+                  <Link href="/expertise/narcotic-drugs">NARCOTIC DRUGS</Link>
+                  <Link href="/expertise/matrimonial-family-laws">MATRIMONIAL AND FAMILY LAWS</Link>
+                  <Link href="/expertise/cheque-dishonour-cases-ni">CHEQUE DISHONOUR CASES - NI ACT</Link>
+                  <Link href="/expertise/violations-under-information-technology">VIOLATIONS UNDER INFORMATION TECHNOLOGY ACT</Link>
+                  <Link href="/expertise/prevention-of-corruption">PREVENTION OF CORRUPTION ACT</Link>
+                  <Link href="/expertise/prevention-of-money-laundering">PREVENTION OF MONEY LAUNDERING ACT (PMLA)</Link>
+                  <Link href="/expertise/company-law-prosecutions-sfio">COMPANY LAW PROSECUTIONS - SFIO</Link>
+                  <Link href="/expertise/copyright-trademark-violation">COPYRIGHT AND TRADEMARK VIOLATION</Link>
+                  <Link href="/expertise/extradition-laws">EXTRADITION LAWS</Link>
+                  <Link href="/expertise/motor-vehicle-offences">MOTOR VEHICLE OFFENCES</Link>
+                  <Link href="/expertise/other-areas">OTHER AREAS -</Link>
                 </div>
               </div>
 
@@ -179,28 +180,28 @@ export default function Header() {
             {/* Mega Menu */}
             <div className="mega-menu desktop-only">
               <div className="mega-column">
-                <Link href="/expertise/quashing-petitions-inherent-powers">Quashing Petitions – Inherent Powers</Link>
-                <Link href="/expertise/bail">Bail</Link>
-                <Link href="/expertise/cbi-prosecutions-defence-of">CBI Prosecutions – Defence Of</Link>
-                <Link href="/expertise/frauds-financial-business-bank">Frauds – Financial, Business & Bank</Link>
-                <Link href="/expertise/look-out-circular-passport-related">Look Out Circular | Passport Related</Link>
-                <Link href="/expertise/sexual-harassment-at-workplace">Sexual Harassment at Workplace</Link>
-                <Link href="/expertise/defamation-laws">Defamation Laws</Link>
-                <Link href="/expertise/narcotic-drugs">Narcotic Drugs</Link>
-                <Link href="/expertise/matrimonial-family-laws">Matrimonial & Family Laws</Link>
+                <Link href="/expertise/quashing-petitions-inherent-powers">QUASHING PETITIONS - INHERENT POWERS</Link>
+                <Link href="/expertise/bail">BAIL</Link>
+                <Link href="/expertise/cbi-prosecutions-defence-of">CBI PROSECUTIONS - DEFENCE OF</Link>
+                <Link href="/expertise/frauds-financial-business-bank">FRAUDS - FINANCIAL, BUSINESS & BANK</Link>
+                <Link href="/expertise/look-out-circular-passport-related">LOOK OUT CIRCULAR - PASSPORT RELATED</Link>
+                <Link href="/expertise/sexual-harassment-at-workplace">SEXUAL HARASSMENT AT WORKPLACE</Link>
+                <Link href="/expertise/defamation-laws">DEFAMATION LAWS</Link>
+                <Link href="/expertise/narcotic-drugs">NARCOTIC DRUGS</Link>
+                <Link href="/expertise/matrimonial-family-laws">MATRIMONIAL AND FAMILY LAWS</Link>
               </div>
 
               <div className="mega-column">
-                <Link href="/expertise/cheque-dishonour-cases-ni">Cheque Dishonour Cases – NI</Link>
-                <Link href="/expertise/violations-under-information-technology">Violations Under Information Technology</Link>
-                <Link href="/expertise/prevention-of-corruption">Prevention of Corruption</Link>
-                <Link href="/expertise/prevention-of-money-laundering">Prevention of Money Laundering</Link>
-                <Link href="/expertise/company-law-prosecutions-sfio">Company Law Prosecutions – SFIO</Link>
-                <Link href="/expertise/copyright-trademark-violation">Copyright & Trademark Violation</Link>
-                <Link href="/expertise/extradition-laws">Extradition Laws</Link>
-                <Link href="/expertise/motor-vehicle-offences">Motor Vehicle Offences</Link>
+                <Link href="/expertise/cheque-dishonour-cases-ni">CHEQUE DISHONOUR CASES - NI ACT</Link>
+                <Link href="/expertise/violations-under-information-technology">VIOLATIONS UNDER INFORMATION TECHNOLOGY ACT</Link>
+                <Link href="/expertise/prevention-of-corruption">PREVENTION OF CORRUPTION ACT</Link>
+                <Link href="/expertise/prevention-of-money-laundering">PREVENTION OF MONEY LAUNDERING ACT (PMLA)</Link>
+                <Link href="/expertise/company-law-prosecutions-sfio">COMPANY LAW PROSECUTIONS - SFIO</Link>
+                <Link href="/expertise/copyright-trademark-violation">COPYRIGHT AND TRADEMARK VIOLATION</Link>
+                <Link href="/expertise/extradition-laws">EXTRADITION LAWS</Link>
+                <Link href="/expertise/motor-vehicle-offences">MOTOR VEHICLE OFFENCES</Link>
+                <Link href="/expertise/other-areas">OTHER AREAS -</Link>
               </div>
-
             </div>
           </div>
 

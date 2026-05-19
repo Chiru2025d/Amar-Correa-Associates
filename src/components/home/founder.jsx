@@ -45,17 +45,17 @@ export default function Founder() {
                 <div className="founder-inner">
                     <div className="founder-text">
                         <span className="founder-label">Head Associate</span>
-                        <h2 className="founder-name">Amar Correa</h2>
+                        <h2 className="founder-name">AMAR CORREA</h2>
                         <span className="founder-role"></span>
 
                         <div className="founder-bio-container">
                             <p className="founder-bio">
-                                25+ years in criminal law : Practice across Magistrate, Sessions, and High Court, with
+                                <span style={{ fontWeight: 500, color: 'rgb(0, 0, 0)' }}>25+ years in criminal law :</span> Practice across Magistrate, Sessions, and High Court, with
                                 specialization in Special Laws and complex CBI trials involving financial frauds, cyber crimes,
                                 extradition, organised crime, narcotics, mining, SFIO prosecutions, and IPC offences.
                             </p>
                             <p className="founder-bio">
-                                Matrimonial & constitutional litigation : Extensive experience in divorce, child custody,
+                                <span style={{ fontWeight: 500, color: 'rgb(0, 0, 0)' }}>Matrimonial & constitutional litigation :</span> Extensive experience in divorce, child custody,
                                 maintenance, foreign custody orders, habeas corpus petitions, criminal appeals, revisions,
                                 bail, quashing and petitions under Section 482 Cr.P.C., and writs on constitutional rights and
                                 public interest.
@@ -63,10 +63,6 @@ export default function Founder() {
                         </div>
                     </div>
                     <div className="founder-img-wrap">
-                        <span className="hidetext">&nbsp;</span>
-                        {/* <h2 className="hidetext">&nbsp;</h2> */}
-                        <h6 className="hidetext">&nbsp;</h6>
-                        <span className="hidetext">&nbsp;</span>
                         <Image
                             src="/images/amar.png"
                             alt="Amar Correa"

@@ -34,6 +34,14 @@ a {
   text-decoration: none;
 }
 
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-family: var(--font-body);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -524,10 +532,10 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #c5a065;
+  color: #fff;
   cursor: pointer;
-  background-color: transparent;
-  border: 0.3px solid #c5a065;
+  background-color: #d4b886;
+  border: 0.3px solid #d4b886;
   border-radius: 6px;
   min-width: 140px;
   height: 47px;
@@ -541,8 +549,8 @@ main {
 }
 
 .newsletter-btn:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: #c5a065;
+  border-color: #c5a065;
   color: var(--color-white);
   box-shadow: 0 4px 15px rgba(197, 160, 101, 0.3);
 }

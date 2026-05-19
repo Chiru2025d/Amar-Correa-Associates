@@ -38,7 +38,7 @@ export default function Culture() {
   return (
     <section className="culture-section">
       <h2 className="culture-heading">
-        Driven by a culture committed to our client’s cause
+        Driven by a Culture Committed to Our Client’s Cause
       </h2>
 
       {/* Mobile: Show static card images */}
