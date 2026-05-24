@@ -43,35 +43,46 @@ export default function Footer() {
                 <div className="contact-link-title">
                   Our Practice Areas{" "}
                   <Link href="/expertise" className="explore-more">
-                    Explore more
+                    Explore More
                   </Link>
                 </div>
                 <p className="contact-link-desc">
-                  Our practice areas encompass a wide range of legal issues.
+                  Criminal Law Specialised Multi-Disciplinary Law Firm
                 </p>
               </div>
 
               <div className="contact-link-group">
                 <div className="contact-link-title">
-                  Know Legal Updates{" "}
-                  <Link href="/legalupdates" className="explore-more">
-                    Explore more
+                  Our Legal Services{" "}
+                  <Link href="/professional-services" className="explore-more">
+                    Explore More
                   </Link>
                 </div>
                 <p className="contact-link-desc">
-                  Joining hands with us can take your business concern to greater
-                  level of prosperity
+                  What Professional Legal Services We Offer
+                </p>
+              </div>
+
+              <div className="contact-link-group">
+                <div className="contact-link-title">
+                  Legal Development{" "}
+                  <Link href="/legalupdates" className="explore-more">
+                    Explore More
+                  </Link>
+                </div>
+                <p className="contact-link-desc">
+                  Legal Landscape: Recent Developments
                 </p>
               </div>
 
               <div className="newsletter-wrapper">
                 <input
-                  type="email"
-                  placeholder="For Updates Enter your email"
+                  type="text"
+                  placeholder="Write to Us - issue in very brief"
                   className="newsletter-input"
                   suppressHydrationWarning
                 />
-                <button className="newsletter-btn">Send</button>
+                <button className="newsletter-btn">Submit</button>
               </div>
 
             </div>
@@ -94,6 +105,9 @@ export default function Footer() {
       <div className="footer-copyright-bar">
         <div className="container footer-copyright-inner">
           <div className="footer-copyright-content">
+            <span>
+              © 2026 Amar Correa Associates, Juris | All Rights Reserved.
+            </span>
             {/* <span>COPYRIGHT © WEBSITE ID</span>
             <span className="footer-divider">|</span>
             <Link href="/terms" className="footer-legal-link">
