@@ -1988,8 +1988,8 @@
 }
 
 .team-card {
-    width: 267px;
     text-align: center;
+    /* width: 267px; */
 }
 
 .team-card img {
