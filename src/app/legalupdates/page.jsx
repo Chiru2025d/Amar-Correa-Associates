@@ -3,8 +3,8 @@ import styles from "./legalupdates.module.css";
 
 const articles = [
   {
-    date: "August 28, 2025",
-    uploadedLabel: "Uploaded Time",
+    updateNumber: "Blog/Legal Update 01",
+    author: "Amar Correa",
     title: "\u201c An Incorrect View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
     subheading: "Understanding the Misconception",
     paragraphs: [
@@ -14,19 +14,15 @@ const articles = [
     bullets: [],
   },
   {
-    date: "August 28, 2025",
-    uploadedLabel: "Uploaded Time",
+    updateNumber: "Blog/Legal Update 02",
+    author: "Amar Correa",
     title: "\u201c The Correct View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
     subheading: "A Clarified and Legally Supported Interpretation",
     paragraphs: [
-      "The more accurate and legally sound position is that the trial court does possess the authority, even after taking cognizance, to order further investigation under Section 173(8) Cr.P.C.",
-      "This can be done:",
+      "The more accurate and legally sound position is that the trial court does possess the authority, even after taking cognizance, to order further investigation under Section 173(8) Cr.P.C. This authority may be exercised suo motu or at the instance of the complainant when the facts of the case reveal gaps in investigation or the need for additional material.",
+      "This interpretation aligns with judicial precedents that emphasize the court\u2019s duty to discover the truth and ensure a fair trial. Empowering the trial court to order further investigation strengthens the justice system by correcting investigative lapses, promoting transparency, and supporting the larger goals of justice and effective advocacy.",
     ],
-    bullets: ["Suo motu (on its own motion)", "At the instance of the complainant"],
-    afterBullets: [
-      "This interpretation aligns with judicial precedents that emphasize the court\u2019s duty to discover the truth and ensure a fair trial. Empowering the trial court to order further investigation strengthens the justice system by correcting investigative lapses and promoting transparency.",
-      "In this section, we provide analysis, case references, and practical implications of this correct view, highlighting how it supports the larger goals of justice and effective advocacy.",
-    ],
+    bullets: [],
   },
 ];
 
@@ -37,19 +33,18 @@ export default function LegalUpdatesPage() {
 
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
-        <h1 className={styles.heroTitle}>Legal Updates</h1>
+        <h1 className={styles.heroTitle}>LEGAL UPDATES & BLOG</h1>
       </section>
 
       {/* Articles */}
       <div className={styles.articlesSection}>
         {articles.map((article, idx) => (
-          <article key={idx} className={styles.article}>
+          <article id={`article-${idx + 1}`} key={idx} className={styles.article}>
             <div className={styles.articleInner}>
               {/* Meta row */}
               <div className={styles.articleMeta}>
-                <span className={styles.articleDate}>{article.date}</span>
-                <span className={styles.articleDateLine} />
-                <span className={styles.articleDateLabel}>{article.uploadedLabel}</span>
+                <span className={styles.articleDate}>{article.updateNumber},</span>
+                <span className={styles.articleDateLabel}>{article.author}</span>
               </div>
 
               {/* Title */}
@@ -79,6 +74,10 @@ export default function LegalUpdatesPage() {
               {article.afterBullets && article.afterBullets.map((p, i) => (
                 <p key={i} className={styles.articleBody}>{p}</p>
               ))}
+
+              <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
+                Read More
+              </a>
             </div>
           </article>
         ))}

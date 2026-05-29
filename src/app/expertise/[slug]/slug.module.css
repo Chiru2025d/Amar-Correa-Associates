@@ -19,14 +19,14 @@
   font-family: "Be Vietnam", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #d4b886;
+  color: #bda588;
   text-decoration: none;
   margin-bottom: 24px;
   transition: color 0.2s;
 }
 
 .backBtn:hover {
-  color: #c5a065;
+  color: #bda588;
 }
 
 
@@ -70,7 +70,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 2px solid #C5A065;
+  border: 2px solid #bda588;
   margin-top: 3px;
 }
 
@@ -144,7 +144,7 @@
   font-family: "Be Vietnam", sans-serif;
   font-size: 80px;
   font-weight: 400;
-  color: rgba(197, 160, 101, 0.18);
+  color: rgba(189, 165, 136, 0.18);
   user-select: none;
   pointer-events: none;
   letter-spacing: 6px;
@@ -163,7 +163,7 @@
 
 .cardContent {
   padding: 16px 18px 20px;
-  border-top: 2px solid #C5A065;
+  border-top: 2px solid #bda588;
 }
 
 .cardTitle {
@@ -179,7 +179,7 @@
 }
 
 .cardTitle:hover {
-  color: #C5A065;
+  color: #bda588;
 }
 
 .cardExcerpt {
@@ -210,7 +210,7 @@
 }
 
 .viewAllLink:hover {
-  color: #C5A065;
+  color: #bda588;
 }
 
 /* ── Responsive ── */

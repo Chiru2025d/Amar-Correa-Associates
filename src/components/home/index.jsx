@@ -5,6 +5,7 @@ import Hero from "./hero.jsx";
 import About from "./about.jsx";
 import Culture from "./client-cause.jsx";
 import ExpertisePreview from "./our-expertise.jsx";
+import ProfessionalServicesPreview from "./professional-services-preview.jsx";
 import Founder from "./founder.jsx";
 import TeamPreview from "./team.jsx";
 import LegalUpdatesPreview from "./legal-updates.jsx";
@@ -19,6 +20,7 @@ export default function HomePage() {
         <About />
         <Culture />
         <ExpertisePreview />
+        <ProfessionalServicesPreview />
         <Founder />
         <TeamPreview />
         <LegalUpdatesPreview />

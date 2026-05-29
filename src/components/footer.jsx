@@ -53,7 +53,7 @@ export default function Footer() {
 
               <div className="contact-link-group">
                 <div className="contact-link-title">
-                  Our Legal Services{" "}
+                  Our Professional Services{" "}
                   <Link href="/professional-services" className="explore-more">
                     Explore More
                   </Link>
@@ -76,13 +76,18 @@ export default function Footer() {
               </div>
 
               <div className="newsletter-wrapper">
-                <input
-                  type="text"
-                  placeholder="Write to Us - issue in very brief"
-                  className="newsletter-input"
-                  suppressHydrationWarning
-                />
-                <button className="newsletter-btn">Submit</button>
+                <Link href="/contact#leave-message" className="newsletter-input-link">
+                  <input
+                    type="text"
+                    placeholder="Write to Us - issue in very brief"
+                    className="newsletter-input"
+                    readOnly
+                    suppressHydrationWarning
+                  />
+                </Link>
+                <Link href="/contact#leave-message" className="newsletter-btn">
+                  Submit
+                </Link>
               </div>
 
             </div>
@@ -95,8 +100,9 @@ export default function Footer() {
       <div className="footer-nav-bar">
         <div className="container footer-nav-container">
           <Link href="/" className="footer-nav-link">Home</Link>
-          <Link href="/expertise" className="footer-nav-link">Expertise</Link>
-          <Link href="/legalupdates" className="footer-nav-link">Legal Updates</Link>
+          <Link href="/expertise" className="footer-nav-link">Areas of Practice</Link>
+          <Link href="/professional-services" className="footer-nav-link">Professional Services</Link>
+          <Link href="/legalupdates" className="footer-nav-link">Legal Updates & Blog</Link>
           <Link href="/contact" className="footer-nav-link">Contact</Link>
         </div>
       </div>

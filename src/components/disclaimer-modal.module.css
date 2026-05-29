@@ -92,9 +92,9 @@
 }
 
 .proceedBtn {
-  background-color: #d4b886;
+  background-color: #bda588;
   color: #fff;
-  border: 0.3px solid #d4b886;
+  border: 0.3px solid #bda588;
   width: auto;
   min-width: 160px;
   height: 47px;
@@ -116,10 +116,10 @@
 
 .proceedBtn:hover {
   transform: translateY(-2px);
-  background-color: #c5a065;
-  border-color: #c5a065;
+  background-color: #bda588;
+  border-color: #bda588;
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(197, 160, 101, 0.3);
+  box-shadow: 0 4px 15px rgba(189, 165, 136, 0.3);
 }
 
 .proceedBtn:disabled {

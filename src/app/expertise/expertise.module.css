@@ -23,7 +23,7 @@
   font-size: 11px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #C5A065;
+  color: #bda588;
   margin: 0 0 14px 0;
 }
 
@@ -73,6 +73,8 @@
   overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
   cursor: pointer;
+  display: block;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -96,7 +98,7 @@
   font-family: "DM Serif Display";
   font-size: 50px;
   font-weight: 400;
-  color: rgba(189, 165, 136, 0.08);
+  color: rgba(189, 165, 136, 0.4);
   user-select: none;
   -webkit-user-select: none;
   pointer-events: none;
@@ -108,7 +110,7 @@
 }
 
 .card:hover .acaWatermark {
-  color: #BDA588;
+  color: #bda588;
 }
 
 .cardIcon {
@@ -141,7 +143,7 @@
 }
 
 .cardTitle:hover {
-  color: #C5A065;
+  color: #bda588;
 }
 
 .cardExcerpt {

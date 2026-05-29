@@ -100,30 +100,41 @@ export default function Header() {
 
           <div className="nav-item-with-dropdown expertise-dropdown">
             {/* Parent */}
-            <button
-              className={`mobile-parent-link navItem ${openParent === "expertise" ? "active" : ""}`}
-              onClick={() =>
-                setOpenParent(openParent === "expertise" ? null : "expertise")
-              }
-            >
-              Expertise
-              <svg
-                width="10"
-                height="6"
-                viewBox="0 0 12 8"
-                className="desktop-arrow"
-                aria-hidden="true"
+            <div className={`mobile-parent-row ${openParent === "expertise" ? "active" : ""}`}>
+              <Link
+                href="/expertise"
+                className="mobile-parent-link navItem"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <path
-                  d="M1 1L6 6L11 1"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </svg>
-            </button>
+                Areas of Practice
+              </Link>
+              <button
+                type="button"
+                className="mobile-dropdown-toggle"
+                onClick={() =>
+                  setOpenParent(openParent === "expertise" ? null : "expertise")
+                }
+                aria-expanded={openParent === "expertise"}
+                aria-label="Toggle Areas of Practice dropdown"
+              >
+                <svg
+                  width="10"
+                  height="6"
+                  viewBox="0 0 12 8"
+                  className="desktop-arrow"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 1L6 6L11 1"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+            </div>
 
             {/* Mobile Accordion */}
             <div className={`mobile-accordion ${openParent === "expertise" ? "open" : ""}`}>
@@ -158,7 +169,7 @@ export default function Header() {
               // className={pathname.startsWith("/expertise") ? "nav-link-active" : ""}
               className={`desktop-only navItem ${pathname.startsWith("/expertise") ? "nav-link-active" : ""}`}
             >
-              Expertise
+              Areas of Practice
               <svg
                 width="10"
                 height="6"
@@ -218,7 +229,7 @@ export default function Header() {
             className={pathname.startsWith("/legalupdates") ? "nav-link-active navItem" : "navItem"}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Legal Updates
+            Legal Updates & Blog
           </Link>
 
           {/* ✅ REAL CONTACT PAGE */}

@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  min-height: 310px;
+  padding: 120px 24px 92px;
+  background: #173e62;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 760px;
+  height: 760px;
+  left: 20%;
+  top: -565px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.hero::after {
+  width: 760px;
+  height: 760px;
+  right: -205px;
+  bottom: -565px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: clamp(36px, 4.4vw, 66px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f4f2ee;
+  padding: 70px 24px 76px;
+}
+
+.article {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+}
+
+.article h1 {
+  color: #173e62;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 28px;
+}
+
+.article h2 {
+  color: #4f5b66;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 30px 0 18px;
+}
+
+.article p {
+  color: #5f6670;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.85;
+  margin: 0 0 18px;
+}
+
+.readBlock {
+  margin-top: 34px;
+}
+
+.readBlock p {
+  color: #d09d67;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+
+.readBlock a {
+  color: #4d5964;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 240px;
+    padding: 92px 20px 66px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .page {
+    padding: 54px 20px 58px;
+  }
+
+  .article h1 {
+    margin-bottom: 22px;
+  }
+}

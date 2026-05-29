@@ -18,16 +18,18 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-  src="/images/legalupdate2.svg"
-  alt="Legal update 1"
-  width={300}
-  height={200}
-  style={{ height: "auto", objectFit: "contain" }}
-/>
+                src="/images/legalupdate1_1.svg"
+                alt="Legal update 1"
+                width={300}
+                height={200}
+                style={{ height: "auto", objectFit: "contain" }}
+              />
             </div>
             <div className="legal-content">
               <div className="update-meta">
-                <span>Author Name</span>
+                <span>Blog/Legal Update 01</span>
+                <span>Amar Correa</span>
+                <span className="update-meta-line" aria-hidden="true" />
                 <span>August 28, 2025</span>
               </div>
               <h4 className="update-title">An Incorrect View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
@@ -38,7 +40,7 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate2.svg"
+                src="/images/legalupdate2_2.svg"
                 alt="Legal update 2"
                 width={534}
                 height={309}
@@ -47,7 +49,9 @@ export default function LegalUpdatesPreview() {
             </div>
             <div className="legal-content">
               <div className="update-meta">
-                <span>Author Name</span>
+                <span>Blog/Legal Update 02</span>
+                <span>Amar Correa</span>
+                <span className="update-meta-line" aria-hidden="true" />
                 <span>August 28, 2025</span>
               </div>
               <h4 className="update-title">The Correct View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>

@@ -6,7 +6,7 @@ export default function About() {
       <div className="container">
         <div className="about-bg">
           <div className="about-content" style={{ color: '#4F4F4F' }}>
-            <h2>Amar Correa Associates, Juris</h2>
+            <h2>Overview</h2>
 
             <p>
               Amar Correa Associates, Juris - <span style={{ fontWeight: 600 }}>ACA</span><span style={{ fontWeight: 400 }}>Juris</span>, is a Bangalore-based multidisciplinary law chambers with a core focus on criminal law. Established in 2002, it brings over 25 years of experience in advising and representing individual and corporate clients across all stages of criminal litigation—from Magistrate and Sessions Courts to the High Court.

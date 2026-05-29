@@ -1,36 +1,69 @@
 .page {
-  background: #F4F2EE;
+  background: #ffffff;
   min-height: 100vh;
 }
 
 .hero {
   position: relative;
-  min-height: 320px;
+  min-height: 310px;
+  padding: 120px 24px 92px;
+  background: #173e62;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 24px;
-  background-color: #0000;
-  background-image: linear-gradient(#173e62c7, #173e62c7), url("/Page banner/Frame 1984078307.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll, scroll;
-  background-origin: padding-box, padding-box;
-  background-clip: border-box, border-box;
-  text-align: center;
   overflow: hidden;
+  text-align: center;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 760px;
+  height: 760px;
+  left: 20%;
+  top: -565px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.hero::after {
+  width: 760px;
+  height: 760px;
+  right: -205px;
+  bottom: -565px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hero p,
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: "Be Vietnam", sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.hero p {
+  color: #d1b892;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
 }
 
 .hero h1 {
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 46px;
-  font-weight: 400;
-  line-height: 1.15;
   color: #ffffff;
-  text-align: center;
-  margin: 0;
-  letter-spacing: 0.5px;
+  font-size: clamp(36px, 4.4vw, 66px);
+  font-weight: 400;
+  line-height: 1.08;
+  text-transform: uppercase;
 }
 
 .services {
@@ -38,28 +71,29 @@
 }
 
 .serviceBand {
-  background: #F4F2EE;
-  padding: 92px 24px;
+  background: #ffffff;
+  padding: 76px 24px;
+  scroll-margin-top: 104px;
 }
 
 .altBand {
-  background: #EEEAE4;
+  background: #f1efeb;
 }
 
 .serviceInner {
-  max-width: 980px;
+  width: min(100%, 960px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(280px, 480px) minmax(280px, 1fr);
+  grid-template-columns: 300px 520px;
   align-items: center;
-  gap: 42px;
+  gap: 90px;
 }
 
 .reverse {
-  grid-template-columns: minmax(280px, 1fr) minmax(280px, 480px);
+  grid-template-columns: 520px 300px;
 }
 
-.reverse .mediaWrap {
+.reverse .serviceCard {
   order: 2;
 }
 
@@ -67,80 +101,146 @@
   order: 1;
 }
 
-.mediaWrap {
-  position: relative;
+.serviceCard {
+  width: 300px;
+  height: 205px;
+  padding: 40px 28px 34px;
+  background: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 12px 26px rgba(31, 38, 47, 0.1);
+}
+
+.cardBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #DED7D7;
-  box-shadow: 0 18px 48px rgba(23, 62, 98, 0.12);
+  margin-bottom: 24px;
+  color: #bda588;
+  font-family: "DM Serif Display", "Playfair Display", serif;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
-.serviceImage {
-  object-fit: cover;
+.cardIcon {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  opacity: 1;
 }
 
-.copy h2 {
+.serviceCard h2 {
+  max-width: 230px;
+  color: #173e62;
   font-family: "Be Vietnam", sans-serif;
-  color: #173E62;
-  font-size: 27px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.22;
-  margin: 0 0 28px;
+  line-height: 1.28;
+  margin: 0;
+}
+
+.copy {
+  width: 520px;
+  max-width: 100%;
 }
 
 .copy p {
+  color: #636972;
   font-family: "Be Vietnam", sans-serif;
-  color: #737982;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.9;
+  letter-spacing: 0;
   margin: 0;
-  text-align: justify;
+}
+
+@media (max-width: 1100px) {
+  .serviceInner {
+    grid-template-columns: minmax(260px, 300px) minmax(0, 520px);
+    gap: clamp(44px, 6vw, 74px);
+  }
+
+  .reverse {
+    grid-template-columns: minmax(0, 520px) minmax(260px, 300px);
+  }
 }
 
 @media (max-width: 900px) {
+  .hero {
+    min-height: 260px;
+    padding: 98px 22px 70px;
+  }
+
+  .hero::before {
+    left: -180px;
+    top: -610px;
+  }
+
+  .hero::after {
+    right: -360px;
+    bottom: -610px;
+  }
+
+  .serviceBand {
+    padding: 56px 22px;
+  }
+
   .serviceInner,
   .reverse {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 30px;
+    justify-items: center;
   }
 
-  .reverse .mediaWrap,
+  .reverse .serviceCard,
   .reverse .copy {
     order: initial;
   }
 
-  .serviceBand {
-    padding: 64px 22px;
+  .copy {
+    width: min(100%, 620px);
   }
 
-  .copy h2 {
-    font-size: 24px;
-    margin-bottom: 18px;
+  .copy p {
+    text-align: center;
   }
 }
 
 @media (max-width: 560px) {
   .hero {
-    min-height: 240px;
-    padding: 72px 20px;
+    min-height: 220px;
+    padding: 86px 20px 58px;
+  }
+
+  .hero p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .serviceBand {
-    padding: 46px 20px;
+    padding: 42px 20px;
   }
 
-  .copy h2 {
-    font-size: 22px;
+  .serviceCard {
+    width: min(100%, 300px);
+    height: 205px;
+    padding: 34px 22px 30px;
   }
 
   .copy p {
-    text-align: left;
+    font-size: clamp(12px, 3.4vw, 14px);
+    line-height: 1.85;
   }
 }

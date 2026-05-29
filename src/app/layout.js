@@ -29,7 +29,6 @@
 // }
 
 
-import ContactFloating from "@/components/ContactFloating/ContactFloating";
 import DisclaimerModal from "@/components/disclaimer-modal";
 import Footer from "@/components/footer";
 import "./globals.css";
@@ -55,7 +54,6 @@ export default function RootLayout({ children }) {
         <DisclaimerModal />
         {children}
         <Footer />
-        <ContactFloating />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ContactFloating from "../ContactFloating/ContactFloating.jsx";
 
 export default function Hero() {
   return (
@@ -58,6 +59,8 @@ export default function Hero() {
 
 
       </div>
+
+      <ContactFloating />
 
     </section>
   );

@@ -91,7 +91,7 @@
   font-family: "Be Vietnam", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: 26.25px;
+  line-height: 18.25px;
   letter-spacing: 0;
   color: #66717a;
   text-decoration: none;
@@ -204,7 +204,7 @@
 .formInput {
   color: #66717a;
   background: #fff;
-  border: 1px solid #767676;
+  border: 0.5px solid #cfcfcf;
   border-radius: 30px;
   outline: none;
   width: 100%;
@@ -232,7 +232,7 @@
   color: #66717a;
   resize: none;
   background: #fff;
-  border: 1px solid #767676;
+  border: 0.5px solid #cfcfcf;
   border-radius: 18.5px;
   outline: none;
   width: 654px;
@@ -258,8 +258,8 @@
 .submitBtn {
   height: 47px;
   padding: 0 41px;              /* keeps width flexible */
-  background: #d4b886;
-  border: 1px solid #d4b886;
+  background: #bda588;
+  border: 1px solid #bda588;
   border-radius: 5px;
 
   font-family: "Be Vietnam", sans-serif;

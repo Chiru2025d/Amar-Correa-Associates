@@ -4,7 +4,7 @@ import styles from "./contact.module.css";
 
 export default function ContactForm() {
   return (
-    <section className={styles.contactForm}>
+    <section id="leave-message" className={styles.contactForm}>
 
       {/* LEAVE A MESSAGE */}
       <p className={styles.leaveMessage}>LEAVE A MESSAGE</p>
