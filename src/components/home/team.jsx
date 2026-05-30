@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 export default function TeamPreview() {
   const team = [
-    { name: "Shridevi M Bhosale", role: "Senior Associate", img: "/images/shridevi-optimized.webp", phone: "+91 7795611707", email: "shridevi.b@acajuris.com" },
-    { name: "Prasad Maharajpeth", role: "Senior Associate", img: "/images/prasad-optimized.webp", phone: "+91 88611 93973", email: "prasad.m@acajuris.com" },
-    { name: "Abhiram K", role: "Associate", img: "/images/abhiram-optimized.webp", phone: "+91 73382 87915", email: "abhiram.k@acajuris.com" },
-    { name: "Mahindra V T", role: "Associate", img: "/images/mahindra-optimized.webp", phone: "+91 80958 51856", email: "mahinda.v@acajuris.com" },
+    { name: "Shridevi M Bhosale", role: "Senior Associate", img: "/images/Sridevi_V1.svg", phone: "+91 7795611707", email: "shridevi.b@acajuris.com" },
+    { name: "Prasad Maharajpeth", role: "Senior Associate", img: "/images/Prasad_V1.svg", phone: "+91 88611 93973", email: "prasad.m@acajuris.com" },
+    { name: "Abhiram K", role: "Associate", img: "/images/Abhi_V1.svg", phone: "+91 73382 87915", email: "abhiram.k@acajuris.com" },
+    { name: "Mahindra V T", role: "Associate", img: "/images/Mahindra_V1.svg", phone: "+91 80958 51856", email: "mahinda.v@acajuris.com" },
   ];
 
   /* 
@@ -24,13 +24,16 @@ export default function TeamPreview() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
+      let nextItemsVisible = 4;
+
       if (width <= 768) {
-        setItemsVisible(1);
+        nextItemsVisible = 1;
       } else if (width <= 1024) {
-        setItemsVisible(2);
-      } else {
-        setItemsVisible(4);
+        nextItemsVisible = 2;
       }
+
+      setItemsVisible(nextItemsVisible);
+      setStartIndex((prev) => Math.min(prev, Math.max(0, teamLength - nextItemsVisible)));
     };
 
     // Set initial
@@ -61,13 +64,6 @@ export default function TeamPreview() {
   const handleNext = () => {
     setStartIndex((prev) => Math.min(maxIndex, prev + 1));
   };
-
-  // Prevent index out of bounds when switching viewports
-  useEffect(() => {
-    if (startIndex > maxIndex) {
-      setStartIndex(maxIndex);
-    }
-  }, [itemsVisible, maxIndex, startIndex]);
 
   return (
     <section className="team-preview">
