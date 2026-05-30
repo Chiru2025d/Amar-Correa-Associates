@@ -6,10 +6,20 @@ import ContactFloating from "../ContactFloating/ContactFloating.jsx";
 export default function Hero() {
   return (
     <section id="hero-section" className="hero-wrapper">
-      <div className="hero-bg-art" aria-hidden="true" />
+      <div className="hero-bg-art" aria-hidden="true">
+        <Image
+          src="/images/hero-bg-optimized.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="hero-bg-image"
+          priority
+          quality={85}
+        />
+      </div>
       <div className="hero-desktop-logo" aria-hidden="true">
         <Image
-          src="/images/New logo.svg"
+          src="/images/New logo.png"
           alt=""
           width={180}
           height={180}
@@ -19,7 +29,7 @@ export default function Hero() {
       </div>
       <div className="hero-mobile-logo" aria-hidden="true">
         <Image
-          src="/images/New logo.svg"
+          src="/images/New logo.png"
           alt=""
           width={180}
           height={180}

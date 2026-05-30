@@ -156,10 +156,12 @@
     height: 100%;
     z-index: 0;
     overflow: hidden;
-        background-image: url('/images/1920x1080 BG.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+    background: #07121c;
+}
+
+.hero-bg-image {
+    object-fit: cover;
+    object-position: center center;
 }
 
 .hero-content {
