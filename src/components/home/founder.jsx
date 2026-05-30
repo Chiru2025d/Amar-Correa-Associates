@@ -64,7 +64,7 @@ export default function Founder() {
                     </div>
                     <div className="founder-img-wrap">
                         <Image
-                            src="/images/amar.png"
+                            src="/images/amar-optimized.webp"
                             alt="Amar Correa"
                             className='founderImg'
                             width={400}

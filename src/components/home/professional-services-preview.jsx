@@ -10,74 +10,74 @@ const professionalServices = [
     group: "advisory",
     title: "Legal Consultation & Counsel Services",
     desc: "From identifying the existence of a fraud or civil wrong to assessing remedies and the right stage for action, ACAJuris provides practical counsel through meetings, document review, and strategic advice.",
-    banner: "/images/Professional services/P1.jpg",
+    banner: "/images/Professional services/optimized/P1.webp",
   },
   {
     slug: "legal-opinion",
     group: "advisory",
     title: "Legal Opinion",
     desc: "Upon review of agreements, deeds, records, communications, facts, and surrounding circumstances, ACAJuris renders legal opinions by applying prevailing laws to the matter.",
-    banner: "/images/Professional services/P2.jpg",
+    banner: "/images/Professional services/optimized/P2.webp",
   },
   {
     slug: "legal-drafting-initiation",
     group: "advisory",
     title: "Legal Drafting & Initiation",
     desc: "Drafting and assistance for complaints before police, complaint presentation before court, and initiation of legal processes with representation at the relevant stage.",
-    banner: "/images/Professional services/P3.jpg",
+    banner: "/images/Professional services/optimized/P3.webp",
   },
   {
     slug: "police-station-assistance",
     group: "advisory",
     title: "Police Station - Assistance",
     desc: "Representative assistance before police for representations, complaint initiation, inquiry summons, show-cause responses, and related circumstances.",
-    banner: "/images/Professional services/P10.jpg",
+    banner: "/images/Professional services/optimized/P10.webp",
   },
   {
     slug: "representative-services-before-trial-courts",
     group: "representation",
     title: "Representative Services before Trial Courts",
     desc: "Comprehensive handling of matters from initial legal counsel and strategy to drafting necessary pleadings and representing clients before court.",
-    banner: "/images/Professional services/P4.jpg",
+    banner: "/images/Professional services/optimized/P4.webp",
   },
   {
     slug: "representation-before-high-court",
     group: "representation",
     title: "Representation Before High Court",
     desc: "Filing and arguing quashing petitions, writ petitions, appeals, revisions, contempt cases, and related proceedings before the High Court of Karnataka.",
-    banner: "/images/Professional services/P5.jpg",
+    banner: "/images/Professional services/optimized/P5.webp",
   },
   {
     slug: "senior-advocate-engagements",
     group: "representation",
     title: "Senior Advocate Engagements",
     desc: "Engaging Senior Advocates where desirable, primarily at stages involving interim relief, stay, or final disposal on merits in matters handled by ACAJuris.",
-    banner: "/images/Professional services/P6.jpg",
+    banner: "/images/Professional services/optimized/P6.webp",
   },
   {
     slug: "supreme-court-matters",
     group: "representation",
     title: "Supreme Court Matters",
     desc: "ACAJuris refers matters to Supreme Court lawyers, continues counsel services in referred matters, and assists during important stages and arguments.",
-    banner: "/images/Professional services/P7.jpg",
+    banner: "/images/Professional services/optimized/P7.webp",
   },
   {
     slug: "criminal-trials",
     group: "representation",
     title: "Criminal Trials",
     desc: "Criminal trial work demands exacting preparation and advocacy. ACAJuris has significant exposure in conducting challenging criminal trials.",
-    banner: "/images/Professional services/P8.jpg",
+    banner: "/images/Professional services/optimized/P8.webp",
   },
   {
     slug: "criminal-appeals-revisions",
     group: "representation",
     title: "Criminal Appeals & Revisions",
     desc: "Representation in criminal appeals and revisions before District Courts and the High Court, from studying trial records to drafting and arguments.",
-    banner: "/images/Professional services/P9.jpg",
+    banner: "/images/Professional services/optimized/P9.webp",
   },
 ];
 
-const professionalServicesBanner = "/Banner/PS1.png";
+const professionalServicesBanner = "/Banner/optimized/PS1.webp";
 const autoRotateMs = 8000;
 const autoRotateStartDelayMs = 2400;
 
@@ -173,7 +173,6 @@ export default function ProfessionalServicesPreview() {
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: "cover" }}
               priority={index === 0}
-              unoptimized
             />
           </div>
           <div className="expertise-card-content">

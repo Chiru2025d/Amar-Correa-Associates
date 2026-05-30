@@ -18,7 +18,7 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate1_1.svg"
+                src="/images/legalupdate1-card.png"
                 alt="Legal update 1"
                 width={300}
                 height={200}
@@ -40,7 +40,7 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate2_2.svg"
+                src="/images/legalupdate2-card.png"
                 alt="Legal update 2"
                 width={534}
                 height={309}
