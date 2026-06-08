@@ -44,9 +44,9 @@ export default function Culture() {
       {/* Mobile: Show static card images */}
       {isMobile ? (
         <div className="culture-mobile-images">
-          <Image src="/images/a-core-culture-optimized.webp" alt="A Core Culture" width={720} height={840} className="culture-mobile-card" />
-          <Image src="/images/our-core-expertise-optimized.webp" alt="Our Core Expertise" width={720} height={840} className="culture-mobile-card" />
-          <Image src="/images/a-core-services-optimized.webp" alt="A Core Services" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/A Core Culture.png" alt="A Core Culture" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/Our Core Expertise.png" alt="Our Core Expertise" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/A Core Services.png" alt="A Core Services" width={720} height={840} className="culture-mobile-card" />
         </div>
       ) : (
         /* Desktop: Show interactive cards - Original */

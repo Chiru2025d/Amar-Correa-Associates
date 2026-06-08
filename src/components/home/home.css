@@ -1275,24 +1275,24 @@
 /* --- Mobile (Max Width: 480px) --- */
 @media screen and (max-width: 480px) {
     .culture-section {
-        padding: 40px 20px !important;
         background-color: #f0e8df;
+        padding: 70px 20px !important;
     }
 
     .culture-heading {
         text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 10px;
-        padding: 0;
         width: 100%;
+        margin-bottom: 9px;
+        padding: 27px;
+        font-size: 20px;
+        font-weight: 600;
     }
 
     /* Mobile Images Container */
     .culture-mobile-images {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 70px;
         width: 100%;
     }
 
