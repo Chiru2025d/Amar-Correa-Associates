@@ -1,6 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleWriteToUs = (event) => {
+    if (pathname !== "/contact") {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.replaceState(null, "", "/contact#leave-message");
+    document.getElementById("leave-message")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <footer className="footer-new">
 
@@ -76,17 +94,14 @@ export default function Footer() {
               </div>
 
               <div className="newsletter-wrapper">
-                <Link href="/contact#leave-message" className="newsletter-input-link">
-                  <input
-                    type="text"
-                    placeholder="Write to Us - issue in very brief"
-                    className="newsletter-input"
-                    readOnly
-                    suppressHydrationWarning
-                  />
-                </Link>
-                <Link href="/contact#leave-message" className="newsletter-btn">
-                  Submit
+                <Link
+                  href="/contact#leave-message"
+                  className="newsletter-input-link"
+                  onClick={handleWriteToUs}
+                >
+                  <span className="newsletter-input">
+                    Write to Us - issue in very brief
+                  </span>
                 </Link>
               </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ContactFloating from "../ContactFloating/ContactFloating.jsx";
 
 export default function Hero() {
@@ -62,9 +63,9 @@ export default function Hero() {
         </div>
 
         <div className="hero-cta-group">
-          <button className="hero-btn primary">
+          <Link href="/expertise" className="hero-btn primary">
             Practice Areas →
-          </button>
+          </Link>
         </div>
 
 

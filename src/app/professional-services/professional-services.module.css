@@ -1,43 +1,23 @@
 .page {
-  background: #ffffff;
+  background: #f8f5ef;
   min-height: 100vh;
 }
 
 .hero {
   position: relative;
-  min-height: 310px;
-  padding: 120px 24px 92px;
-  background: #173e62;
+  min-height: 260px;
+  padding: 0 24px;
+  background-color: #173e62;
+  background-image: url("/Page banner/Frame 1984078307.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   text-align: center;
-}
-
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  pointer-events: none;
-}
-
-.hero::before {
-  width: 760px;
-  height: 760px;
-  left: 20%;
-  top: -565px;
-  background: rgba(255, 255, 255, 0.035);
-}
-
-.hero::after {
-  width: 760px;
-  height: 760px;
-  right: -205px;
-  bottom: -565px;
-  background: rgba(255, 255, 255, 0.025);
+  overflow: hidden;
 }
 
 .hero p,
@@ -45,202 +25,366 @@
   position: relative;
   z-index: 1;
   font-family: "Be Vietnam", sans-serif;
-  letter-spacing: 0;
   margin: 0;
 }
 
 .hero p {
   color: #d1b892;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 6px;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 .hero h1 {
   color: #ffffff;
-  font-size: clamp(36px, 4.4vw, 66px);
+  font-size: 44px;
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
 .services {
-  width: 100%;
-}
-
-.serviceBand {
-  background: #ffffff;
-  padding: 76px 24px;
-  scroll-margin-top: 104px;
-}
-
-.altBand {
-  background: #f1efeb;
-}
-
-.serviceInner {
-  width: min(100%, 960px);
+  gap: 100px;
+  width: min(1200px, 100%);
   margin: 0 auto;
+  padding: 80px 24px 120px;
   display: grid;
-  grid-template-columns: 300px 520px;
-  align-items: center;
-  gap: 90px;
-}
-
-.reverse {
-  grid-template-columns: 520px 300px;
-}
-
-.reverse .serviceCard {
-  order: 2;
-}
-
-.reverse .copy {
-  order: 1;
 }
 
 .serviceCard {
-  width: 300px;
-  height: 205px;
-  padding: 40px 28px 34px;
-  background: #ffffff;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 0 12px 26px rgba(31, 38, 47, 0.1);
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #173e621f;
+  border-radius: 20px;
+  grid-template-columns: minmax(0, 1fr) 12px 380px;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  height: 343px;
+  display: grid;
+  position: relative;
+  overflow: hidden;
 }
 
-.cardBrand {
+.serviceCard.imageLeft {
+  grid-template-columns: 380px 12px minmax(0, 1fr);
+}
+
+.cardDivider {
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  display: flex;
+  visibility: visible;
+}
+
+.cardDivider::before {
+  content: none;
+}
+
+.cardMedia {
+  position: relative;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 26px;
-  width: 100%;
-  margin-bottom: 24px;
-  color: #bda588;
-  font-family: "DM Serif Display", "Playfair Display", serif;
-  font-size: 36px;
-  line-height: 1;
-  letter-spacing: 0;
+  padding: 56px 32px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  min-height: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.serviceCard.imageLeft .cardMedia {
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.serviceCard.imageLeft .cardContent {
+  border-radius: 0 32px 32px 0;
+}
+
+.cardContent {
+  background: transparent;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 17px;
+  height: 100%;
+  min-height: 100%;
+  padding: 56px 42px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reduce left padding for cards where image is on the left */
+.serviceCard.imageLeft .cardContent {
+  padding-left: 12px;
+}
+
+.serviceCard:not(.imageLeft) .cardContent {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.iconCircle {
+  /* background: #1a4c7a; */
+  border: 1px solid #bda588;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+  display: flex;
+}
+
+.iconBg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardIcon {
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  opacity: 1;
 }
 
-.serviceCard h2 {
-  max-width: 230px;
+.cardIndicator {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 0px;
+  visibility: hidden;
+}
+
+.cardLogo {
+  /* opacity: 0.56; */
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  /* height: 56px; */
+  /* margin-top: 28px; */
+  display: flex;
+}
+
+.cardLogoImg {
+  width: 100%;
+  height: auto;
+}
+
+.indicatorLine {
+  display: block;
+  width: 88px;
+  height: 2px;
+  background: #d7c7a1;
+  border-radius: 999px;
+}
+
+.indicatorDots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicatorDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d7c7a1;
+  opacity: 0.8;
+}
+
+.cardContent h2 {
   color: #173e62;
+  max-width: 620px;
+  margin: 0;
   font-family: "Be Vietnam", sans-serif;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
-  line-height: 1.28;
+  line-height: 1.08;
+}
+
+.cardContent p {
+  color: #5d6670;
+  max-width: 620px;
   margin: 0;
-}
-
-.copy {
-  width: 520px;
-  max-width: 100%;
-}
-
-.copy p {
-  color: #636972;
   font-family: "Be Vietnam", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.9;
-  letter-spacing: 0;
-  margin: 0;
 }
 
-@media (max-width: 1100px) {
-  .serviceInner {
-    grid-template-columns: minmax(260px, 300px) minmax(0, 520px);
-    gap: clamp(44px, 6vw, 74px);
-  }
-
-  .reverse {
-    grid-template-columns: minmax(0, 520px) minmax(260px, 300px);
-  }
+.mobileImagesContainer {
+  display: none;
+  width: 100%;
+  flex-direction: column;
 }
 
-@media (max-width: 900px) {
-  .hero {
-    min-height: 260px;
-    padding: 98px 22px 70px;
-  }
+.mobileImageWrapper {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
 
-  .hero::before {
-    left: -180px;
-    top: -610px;
-  }
+.mobileImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 
-  .hero::after {
-    right: -360px;
-    bottom: -610px;
-  }
-
-  .serviceBand {
-    padding: 56px 22px;
-  }
-
-  .serviceInner,
-  .reverse {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    justify-items: center;
-  }
-
-  .reverse .serviceCard,
-  .reverse .copy {
-    order: initial;
-  }
-
-  .copy {
-    width: min(100%, 620px);
-  }
-
-  .copy p {
-    text-align: center;
+@media (min-width: 1025px) {
+  .cardContent {
+    padding: 29px 16px;
   }
 }
 
-@media (max-width: 560px) {
-  .hero {
-    min-height: 220px;
-    padding: 86px 20px 58px;
-  }
-
-  .hero p {
-    font-size: 9px;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
-  }
-
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .serviceBand {
-    padding: 42px 20px;
+@media (min-width: 761px) and (max-width: 1024px) {
+  .services {
+    --tablet-text-move-x: 0px;
+    --tablet-text-move-y: 0px;
+    --tablet-first-text-move-y: 0px;
+    --tablet-right-text-move-x: 16px;
+    --tablet-right-text-move-y: 38px;
   }
 
   .serviceCard {
-    width: min(100%, 300px);
-    height: 205px;
-    padding: 34px 22px 30px;
+    border-radius: 20px;
+    grid-template-columns: minmax(0, 1fr) 12px 32%;
+    height: 275px;
   }
 
-  .copy p {
-    font-size: clamp(12px, 3.4vw, 14px);
-    line-height: 1.85;
+  .serviceCard.imageLeft {
+    grid-template-columns: 32% 12px minmax(0, 1fr);
+  }
+
+  .cardIndicator {
+    display: none;
+  }
+
+  .cardContent {
+    gap: clamp(9px, 1.4vw, 14px);
+    padding: clamp(20px, 2.8vw, 28px) clamp(18px, 3vw, 30px);
+    transform: translate(
+      var(--tablet-text-move-x),
+      var(--tablet-text-move-y)
+    );
+  }
+
+  .serviceCard:not(.imageLeft) .cardContent {
+    transform: translate(
+      calc(var(--tablet-text-move-x) + var(--tablet-right-text-move-x)),
+      calc(var(--tablet-text-move-y) + var(--tablet-right-text-move-y))
+    );
+  }
+
+  .cardContent h2 {
+    font-size: clamp(17px, 2.15vw, 23px);
+    line-height: 1.12;
+  }
+
+  .cardContent p {
+    font-size: clamp(11px, 1.35vw, 14px);
+    line-height: 1.55;
+  }
+
+  .serviceCard:nth-of-type(1) .cardContent,
+  .serviceCard:nth-of-type(3) .cardContent,
+  .serviceCard:nth-of-type(5) .cardContent,
+  .serviceCard:nth-of-type(7) .cardContent,
+  .serviceCard:nth-of-type(9) .cardContent {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: clamp(64px, 5vw, 52px);
+    transform: translate(
+      var(--tablet-text-move-x),
+      calc(var(--tablet-text-move-y) + var(--tablet-first-text-move-y))
+    );
+  }
+}
+
+@media (max-width: 760px) {
+  .serviceCard {
+    display: none;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .mobileImagesContainer {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 30px;
+  }
+
+  .mobileImageWrapper {
+    display: block;
+    box-shadow: 0 10px 24px rgba(23, 62, 98, 0.14);
+  }
+
+  .serviceCard {
+    display: none;
+  }
+
+  .hero {
+    min-height: 240px;
+    padding: 72px 20px;
+  }
+
+  .hero p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .services {
+    padding: 56px 20px 80px;
+    gap: 24px;
+  }
+
+  .cardContent h2 {
+    font-size: 28px;
+  }
+
+  .cardContent p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .serviceCard {
+    border-radius: 24px;
+  }
+
+  .cardMedia {
+    padding: 32px 18px;
+  }
+
+  .iconCircle {
+    width: 170px;
+    height: 170px;
+  }
+
+  .iconBg {
+    width: 110px;
+    height: 110px;
   }
 }

@@ -75,6 +75,40 @@ const professionalServices = [
   },
 ];
 
+const boxImageDesignTitles = new Set([
+  "Legal Consultation & Counsel Services",
+  "Legal Drafting & Initiation",
+  "Representation Before High Court",
+  "Supreme Court Matters",
+  "Criminal Appeals & Revisions",
+]);
+
+const mobileServiceImages = [
+  "/images/Professional services - Mobile/P1.png",
+  "/images/Professional services - Mobile/P2.png",
+  "/images/Professional services - Mobile/P3.png",
+  "/images/Professional services - Mobile/P4.png",
+  "/images/Professional services - Mobile/P5.png",
+  "/images/Professional services - Mobile/P6.png",
+  "/images/Professional services - Mobile/P7.png",
+  "/images/Professional services - Mobile/P8.png",
+  "/images/Professional services - Mobile/P9.png",
+  "/images/Professional services - Mobile/P10.png",
+];
+
+const webServiceImages = [
+  "/images/Professional services - web/P1-Web.png",
+  "/images/Professional services - web/P2-Web.png",
+  "/images/Professional services - web/P3-Web.png",
+  "/images/Professional services - web/P4-Web.png",
+  "/images/Professional services - web/P5-Web.png",
+  "/images/Professional services - web/P6-Web.png",
+  "/images/Professional services - web/P7-Web.png",
+  "/images/Professional services - web/P8-Web.png",
+  "/images/Professional services - web/P9-Web.png",
+  "/images/Professional services - web/P10-Web.png",
+];
+
 export default function ProfessionalServicesPage() {
   return (
     <>
@@ -87,33 +121,90 @@ export default function ProfessionalServicesPage() {
         </section>
 
         <section className={styles.services} id="professional-services-list">
-          {professionalServices.map((service, index) => (
-            <article
-              id={service.slug}
-              className={`${styles.serviceBand} ${index % 2 === 1 ? styles.altBand : ""}`}
-              key={service.title}
-            >
-              <div className={`${styles.serviceInner} ${index % 2 === 1 ? styles.reverse : ""}`}>
-                <div className={styles.serviceCard}>
-                  <div className={styles.cardBrand} aria-hidden="true">
-                    <span>ACA</span>
-                    <Image
-                      src={service.icon}
-                      alt=""
-                      width={64}
-                      height={64}
-                      className={styles.cardIcon}
-                    />
+          <div className={styles.mobileImagesContainer}>
+            {mobileServiceImages.map((src, index) => (
+              <div key={index} className={styles.mobileImageWrapper}>
+                <Image
+                  src={src}
+                  alt={`Professional service ${index + 1}`}
+                  width={1200}
+                  height={800}
+                  className={styles.mobileImage}
+                  priority={false}
+                />
+              </div>
+            ))}
+          </div>
+
+          {professionalServices.map((service, index) => {
+            const isBoxImageDesign = boxImageDesignTitles.has(service.title);
+            return (
+              <article
+                id={service.slug}
+                className={`${styles.serviceCard} ${isBoxImageDesign ? styles.imageLeft : ""}`}
+                key={service.title}
+                style={{ backgroundImage: `url("${webServiceImages[index]}")` }}
+              >
+                {isBoxImageDesign && (
+                  <div className={styles.cardMedia}>
+                    <div className={styles.iconCircle}>
+                      <div className={styles.iconBg}>
+                        <Image
+                          src={service.icon}
+                          alt=""
+                          width={64}
+                          height={64}
+                          className={styles.cardIcon}
+                        />
+                      </div>
+                    </div>
+                    <div className={styles.cardLogo}>
+                      <Image
+                        src="/icons/ACA_Dark.png"
+                        alt="ACA"
+                        width={56}
+                        height={56}
+                        className={styles.cardLogoImg}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {isBoxImageDesign && <div className={styles.cardDivider} aria-hidden="true" />}
+
+                <div className={styles.cardContent}>
+                  <div className={styles.cardIndicator}>
+                    <div className={styles.indicatorDots} aria-hidden="true">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <span className={styles.indicatorLine} aria-hidden="true" />
                   </div>
                   <h2>{service.title}</h2>
-                </div>
-
-                <div className={styles.copy}>
                   <p>{service.description}</p>
                 </div>
-              </div>
-            </article>
-          ))}
+
+                {!isBoxImageDesign && <div className={styles.cardDivider} aria-hidden="true" />}
+
+                {!isBoxImageDesign && (
+                  <div className={styles.cardMedia}>
+                    <div className={styles.iconCircle}>
+                      <div className={styles.iconBg}>
+                        <Image
+                          src={service.icon}
+                          alt=""
+                          width={64}
+                          height={64}
+                          className={styles.cardIcon}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </section>
       </main>
     </>

@@ -2347,11 +2347,15 @@
     color: #6f6b73;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 3px;
     margin-bottom: 0;
     text-transform: none;
     letter-spacing: 0;
     flex-wrap: wrap;
+}
+
+.update-meta-separator {
+    color: #8d8781;
 }
 
 .update-meta-line {
@@ -2359,6 +2363,7 @@
     min-width: 42px;
     max-width: 86px;
     height: 1px;
+    margin: 0 1px;
     background: #b8b1aa;
 }
 
@@ -2514,7 +2519,7 @@
     font-size: 22px;
     font-weight: 400;
     color: #000000;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     display: flex;
     align-items: baseline;
     gap: 10px;

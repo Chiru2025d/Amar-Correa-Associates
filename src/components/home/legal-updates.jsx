@@ -18,21 +18,22 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate1-card.png"
+                src="/images/legalupdate1_1.svg"
                 alt="Legal update 1"
-                width={300}
-                height={200}
-                style={{ height: "auto", objectFit: "contain" }}
+                width={534}
+                height={309}
               />
             </div>
             <div className="legal-content">
               <div className="update-meta">
                 <span>Blog/Legal Update 01</span>
+                <span className="update-meta-separator" aria-hidden="true">|</span>
                 <span>Amar Correa</span>
+                <span className="update-meta-separator" aria-hidden="true">|</span>
                 <span className="update-meta-line" aria-hidden="true" />
                 <span>August 28, 2025</span>
               </div>
-              <h4 className="update-title">An Incorrect View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
+              <h4 className="update-title">An Incorrect View on Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
             </div>
           </Link>
 
@@ -40,21 +41,22 @@ export default function LegalUpdatesPreview() {
           <Link href="/legalupdates" className="legal-card">
             <div className="legal-img-wrap">
               <Image
-                src="/images/legalupdate2-card.png"
+                src="/images/legalupdate2_2.svg"
                 alt="Legal update 2"
                 width={534}
                 height={309}
-                style={{ objectFit: 'cover' }}
               />
             </div>
             <div className="legal-content">
               <div className="update-meta">
                 <span>Blog/Legal Update 02</span>
+                <span className="update-meta-separator" aria-hidden="true">|</span>
                 <span>Amar Correa</span>
+                <span className="update-meta-separator" aria-hidden="true">|</span>
                 <span className="update-meta-line" aria-hidden="true" />
                 <span>August 28, 2025</span>
               </div>
-              <h4 className="update-title">The Correct View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
+              <h4 className="update-title">The Correct View on Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
             </div>
           </Link>
         </div>

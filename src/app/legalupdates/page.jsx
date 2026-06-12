@@ -33,6 +33,7 @@ export default function LegalUpdatesPage() {
 
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
+        <p className={styles.heroLabel}>Updates</p>
         <h1 className={styles.heroTitle}>LEGAL UPDATES & BLOG</h1>
       </section>
 
