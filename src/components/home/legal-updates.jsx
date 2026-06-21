@@ -6,29 +6,32 @@ import Image from "next/image";
 const legalUpdates = [
   {
     href: "/legalupdates",
-    image: "/images/legalupdate1_1.svg",
+    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20A.png",
     alt: "Legal update 1",
     meta: "Blog/Legal Update 01",
     author: "Amar Correa",
     date: "August 28, 2025",
+    heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
     title: "An Incorrect View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
   {
     href: "/legalupdates",
-    image: "/images/legalupdate2_2.svg",
+    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20B.png",
     alt: "Legal update 2",
     meta: "Blog/Legal Update 02",
     author: "Amar Correa",
     date: "August 28, 2025",
+    heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
     title: "The Correct View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
   {
     href: "/legalupdates/counsel-accused-video-conference",
-    image: "/images/legalupdate3_3.svg",
+    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
     author: "Amar Correa",
     date: "August 28, 2025",
+    heading: "Counsel-accused Video Conference",
     title: "Counsel-accused Video Conference",
   },
 ];
@@ -53,15 +56,15 @@ export default function LegalUpdatesPreview() {
                 />
               </div>
               <div className="legal-content">
-                <div className="update-meta">
-                  <span>{update.meta}</span>
-                  <span className="update-meta-separator" aria-hidden="true">|</span>
-                  <span>{update.author}</span>
-                  <span className="update-meta-separator" aria-hidden="true">|</span>
-                  <span className="update-meta-line" aria-hidden="true" />
-                  <span>{update.date}</span>
+                <h3 className="update-heading">{update.heading}</h3>
+                <div className="update-bottom">
+                  <h4 className="update-title">{update.title}</h4>
+                  <span className="update-divider" aria-hidden="true" />
+                  <div className="update-footer">
+                    <span>{`Author : ${update.author}`}</span>
+                    <span>{update.date}</span>
+                  </div>
                 </div>
-                <h4 className="update-title">{update.title}</h4>
               </div>
             </Link>
           ))}
