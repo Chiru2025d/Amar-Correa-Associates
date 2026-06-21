@@ -35,6 +35,7 @@
   letter-spacing: 6px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  max-width: 90%;
 }
 
 .hero h1 {
@@ -54,16 +55,17 @@
 }
 
 .serviceCard {
-  background-color: #fff;
+  background-color: #ffffff00;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid #173e621f;
+  background-size: contain;
+  /* border: 1px solid #173e621f; */
   border-radius: 20px;
   grid-template-columns: minmax(0, 1fr) 12px 380px;
   grid-auto-rows: 1fr;
   align-items: stretch;
-  height: 343px;
+  aspect-ratio: 2048 / 714;
+  min-height: 343px;
   display: grid;
   position: relative;
   overflow: hidden;
@@ -224,8 +226,13 @@
 .cardContent p {
   color: #5d6670;
   max-width: 620px;
-  margin: 0;
+  margin: 15px;
   font-family: "Be Vietnam", sans-serif;
+  transform: translateX(-8px);
+}
+
+.serviceCard.imageLeft .cardContent p {
+  transform: translateX(12px);
 }
 
 .mobileImagesContainer {
@@ -247,6 +254,31 @@
   object-fit: contain;
 }
 
+.mobileTextCard {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 24px rgba(23, 62, 98, 0.14);
+  padding: 44px 26px;
+  text-align: center;
+}
+
+.mobileTextCard h2 {
+  color: #173e62;
+  margin: 0 0 20px;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.mobileTextCard p {
+  color: #5d6670;
+  margin: 0;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
 @media (min-width: 1025px) {
   .cardContent {
     padding: 29px 16px;
@@ -258,18 +290,22 @@
     --tablet-text-move-x: 0px;
     --tablet-text-move-y: 0px;
     --tablet-first-text-move-y: 0px;
-    --tablet-right-text-move-x: 16px;
-    --tablet-right-text-move-y: 38px;
+    --tablet-right-text-move-x: 0px;
+    --tablet-right-text-move-y: 0px;
+    gap: clamp(48px, 8vw, 72px);
+    padding: 64px 32px 96px;
   }
 
   .serviceCard {
     border-radius: 20px;
-    grid-template-columns: minmax(0, 1fr) 12px 32%;
-    height: 275px;
+    grid-template-columns: minmax(0, 1fr) 8px 34%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 2048 / 714;
   }
 
   .serviceCard.imageLeft {
-    grid-template-columns: 32% 12px minmax(0, 1fr);
+    grid-template-columns: 34% 8px minmax(0, 1fr);
   }
 
   .cardIndicator {
@@ -277,8 +313,8 @@
   }
 
   .cardContent {
-    gap: clamp(9px, 1.4vw, 14px);
-    padding: clamp(20px, 2.8vw, 28px) clamp(18px, 3vw, 30px);
+    gap: clamp(7px, 1vw, 11px);
+    padding: clamp(16px, 2.2vw, 22px) clamp(18px, 2.6vw, 26px);
     transform: translate(
       var(--tablet-text-move-x),
       var(--tablet-text-move-y)
@@ -293,27 +329,30 @@
   }
 
   .cardContent h2 {
-    font-size: clamp(17px, 2.15vw, 23px);
+    font-size: clamp(16px, 2vw, 21px);
     line-height: 1.12;
   }
 
   .cardContent p {
-    font-size: clamp(11px, 1.35vw, 14px);
-    line-height: 1.55;
+    font-size: clamp(10px, 1.25vw, 12px);
+    line-height: 1.45;
+    margin: 8px 18px 0;
+    max-width: min(100%, 520px);
   }
 
-  .serviceCard:nth-of-type(1) .cardContent,
-  .serviceCard:nth-of-type(3) .cardContent,
-  .serviceCard:nth-of-type(5) .cardContent,
-  .serviceCard:nth-of-type(7) .cardContent,
-  .serviceCard:nth-of-type(9) .cardContent {
+  .serviceCard.imageLeft .cardContent {
     align-items: flex-start;
     text-align: left;
-    padding-top: clamp(64px, 5vw, 52px);
+    padding-top: clamp(24px, 3vw, 32px);
     transform: translate(
       var(--tablet-text-move-x),
       calc(var(--tablet-text-move-y) + var(--tablet-first-text-move-y))
     );
+  }
+
+  .serviceCard.imageLeft .cardContent p,
+  .serviceCard:not(.imageLeft) .cardContent p {
+    transform: none;
   }
 }
 
@@ -347,7 +386,8 @@
 
   .hero p {
     font-size: 10px;
-    letter-spacing: 4px;
+    letter-spacing: 2.2px;
+    line-height: 1.5;
     margin-bottom: 14px;
   }
 

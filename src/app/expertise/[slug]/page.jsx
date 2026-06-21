@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Header from "../../../components/header.jsx";
+import { formatAcaJuris } from "../../../components/aca-juris.jsx";
 import styles from "./slug.module.css";
 
 const expertiseContent = {
@@ -225,12 +226,6 @@ const expertiseContent = {
 
 const expertiseSlugs = Object.keys(expertiseContent);
 
-function boldAca(text) {
-  return text.split(/(ACA)/g).map((part, index) =>
-    part === "ACA" ? <strong key={index}>{part}</strong> : part
-  );
-}
-
 export function generateStaticParams() {
   return expertiseSlugs.map((slug) => ({ slug }));
 }
@@ -256,9 +251,9 @@ export default async function ExpertiseSlugPage({ params }) {
             ← Back
           </Link>
           <h2 className={styles.practiceTitle}>{detail.title}</h2>
-          <p className={styles.practiceDescription}>{boldAca(detail.description)}</p>
+          <p className={styles.practiceDescription}>{formatAcaJuris(detail.description)}</p>
           {detail.paragraphs && detail.paragraphs.map((paragraph, i) => (
-            <p key={i} className={styles.practiceDescription}>{boldAca(paragraph)}</p>
+            <p key={i} className={styles.practiceDescription}>{formatAcaJuris(paragraph)}</p>
           ))}
 
           {detail.bullets && detail.bullets.length > 0 && (
@@ -266,14 +261,14 @@ export default async function ExpertiseSlugPage({ params }) {
               {detail.bullets.map((b, i) => (
                 <li key={i} className={styles.bulletItem}>
                   <img src="/icons/bullet.png" alt="" className={styles.bulletIcon} />
-                  <span className={styles.bulletText}>{boldAca(b)}</span>
+                  <span className={styles.bulletText}>{formatAcaJuris(b)}</span>
                 </li>
               ))}
             </ul>
           )}
 
           {detail.closingText && (
-            <p className={styles.practiceDescription}>{boldAca(detail.closingText)}</p>
+            <p className={styles.practiceDescription}>{formatAcaJuris(detail.closingText)}</p>
           )}
         </div>
       </section>

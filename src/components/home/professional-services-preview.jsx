@@ -3,76 +3,84 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { formatAcaJuris } from "../aca-juris.jsx";
 
 const professionalServices = [
   {
     slug: "legal-consultation-counsel-services",
     group: "advisory",
     title: "Legal Consultation & Counsel Services",
-    desc: "From identifying the existence of a fraud or civil wrong to assessing remedies and the right stage for action, ACAJuris provides practical counsel through meetings, document review, and strategic advice.",
+    desc: "From distinguishing a crime or civil wrong to determining the appropriate legal remedy, ACAJuris provides study, discussion, fact-finding, assessment, and counsel on whether and how to act.",
     banner: "/images/Professional services/optimized/P1.webp",
   },
   {
     slug: "legal-opinion",
     group: "advisory",
     title: "Legal Opinion",
-    desc: "Upon review of agreements, deeds, records, communications, facts, and surrounding circumstances, ACAJuris renders legal opinions by applying prevailing laws to the matter.",
+    desc: "Through meetings, document review, communications, facts, and applicable laws, statutes, and precedents, ACAJuris provides considered legal opinions on standing, risks, and likely outcomes.",
     banner: "/images/Professional services/optimized/P2.webp",
   },
   {
     slug: "legal-drafting-initiation",
     group: "advisory",
     title: "Legal Drafting & Initiation",
-    desc: "Drafting and assistance for complaints before police, complaint presentation before court, and initiation of legal processes with representation at the relevant stage.",
+    desc: "Drafting and assistance for initiating legal processes, including police complaints, court complaints, and representation before the Court.",
     banner: "/images/Professional services/optimized/P3.webp",
+  },
+  {
+    slug: "legal-services-on-retainer",
+    group: "advisory",
+    title: "Legal Services on Retainer",
+    desc: "A retainer structure for immediate and continuous access to legal support, including consultation, counsel, document review, legal opinions, and urgent professional assistance.",
+    banner: "/images/Professional services/optimized/P1.webp",
   },
   {
     slug: "police-station-assistance",
     group: "advisory",
     title: "Police Station - Assistance",
-    desc: "Representative assistance before police for representations, complaint initiation, inquiry summons, show-cause responses, and related circumstances.",
+    desc: "Professional assistance before the police for representations, complaints, inquiry summons, allegations, charges, and related circumstances.",
     banner: "/images/Professional services/optimized/P10.webp",
   },
   {
     slug: "representative-services-before-trial-courts",
     group: "representation",
     title: "Representative Services before Trial Courts",
-    desc: "Comprehensive handling of matters from initial legal counsel and strategy to drafting necessary pleadings and representing clients before court.",
+    desc: "Comprehensive handling from initial legal counsel and strategy to drafting pleadings and representation in Trial Courts, including conducting defence.",
     banner: "/images/Professional services/optimized/P4.webp",
   },
   {
     slug: "representation-before-high-court",
     group: "representation",
     title: "Representation Before High Court",
-    desc: "Filing and arguing quashing petitions, writ petitions, appeals, revisions, contempt cases, and related proceedings before the High Court of Karnataka.",
+    desc: "Filing and pursuing quashing petitions, writ petitions, appeals, revisions, and contempt cases before the High Court of Karnataka, with arguments on interim and main matters.",
     banner: "/images/Professional services/optimized/P5.webp",
   },
   {
     slug: "senior-advocate-engagements",
     group: "representation",
     title: "Senior Advocate Engagements",
-    desc: "Engaging Senior Advocates where desirable, primarily at stages involving interim relief, stay, or final disposal on merits in matters handled by ACAJuris.",
+    desc: "Facilitating Senior Advocate engagements where desirable, particularly for interim relief, stay orders, and final disposal on merits.",
     banner: "/images/Professional services/optimized/P6.webp",
   },
   {
     slug: "supreme-court-matters",
     group: "representation",
     title: "Supreme Court Matters",
-    desc: "ACAJuris refers matters to Supreme Court lawyers, continues counsel services in referred matters, and assists during important stages and arguments.",
+    desc: "ACAJuris refers matters to experienced Supreme Court practitioners, continues counsel support, monitors progress, and assists through significant stages.",
     banner: "/images/Professional services/optimized/P7.webp",
   },
   {
     slug: "criminal-trials",
     group: "representation",
     title: "Criminal Trials",
-    desc: "Criminal trial work demands exacting preparation and advocacy. ACAJuris has significant exposure in conducting challenging criminal trials.",
+    desc: "Criminal trial work demands precision, resilience, preparation, and advocacy. ACAJuris has represented clients in numerous complex and demanding criminal trials.",
     banner: "/images/Professional services/optimized/P8.webp",
   },
   {
     slug: "criminal-appeals-revisions",
     group: "representation",
     title: "Criminal Appeals & Revisions",
-    desc: "Representation in criminal appeals and revisions before District Courts and the High Court, from studying trial records to drafting and arguments.",
+    desc: "Representation in criminal appeals and revisions before District Courts and the High Court, including trial record study, drafting, appearances, and arguments.",
     banner: "/images/Professional services/optimized/P9.webp",
   },
 ];
@@ -154,7 +162,7 @@ export default function ProfessionalServicesPreview() {
         <div className="expertise-left">
           <h3>Professional Services</h3>
           <p className="expertise-lead">
-            Strategic legal services for every stage of criminal litigation.
+            "What Professional Legal Services We Offer"
           </p>
           <Link href="/professional-services" className="hero-btn primary expertise-view-more-btn">
             View All
@@ -190,7 +198,7 @@ export default function ProfessionalServicesPreview() {
               className={`expertise-slide expertise-slide-anim-${direction}`}
             >
               <h4 className="expertise-slide-title">{current.title}</h4>
-              <p className="expertise-slide-desc">{current.desc}</p>
+              <p className="expertise-slide-desc">{formatAcaJuris(current.desc)}</p>
             </div>
             <div className="expertise-nav">
               <Link href={`/professional-services#${current.slug}`} className="expertise-card-read-more">

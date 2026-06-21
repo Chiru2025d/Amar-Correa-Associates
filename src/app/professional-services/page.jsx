@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "../../components/header.jsx";
+import { formatAcaJuris } from "../../components/aca-juris.jsx";
 import styles from "./professional-services.module.css";
 
 const professionalServices = [
@@ -7,107 +8,111 @@ const professionalServices = [
     slug: "legal-consultation-counsel-services",
     title: "Legal Consultation & Counsel Services",
     icon: "/icons/PracticeList/Legal-Consultation-&-Counsel-Services.png",
+    mobileImage: "/images/Professional services - Mobile/P1.png",
+    webImage: "/images/Professional services - web/P1-Web.png",
     description:
-      "From the inception stage of identifying the existence of a fraud or a civil wrong; reading of materials and discussions; on the courses to be adopted, remedies available under law and its processes; the apt stage of initiating the remedies. Through meetings, knowing facts & circumstances, assessment of the situation and then rendering legal counsel. Helps decide the stage to act or abstain from any actions.",
+      "From distinguishing and identifying a crime or civil wrong to determining the appropriate legal remedy, the process involves study, discussion, meetings, fact-finding, assessment, and counsel - guiding whether to act or abstain, and if to act, what legal remedy to pursue, ACAJuris provides these comprehensive services.",
   },
   {
     slug: "legal-opinion",
     title: "Legal Opinion",
     icon: "/icons/PracticeList/Legal-Opinion.png",
+    mobileImage: "/images/Professional services - Mobile/P2.png",
+    webImage: "/images/Professional services - web/P2-Web.png",
     description:
-      "Upon Meeting/s, thorough reading of issue related documents like Agreements, Deeds or any other records, reading of communications of all nature, knowing overall facts & circumstances and assessment of the situation, and finally by application of prevailing laws, we render Legal Opinion.",
+      "Through meetings, review of documents and communications, and assessment of facts and circumstances, then applying prevailing laws, statutes, and case precedents, ACAJuris provides a considered Legal Opinion - advising clients on their legal standing, litigation risks, and likely dispute outcomes.",
   },
   {
     slug: "legal-drafting-initiation",
     title: "Legal Drafting & Initiation",
     icon: "/icons/PracticeList/Legal-Drafting-&-Initiation.png",
+    mobileImage: "/images/Professional services - Mobile/P3.png",
+    webImage: "/images/Professional services - web/P3-Web.png",
     description:
-      "Drafting and Assistance towards initiating the legal processes - of Complaint to be lodged before police; assistance towards lodging complaint before police; drafting of complaint to be presented before Court along with representation and appearance before Court.",
+      "We provide drafting and assistance in initiating legal processes, including preparing and lodging complaints before the police, drafting complaints to be presented before the Court, and offering representation and appearance before the Court.",
+  },
+  {
+    slug: "legal-services-on-retainer",
+    title: "Legal Services on Retainer",
+    icon: "/icons/PracticeList/Legal-Consultation-&-Counsel-Services.png",
+    mobileImage: null,
+    webImage: "/images/Professional services - web/P1-Web.png",
+    description:
+      "This legal service structure is designed to ensure immediate and continuous access to a law chambers' expertise and availability. It establishes a retainer arrangement for the provision of comprehensive legal support, including consultation and counsel services, advisory assistance, document review, preparation of legal opinions, and related professional services, particularly in urgent or time-sensitive matters.",
   },
   {
     slug: "representative-services-before-trial-courts",
     title: "Representative Services before Trial Courts",
     icon: "/icons/PracticeList/Representative-Services-before-Trial-Courts.png",
+    mobileImage: "/images/Professional services - Mobile/P4.png",
+    webImage: "/images/Professional services - web/P4-Web.png",
     description:
-      "This signifies, comprehensive professional services, i.e handling the case in its entirety. From stage of inception, like initial Legal counsel and advice, legal strategising, rendering legal opinion through the services of drafting of all necessary pleadings and finally representation in Court.",
+      "This signifies comprehensive professional services, i.e. handling the case in its entirety. From stage of inception, like initial legal counsel and advice, legal strategising, rendering legal opinion through the services of drafting of all necessary pleadings and finally representation in Trial Courts including conducting defence.",
   },
   {
     slug: "representation-before-high-court",
     title: "Representation Before High Court",
     icon: "/icons/PracticeList/Representation-Before-High-Court.png",
+    mobileImage: "/images/Professional services - Mobile/P5.png",
+    webImage: "/images/Professional services - web/P5-Web.png",
     description:
-      "Filing of new Quashing Petitions, Writ Petitions, Appeals, Revisions, Contempt Cases, etc. before the High Court of Karnataka, representations therein and addressing Arguments on interim applications and main petitions and Appeals, on merits.",
+      "ACAJuris' core practice is centred on proceedings before the High Court of Karnataka. Services include filing and pursuing Quashing Petitions, Writ Petitions, Appeals, Revisions, and Contempt Cases, along with making representations and presenting arguments on interim applications, main petitions, and appeals on merits.",
   },
   {
     slug: "senior-advocate-engagements",
     title: "Senior Advocate Engagements",
     icon: "/icons/PracticeList/Senior-Advocate-Engagements.png",
+    mobileImage: "/images/Professional services - Mobile/P6.png",
+    webImage: "/images/Professional services - web/P6-Web.png",
     description:
-      "There may be cases where it is desirable to engage services of a Senior Advocate, in a give matter, primarily at the stage of addressing arguments for interim relief of Stay or the like, and also at the stage of final disposal on merits, ACAJuris renders these services. These professional services would be in matters ACAJuris has filed Petitions on behalf of Clients or represented and appeared for parties as Respondents.",
+      "In certain matters, it may be desirable to engage the services of a Senior Advocate, particularly at the stage of presenting arguments for interim relief such as stay orders, and at the stage of final disposal on merits. ACAJuris facilitates such engagements in cases where it has filed petitions on behalf of clients or represented parties as respondents.",
   },
   {
     slug: "supreme-court-matters",
     title: "Supreme Court Matters",
     icon: "/icons/PracticeList/Supreme-Court-Matters.png",
+    mobileImage: "/images/Professional services - Mobile/P7.png",
+    webImage: "/images/Professional services - web/P7-Web.png",
     description:
-      "While ACAJuris does not presently have active practice in the Supreme Court, the Firm regularly refers matters to lawyers, who practice in the Supreme Court. That said, ACAJuris continues Legal counsel services in such referred matters and follows up with the Lawyers in Supreme Court, on the progress of the case. Besides, the Firm assists the Supreme Court lawyers in so referred matters and assists during addressing arguments and all important stages.",
+      "While ACAJuris does not presently maintain an active practice before the Supreme Court, the Firm regularly refers matters to experienced Supreme Court practitioners. In such cases, ACAJuris continues to provide legal counsel, monitors progress with the engaged counsel, and offers ongoing support. The Firm also assists Supreme Court lawyers in these referred matters, including during the preparation and presentation of arguments and at all significant stages of proceedings.",
   },
   {
     slug: "criminal-trials",
     title: "Criminal Trials",
     icon: "/icons/PracticeList/Criminal-Trials.png",
+    mobileImage: "/images/Professional services - Mobile/P8.png",
+    webImage: "/images/Professional services - web/P8-Web.png",
     description:
-      "Criminal Trial, often considered among the most challenging field in practice of law, the role of a Trial Lawyer is truly exacting, demanding and stretching. ACAJuris has had huge exposure in conducting Criminal Trials, in very many challenging cases.",
+      "A criminal trial is widely regarded as one of the most challenging areas in the practice of law, demanding precision, resilience, and exceptional advocacy. The role of a trial lawyer is exacting, requiring rigorous preparation and sustained effort throughout proceedings. ACAJuris has gained substantial experience in conducting criminal trials, having represented clients in numerous complex and demanding cases.",
   },
   {
     slug: "criminal-appeals-revisions",
     title: "Criminal Appeals & Revisions",
     icon: "/icons/PracticeList/Criminal-Appeals-&-Revisions.png",
+    mobileImage: "/images/Professional services - Mobile/P9.png",
+    webImage: "/images/Professional services - web/P9-Web.png",
     description:
-      "ACAJuris represents clients in filing Criminal Appeals or Criminal Revisions before the District Courts any also before the High Court. This service is taken up from the stage of studying the Trial Court records through the services of drafting of Appeal or Revision, making appearances and addressing arguments before Appellate or Revision Courts.",
+      "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
   },
   {
     slug: "police-station-assistance",
     title: "Police Station - Assistance",
     icon: "/icons/PracticeList/Police-Station---Assistance.png",
+    mobileImage: "/images/Professional services - Mobile/P10.png",
+    webImage: "/images/Professional services - web/P10-Web.png",
     description:
-      "Services of a Lawyer are considered essential before the Police, in different circumstances and situations. Conceivably, to give a representation or initiate a complaint or for an inquiry when summoned or to show cause to an allegation or charge, and so forth. ACAJuris offers professional services, in representative capacity before the police, in such circumstances and situations.",
+      "The services of a lawyer are often indispensable before the police in a variety of circumstances. These may include submitting representations, initiating complaints, responding to inquiries when summoned, or addressing allegations and charges. ACAJuris provides professional representation in such matters, ensuring effective legal support and guidance throughout these interactions.",
   },
 ];
 
 const boxImageDesignTitles = new Set([
   "Legal Consultation & Counsel Services",
   "Legal Drafting & Initiation",
+  "Legal Services on Retainer",
   "Representation Before High Court",
   "Supreme Court Matters",
   "Criminal Appeals & Revisions",
 ]);
-
-const mobileServiceImages = [
-  "/images/Professional services - Mobile/P1.png",
-  "/images/Professional services - Mobile/P2.png",
-  "/images/Professional services - Mobile/P3.png",
-  "/images/Professional services - Mobile/P4.png",
-  "/images/Professional services - Mobile/P5.png",
-  "/images/Professional services - Mobile/P6.png",
-  "/images/Professional services - Mobile/P7.png",
-  "/images/Professional services - Mobile/P8.png",
-  "/images/Professional services - Mobile/P9.png",
-  "/images/Professional services - Mobile/P10.png",
-];
-
-const webServiceImages = [
-  "/images/Professional services - web/P1-Web.png",
-  "/images/Professional services - web/P2-Web.png",
-  "/images/Professional services - web/P3-Web.png",
-  "/images/Professional services - web/P4-Web.png",
-  "/images/Professional services - web/P5-Web.png",
-  "/images/Professional services - web/P6-Web.png",
-  "/images/Professional services - web/P7-Web.png",
-  "/images/Professional services - web/P8-Web.png",
-  "/images/Professional services - web/P9-Web.png",
-  "/images/Professional services - web/P10-Web.png",
-];
 
 export default function ProfessionalServicesPage() {
   return (
@@ -116,22 +121,29 @@ export default function ProfessionalServicesPage() {
 
       <main className={styles.page}>
         <section className={styles.hero} aria-labelledby="professional-services-title">
-          <p>Services</p>
+          <p>What Professional Legal Services We Offer</p>
           <h1 id="professional-services-title">Professional Services</h1>
         </section>
 
         <section className={styles.services} id="professional-services-list">
           <div className={styles.mobileImagesContainer}>
-            {mobileServiceImages.map((src, index) => (
-              <div key={index} className={styles.mobileImageWrapper}>
-                <Image
-                  src={src}
-                  alt={`Professional service ${index + 1}`}
-                  width={1200}
-                  height={800}
-                  className={styles.mobileImage}
-                  priority={false}
-                />
+            {professionalServices.map((service, index) => (
+              <div key={service.title} className={styles.mobileImageWrapper}>
+                {service.mobileImage ? (
+                  <Image
+                    src={service.mobileImage}
+                    alt={service.title}
+                    width={1200}
+                    height={800}
+                    className={styles.mobileImage}
+                    priority={false}
+                  />
+                ) : (
+                  <article className={styles.mobileTextCard}>
+                    <h2>{service.title}</h2>
+                    <p>{formatAcaJuris(service.description)}</p>
+                  </article>
+                )}
               </div>
             ))}
           </div>
@@ -143,7 +155,7 @@ export default function ProfessionalServicesPage() {
                 id={service.slug}
                 className={`${styles.serviceCard} ${isBoxImageDesign ? styles.imageLeft : ""}`}
                 key={service.title}
-                style={{ backgroundImage: `url("${webServiceImages[index]}")` }}
+                style={{ backgroundImage: `url("${service.webImage}")` }}
               >
                 {isBoxImageDesign && (
                   <div className={styles.cardMedia}>
@@ -182,7 +194,7 @@ export default function ProfessionalServicesPage() {
                     <span className={styles.indicatorLine} aria-hidden="true" />
                   </div>
                   <h2>{service.title}</h2>
-                  <p>{service.description}</p>
+                  <p>{formatAcaJuris(service.description)}</p>
                 </div>
 
                 {!isBoxImageDesign && <div className={styles.cardDivider} aria-hidden="true" />}

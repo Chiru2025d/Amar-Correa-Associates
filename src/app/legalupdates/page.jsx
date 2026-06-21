@@ -33,7 +33,7 @@ export default function LegalUpdatesPage() {
 
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
-        <p className={styles.heroLabel}>Updates</p>
+        <p className={styles.heroLabel}>Legal Landscape: Recent Developments</p>
         <h1 className={styles.heroTitle}>LEGAL UPDATES & BLOG</h1>
       </section>
 
@@ -48,37 +48,39 @@ export default function LegalUpdatesPage() {
                 <span className={styles.articleDateLabel}>{article.author}</span>
               </div>
 
-              {/* Title */}
-              <h2 className={styles.articleTitle}>{article.title}</h2>
+              <div className={styles.articleContent}>
+                {/* Title */}
+                <h2 className={styles.articleTitle}>{article.title}</h2>
 
-              {/* Subheading */}
-              <p className={styles.articleSubheading}>{article.subheading}</p>
+                {/* Subheading */}
+                <p className={styles.articleSubheading}>{article.subheading}</p>
 
-              {/* Paragraphs */}
-              {article.paragraphs.map((p, i) => (
-                <p key={i} className={styles.articleBody}>{p}</p>
-              ))}
+                {/* Paragraphs */}
+                {article.paragraphs.map((p, i) => (
+                  <p key={i} className={styles.articleBody}>{p}</p>
+                ))}
 
-              {/* Optional bullet list */}
-              {article.bullets && article.bullets.length > 0 && (
-                <div>
-                  {article.bullets.map((b, i) => (
-                    <div key={i} className={styles.articleBullet}>
-                      <span className={styles.bulletDot} />
-                      <span className={styles.bulletText}>{b}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
+                {/* Optional bullet list */}
+                {article.bullets && article.bullets.length > 0 && (
+                  <div>
+                    {article.bullets.map((b, i) => (
+                      <div key={i} className={styles.articleBullet}>
+                        <span className={styles.bulletDot} />
+                        <span className={styles.bulletText}>{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-              {/* After-bullets paragraphs */}
-              {article.afterBullets && article.afterBullets.map((p, i) => (
-                <p key={i} className={styles.articleBody}>{p}</p>
-              ))}
+                {/* After-bullets paragraphs */}
+                {article.afterBullets && article.afterBullets.map((p, i) => (
+                  <p key={i} className={styles.articleBody}>{p}</p>
+                ))}
 
-              <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
-                Read More
-              </a>
+                <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
+                  Read More
+                </a>
+              </div>
             </div>
           </article>
         ))}

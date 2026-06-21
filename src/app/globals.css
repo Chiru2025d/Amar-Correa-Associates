@@ -20,13 +20,12 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: var(--font-body);
-  background-color: #FDFBF7;
-  /* Unified light beige/cream */
   color: var(--color-text);
-  line-height: 1.6;
+  background-color: #fdfbf7;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
 }
 
 a {
@@ -494,12 +493,11 @@ main {
 }
 
 .contact-link-desc {
-  font-family: 'Be Vietnam', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.45;
-  color: #333333;
+  color: #333;
   margin: 0;
+  font-family: Be Vietnam, sans-serif;
+  font-size: 14px;
+  line-height: 0.4;
   max-width: 760px;
 }
 
@@ -703,12 +701,26 @@ main {
   }
 
   .contact-link-desc {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.25;
     max-width: 100%;
+  }
+
+  .contact-link-group {
+    margin-bottom: 24px;
+  }
+
+  .contact-link-title {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    line-height: 1.15;
   }
 
   .newsletter-wrapper {
     flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 0;
   }
 
   .newsletter-input {
@@ -759,11 +771,25 @@ main {
   }
 
   .contact-link-title {
-    font-size: 22px;
+    font-size: 21px;
+    margin-bottom: 4px;
   }
 
   .contact-link-desc {
     font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .explore-more {
+    font-size: 9px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .newsletter-input {
+    height: 50px;
+    font-size: 14px;
+    padding: 0 24px;
   }
 
   .newsletter-btn {

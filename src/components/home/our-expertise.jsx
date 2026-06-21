@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { formatAcaJuris } from "../aca-juris.jsx";
 
 const aopItems = [
   {
@@ -181,7 +182,7 @@ export default function ExpertisePreview() {
         <div className="expertise-left">
           <h3>Practice Areas</h3>
           <p className="expertise-lead">
-            Criminal Law Specialised Multi-Disciplinary Law Firm.
+            "Criminal Law Specialised Multi - Disciplinary Law Chambers".
           </p>
           <Link href="/expertise" className="hero-btn primary expertise-view-more-btn">
             View All
@@ -217,7 +218,7 @@ export default function ExpertisePreview() {
               className={`expertise-slide expertise-slide-anim-${direction}`}
             >
               <h4 className="expertise-slide-title">{current.title}</h4>
-              <p className="expertise-slide-desc">{current.desc}</p>
+              <p className="expertise-slide-desc">{formatAcaJuris(current.desc)}</p>
             </div>
             <div className="expertise-nav">
               <Link href={`/expertise/${current.slug}`} className="expertise-card-read-more">

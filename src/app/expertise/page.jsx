@@ -1,5 +1,6 @@
 import Header from "../../components/header.jsx";
 import Link from "next/link";
+import { formatAcaJuris } from "../../components/aca-juris.jsx";
 import styles from "./expertise.module.css";
 
 const expertiseItems = [
@@ -138,7 +139,7 @@ export default function ExpertisePage() {
 
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
-        <p className={styles.heroLabel}>Expertise</p>
+        <p className={styles.heroLabel}>Criminal Law Specialised Multi - Disciplinary Law Chambers</p>
         <h1 className={styles.heroTitle}>AREAS OF PRACTICE</h1>
       </section>
 
@@ -161,7 +162,7 @@ export default function ExpertisePage() {
                   <span className={styles.cardTitle}>
                     {title}
                   </span>
-                  <p className={styles.cardExcerpt}>{excerpt}</p>
+                  <p className={styles.cardExcerpt}>{formatAcaJuris(excerpt)}</p>
                 </div>
               </Link>
             ))}

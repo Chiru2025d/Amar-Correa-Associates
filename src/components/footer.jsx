@@ -65,7 +65,7 @@ export default function Footer() {
                   </Link>
                 </div>
                 <p className="contact-link-desc">
-                  Criminal Law Specialised Multi-Disciplinary Law Firm
+                  Criminal Law Specialised Multi - Disciplinary Law Chambers
                 </p>
               </div>
 

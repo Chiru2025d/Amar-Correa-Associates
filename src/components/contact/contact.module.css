@@ -169,7 +169,7 @@
 
 .formSection {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 48px;
   align-items: start;
 }
@@ -258,7 +258,7 @@
   border: 0.5px solid #cfcfcf;
   border-radius: 18.5px;
   outline: none;
-  width: 654px;
+  width: 521px;
   height: 168px;
   margin-bottom: 36px;
   padding: 12px;
@@ -273,6 +273,18 @@
 
 .formTextarea:focus {
   border-color: #bda588;
+}
+
+.formStatus {
+  margin: -12px 0 22px;
+  color: #20603d;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.formStatusError {
+  color: #b42318;
 }
 
 
@@ -382,6 +394,15 @@
 ================================ */
 
 @media (max-width: 768px) {
+
+  .heroBanner {
+    min-height: 160px;
+    padding: 0 20px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
 
   /* PAGE PADDING */
   .contactPage {
@@ -520,6 +541,10 @@
 ================================ */
 
 @media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 34px;
+  }
+
   .officeGrid,
   .formSection {
     grid-template-columns: 1fr;
@@ -535,4 +560,47 @@
     height: 360px;
     margin-top: 40px;
   }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+}
+.heroBanner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 201px;
+  text-align: center;
+  background-color: #F4F2EE;
+  background-image: url("/Page banner/Frame 1984078307.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-clip: border-box;
+  padding: 0 24px;
+}
+
+.heroLabel {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #bda588;
+  margin: 0 0 10px;
+}
+
+.heroTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 18px;
+  line-height: 1.1;
+  letter-spacing: 1px;
 }

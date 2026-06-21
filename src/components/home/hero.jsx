@@ -64,15 +64,12 @@ export default function Hero() {
 
         <div className="hero-cta-group">
           <Link href="/expertise" className="hero-btn primary">
-            Practice Areas →
+            View All
           </Link>
         </div>
-
-
       </div>
 
       <ContactFloating />
-
     </section>
   );
 }

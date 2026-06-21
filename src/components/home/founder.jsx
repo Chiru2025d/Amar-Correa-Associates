@@ -57,14 +57,14 @@ export default function Founder() {
                             <p className="founder-bio">
                                 <span style={{ fontWeight: 500, color: 'rgb(0, 0, 0)' }}>Matrimonial & constitutional litigation :</span> Extensive experience in divorce, child custody,
                                 maintenance, foreign custody orders, habeas corpus petitions, criminal appeals, revisions,
-                                bail, quashing and petitions under Section 482 Cr.P.C., and writs on constitutional rights and
-                                public interest.
+                                bail, quashing and petitions under Section 482 Cr.P.C., and writs on constitutional rights
+                                and public interest.
                             </p>
                         </div>
                     </div>
                     <div className="founder-img-wrap">
                         <Image
-                            src="/images/amar-optimized.webp"
+                            src="/images/amar.png"
                             alt="Amar Correa"
                             className='founderImg'
                             width={400}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { formatAcaJuris } from "../aca-juris.jsx";
 
 export default function Culture() {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,7 +60,7 @@ export default function Culture() {
             {/* NORMAL STATE */}
             <div className="card-normal">
               <div className="normal-inner">
-                <p>{card.desc}</p>
+                <p>{formatAcaJuris(card.desc)}</p>
               </div>
             </div>
 
@@ -73,7 +74,7 @@ export default function Culture() {
               </div>
 
               <div className="active-right culture-hover-box">
-                <p>{card.desc}</p>
+                <p>{formatAcaJuris(card.desc)}</p>
               </div>
             </div>
           </div>

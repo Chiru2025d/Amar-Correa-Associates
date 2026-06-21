@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
 
+const recipientEmail = "office@acajuris.com";
 const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
 const indianPhonePattern = /^[6-9]\d{9}$/;
 
@@ -10,13 +11,15 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [touched, setTouched] = useState({ email: false, phone: false });
+  const [status, setStatus] = useState({ type: "idle", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const normalizedPhone = phone.replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "");
   const isEmailValid = gmailPattern.test(email.trim());
   const isPhoneValid = indianPhonePattern.test(normalizedPhone);
-  const canSubmit = isEmailValid && isPhoneValid;
+  const canSubmit = isEmailValid && isPhoneValid && !isSubmitting;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!canSubmit) {
@@ -24,22 +27,46 @@ export default function ContactForm() {
       return;
     }
 
-    const formData = new FormData(event.currentTarget);
-    const name = formData.get("name");
-    const message = formData.get("message");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-    const whatsappMessage = [
-      "New enquiry from ACA Juris website",
-      "",
-      `Name: ${name}`,
-      `Email: ${email.trim()}`,
-      `Phone: +91 ${normalizedPhone}`,
-      "",
-      `Message: ${message}`,
-    ].join("\n");
+    formData.set("email", email.trim());
+    formData.set("phone", `+91 ${normalizedPhone}`);
+    formData.append("_subject", "New enquiry from ACA Juris website");
+    formData.append("_template", "table");
 
-    const whatsappUrl = `https://wa.me/919663812090?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" });
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Message could not be sent");
+      }
+
+      form.reset();
+      setEmail("");
+      setPhone("");
+      setTouched({ email: false, phone: false });
+      setStatus({
+        type: "success",
+        message: "Thank you. Your message has been sent to ACA Juris.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "Sorry, we could not send your message. Please email office@acajuris.com.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -117,8 +144,14 @@ export default function ContactForm() {
           required
         ></textarea>
 
+        {status.message && (
+          <p className={`${styles.formStatus} ${status.type === "error" ? styles.formStatusError : ""}`}>
+            {status.message}
+          </p>
+        )}
+
         <button type="submit" className={styles.submitBtn} disabled={!canSubmit}>
-          SUBMIT
+          {isSubmitting ? "SENDING..." : "SUBMIT"}
         </button>
       </form>
     </section>
