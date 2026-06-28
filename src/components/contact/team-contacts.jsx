@@ -18,6 +18,12 @@ const teamMembers = [
     email: "shridevi.b@acajuris.com",
     image: "/images/team3.png",
   },
+  {
+    name: "Yathish L Kumar",
+    role: "Office Clerk",
+    phone: "+91 98809 99559",
+    image: "/images/Yathish L Kumar.png",
+  },
 ];
 
 export default function TeamContacts() {
@@ -43,13 +49,17 @@ export default function TeamContacts() {
             <p className={styles.teamRole}>{member.role}</p>
             <br></br> 
 
-            <p className={styles.teamContact}>
-              Phone: {member.phone}
-            </p>
+            {member.phone && (
+              <p className={styles.teamContact}>
+                Phone: {member.phone}
+              </p>
+            )}
 
-            <p className={styles.teamContact}>
-              Email: {member.email}
-            </p>
+            {member.email && (
+              <p className={styles.teamContact}>
+                Email: {member.email}
+              </p>
+            )}
           </div>
 
         </div>

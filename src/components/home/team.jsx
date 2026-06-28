@@ -9,6 +9,7 @@ export default function TeamPreview() {
     { name: "Prasad Maharajpeth", role: "Senior Associate", img: "/images/Prasad_V1.svg", phone: "+91 88611 93973", email: "prasad.m@acajuris.com" },
     { name: "Abhiram K", role: "Associate", img: "/images/Abhi_V1.svg", phone: "+91 73382 87915", email: "abhiram.k@acajuris.com" },
     { name: "Mahindra V T", role: "Associate", img: "/images/Mahindra_V1.svg", phone: "+91 80958 51856", email: "mahinda.v@acajuris.com" },
+    { name: "Yathish L Kumar", role: "Office Clerk", img: "/images/Yathish L Kumar.png", phone: "+91 98809 99559", email: "" },
   ];
 
   /* 
@@ -118,7 +119,7 @@ export default function TeamPreview() {
                       />
                       <div className="team-overlay">
                         <p className="team-phone">{member.phone}</p>
-                        <p className="team-email">{member.email}</p>
+                        {member.email && <p className="team-email">{member.email}</p>}
                       </div>
                     </div>
                     <div className="team-info-box">

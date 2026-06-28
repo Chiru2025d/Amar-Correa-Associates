@@ -470,9 +470,9 @@ main {
 
 .contact-link-title {
   font-family: 'Be Vietnam', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 4px;
   display: flex;
   align-items: baseline;
@@ -493,7 +493,7 @@ main {
 }
 
 .contact-link-desc {
-  color: #ffffff;
+  color: #ffffff7a;
   margin: 0;
   font-family: Be Vietnam, sans-serif;
   font-size: 14px;
@@ -572,6 +572,20 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .footer-new {
+    background-image: url("/images/Footer Mobile Screen.png");
+    background-position: top center;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+  .footer-new {
+    background-image: url("/images/Tab Footer.png");
+    background-position: center;
+  }
 }
 
 /* Top White Nav Bar */
@@ -776,7 +790,7 @@ main {
   }
 
   .contact-link-title {
-    font-size: 21px;
+    font-size: 18px;
     margin-bottom: 4px;
   }
 
