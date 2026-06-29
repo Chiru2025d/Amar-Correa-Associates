@@ -1,3 +1,45 @@
+/* ── Hero Banner ── */
+.heroBanner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 201px;
+  background-color: #F4F2EE;
+  background-image: url("/Page banner/Frame 1984078307.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-clip: border-box;
+  padding: 0 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroLabel {
+  color: #bda588;
+  margin: 0 0 10px;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  max-width: 90%;
+}
+
+.heroTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  text-align: center;
+}
+
 .hero {
   position: relative;
   min-height: 310px;

@@ -6,8 +6,9 @@ export default function CounselAccusedVideoConferencePage() {
     <>
       <Header />
 
-      <section className={styles.hero} aria-labelledby="legal-detail-title">
-        <h1 id="legal-detail-title">LEGAL UPDATES & BLOG</h1>
+      <section className={styles.heroBanner}>
+        <p className={styles.heroLabel}>Legal Landscape: Recent Developments</p>
+        <h1 className={styles.heroTitle}>LEGAL UPDATES & BLOG</h1>
       </section>
 
       <main className={styles.page}>
