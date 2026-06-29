@@ -698,12 +698,12 @@ main {
 
   .contact-left {
     border-bottom: 1px solid #ffffff9e;
-    padding-bottom: 45px;
-    margin-bottom: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
   }
 
-  .contact-left .contact-group:last-child {
-    margin-bottom: 25px;
+  .contact-right {
+    padding-top: 60px;
   }
 
   .newsletter-wrapper {
