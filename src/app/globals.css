@@ -698,7 +698,8 @@ main {
 
   .contact-left {
     border-bottom: 1px solid #ffffff9e;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
+    margin-bottom: 30px;
   }
 
   .contact-left .contact-group:last-child {
