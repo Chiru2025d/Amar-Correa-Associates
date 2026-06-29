@@ -154,17 +154,17 @@
 }
 
 .cardExcerpt {
-  font-family: "Be Vietnam Pro", "Be Vietnam", sans-serif;
-  font-size: 15px;
-  line-height: 24px;
   color: #3c3e40;
-  font-weight: 300;
-  margin: 0;
   text-align: left;
-  display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
+  margin: 0;
+  font-family: Be Vietnam Pro, Be Vietnam, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  display: -webkit-box;
   overflow: hidden;
 }
 
@@ -216,8 +216,8 @@
     font-size: 54px;
   }
   .cardIcon {
-    width: 46px;
-    height: 46px;
+    /* width: 46px; */
+    /* height: 46px; */
   }
   .cardContent {
     padding: 4px 18px 24px;
