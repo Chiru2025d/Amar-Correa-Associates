@@ -1,18 +1,11 @@
-/* ── Spacing Configuration ── */
-/* Adjust these values to control spacing between heading and subheading */
-:root {
-  --spacing-hero-bottom: 8px; /* Space between subheading and main heading */
-}
-
 .page {
-  background: #f8f5ef;
   min-height: 100vh;
+  background: #e8eaef;
 }
 
 .hero {
-  position: relative;
-  min-height: 260px;
-  padding: 0 24px;
+  min-height: 205px;
+  padding: 28px 20px;
   background-color: #173e62;
   background-image: url("/Page banner/Frame 1984078307.png");
   background-position: center;
@@ -23,432 +16,294 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .hero p,
 .hero h1 {
-  position: relative;
-  z-index: 1;
-  font-family: "Be Vietnam", sans-serif;
   margin: 0;
+  font-family: "Be Vietnam", sans-serif;
 }
 
 .hero p {
   color: #d1b892;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 6px;
+  font-size: 11px;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
-  margin-bottom: var(--spacing-hero-bottom);
-  max-width: 90%;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
   color: #ffffff;
-  font-size: 44px;
+  font-size: clamp(32px, 4vw, 40px);
   font-weight: 400;
   line-height: 1.1;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
-.services {
-  gap: 100px;
-  width: min(1200px, 100%);
+.servicesSection {
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 80px 24px 120px;
+  padding: 64px 24px 86px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  margin: 12px 0 0;
+  color: #173e62;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.servicesGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px 50px;
   display: grid;
+}
+
+.rowDivider {
+  grid-column: 1 / -1;
+  height: 2px;
+  background: #c7c7c7;
+  margin-top: 0px;
+  margin-bottom: -25px;
+}
+
+.featuredDivider {
+  height: 2px;
+  background: #c7c7c7;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .serviceCard {
-  background-color: #ffffff00;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* border: 1px solid #173e621f; */
-  border-radius: 20px;
-  grid-template-columns: minmax(0, 1fr) 12px 380px;
-  grid-auto-rows: 1fr;
-  align-items: stretch;
-  aspect-ratio: 2048 / 714;
-  min-height: 343px;
-  display: grid;
   position: relative;
-  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  border-bottom: 10px solid #b89d74;
+  padding: 18px 24px 35px 91px;
+  min-height: 172px;
+  box-shadow: 0 1px #091f330d;
 }
 
-.serviceCard.imageLeft {
-  grid-template-columns: 380px 12px minmax(0, 1fr);
+.featuredCard {
+  margin-top: 0;
+  min-height: 126px;
 }
 
-.cardDivider {
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-  width: 12px;
+.cardTop {
   display: flex;
-  visibility: visible;
-}
-
-.cardDivider::before {
-  content: none;
-}
-
-.cardMedia {
-  position: relative;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 56px 32px;
-  border-top-right-radius: 32px;
-  border-bottom-right-radius: 32px;
-  min-height: 100%;
-  height: 100%;
-  visibility: hidden;
-}
-
-.serviceCard.imageLeft .cardMedia {
-  border-top-left-radius: 32px;
-  border-bottom-left-radius: 32px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.serviceCard.imageLeft .cardContent {
-  border-radius: 0 32px 32px 0;
-}
-
-.cardContent {
-  background: transparent;
-  border-top-left-radius: 32px;
-  border-bottom-left-radius: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 17px;
-  height: 100%;
-  min-height: 100%;
-  padding: 56px 42px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Reduce left padding for cards where image is on the left */
-.serviceCard.imageLeft .cardContent {
-  padding-left: 12px;
-}
-
-.serviceCard:not(.imageLeft) .cardContent {
-  align-items: flex-end;
-  text-align: right;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .iconCircle {
-  /* background: #1a4c7a; */
-  border: 1px solid #bda588;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 180px;
-  display: flex;
-}
-
-.iconBg {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #ffffff;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  width: 61px;
+  height: 61px;
+  border-radius: 999px;
+  background: #173e62;
+  border: 2px solid #bfa17c;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: none;
 }
 
 .cardIcon {
-  width: 64px;
-  height: 64px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
+  filter: brightness(0) invert();
 }
 
-.cardIndicator {
+.titleWrap {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 0px;
-  visibility: hidden;
+  gap: 10px;
+  min-width: 0;
 }
 
-.cardLogo {
-  /* opacity: 0.56; */
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  /* height: 56px; */
-  /* margin-top: 28px; */
-  display: flex;
+.titleRule {
+  width: 2px;
+  height: 22px;
+  background: #c6ab82;
+  flex: none;
 }
 
-.cardLogoImg {
-  width: 100%;
-  height: auto;
-}
-
-.indicatorLine {
-  display: block;
-  width: 88px;
-  height: 2px;
-  background: #d7c7a1;
-  border-radius: 999px;
-}
-
-.indicatorDots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.indicatorDots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #d7c7a1;
-  opacity: 0.8;
-}
-
-.cardContent h2 {
-  color: #173e62;
-  max-width: 620px;
-  margin: 0px 0px 0px;
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1.08;
-}
-
-.cardContent p {
-  color: #5d6670;
-  max-width: 620px;
-  margin: 15px 20px 0px;
-  padding: 0;
-  font-family: Be Vietnam, sans-serif;
-}
-
-.serviceCard.imageLeft .cardContent p {
-  margin: 15px 20px 0;
-}
-
-.mobileImagesContainer {
-  display: none;
-  width: 100%;
-  flex-direction: column;
-  gap: 24px;
-  padding: 0;
-}
-
-.mobileImageWrapper {
-  display: none;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 20px 20px 0 0;
-}
-
-.mobileImage {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-
-.mobileImageImg {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-
-.mobileTextCard {
-  background: #fff;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 10px 24px rgba(23, 62, 98, 0.14);
-  padding: 24px 20px 30px;
-  text-align: center;
-}
-
-.mobileTextCard h2 {
-  color: #173e62;
-  margin: 0 0 12px;
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.mobileTextCard p {
-  color: #5d6670;
+.titleWrap h3 {
   margin: 0;
+  color: #193f62;
   font-family: "Be Vietnam", sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
-@media (min-width: 1025px) {
-  .cardContent {
-    padding: 29px 16px;
-  }
+.cardDescription {
+  margin: 0;
+  color: #4f5560;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  line-height: 2;
+  padding-right: 4px;
 }
 
-@media (min-width: 761px) and (max-width: 1024px) {
-  .page {
-    background-image: none;
+.cardWatermark {
+  position: absolute;
+  left: 25px;
+  bottom: 32px;
+  color: #173e6233;
+  font-family: DM Serif Display, serif;
+  font-size: 19px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.ctaSection {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 24px 84px;
+}
+
+.ctaPanel {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0f2d49 0%, #173e62 52%, #274f76 100%);
+  border-radius: 12px;
+  min-height: 106px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ctaPanel::before,
+.ctaPanel::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ctaPanel::before {
+  width: 220px;
+  height: 220px;
+  right: -82px;
+  bottom: -136px;
+  background: rgba(97, 132, 168, 0.26);
+}
+
+.ctaPanel::after {
+  width: 140px;
+  height: 140px;
+  right: 12px;
+  bottom: -72px;
+  background: rgba(14, 40, 66, 0.38);
+}
+
+.ctaPanel h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.ctaPanel p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+}
+
+.ctaActions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.primaryAction,
+.secondaryAction {
+  text-decoration: none;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 11px 30px;
+  white-space: nowrap;
+  transition: transform .2s, opacity .2s;
+}
+
+.primaryAction {
+  color: #102b43;
+  background: #c8a97b;
+}
+
+.secondaryAction {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.primaryAction:hover,
+.secondaryAction:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+@media (max-width: 1024px) {
+  .servicesSection {
+    padding-top: 56px;
   }
 
-  .services {
-    --tablet-text-move-x: 0px;
-    --tablet-text-move-y: 0px;
-    --tablet-first-text-move-y: 0px;
-    --tablet-right-text-move-x: 0px;
-    --tablet-right-text-move-y: 0px;
-    gap: clamp(48px, 8vw, 72px);
-    padding: 64px 32px 96px;
+  .servicesGrid {
+    gap: 16px;
   }
 
   .serviceCard {
-    border-radius: 20px;
-    grid-template-columns: minmax(0, 1fr) 8px 34%;
-    min-height: 0;
-    height: auto;
-    aspect-ratio: 2048 / 714;
+    padding: 16px 18px 16px 124px;
+    min-height: 192px;
   }
 
-  .serviceCard.imageLeft {
-    grid-template-columns: 34% 8px minmax(0, 1fr);
+  .featuredCard {
+    min-height: 136px;
   }
 
-  .cardIndicator {
-    display: none;
+  .iconCircle {
+    left: 24px;
+    top: 18px;
   }
 
-  .cardContent {
-    gap: clamp(7px, 1vw, 11px);
-    padding: clamp(16px, 2.2vw, 22px) clamp(18px, 2.6vw, 26px);
-    transform: translate(
-      var(--tablet-text-move-x),
-      var(--tablet-text-move-y)
-    );
+  .cardWatermark {
+    left: 24px;
+    bottom: 10px;
+    font-size: 25px;
   }
 
-  .serviceCard:not(.imageLeft) .cardContent {
-    transform: translate(
-      calc(var(--tablet-text-move-x) + var(--tablet-right-text-move-x)),
-      calc(var(--tablet-text-move-y) + var(--tablet-right-text-move-y))
-    );
+  .ctaPanel {
+    padding: 22px;
   }
 
-  .cardContent h2 {
-    font-size: clamp(16px, 2vw, 21px);
-    line-height: 1.12;
-  }
-
-  .cardContent p {
-    font-size: clamp(10px, 1.25vw, 12px);
-    line-height: 1.45;
-    margin: 8px 0 0 0;
-    max-width: min(100%, 520px);
-    padding: 0;
-  }
-
-  .serviceCard.imageLeft .cardContent {
-    align-items: flex-start;
-    text-align: left;
-    padding-top: clamp(24px, 3vw, 32px);
-    transform: translate(
-      var(--tablet-text-move-x),
-      calc(var(--tablet-text-move-y) + var(--tablet-first-text-move-y))
-    );
-  }
-
-  .serviceCard:not(.imageLeft) .cardContent {
-    align-items: flex-end;
-    text-align: right;
-  }
-
-  .serviceCard.imageLeft .cardContent p,
-  .serviceCard:not(.imageLeft) .cardContent p {
-    transform: none;
+  .ctaPanel h3 {
+    font-size: 25px;
   }
 }
 
 @media (max-width: 760px) {
-  .serviceCard {
-    display: none;
-    background-image: none !important;
-  }
-
-  .services {
-    display: none;
-  }
-}
-
-@media (max-width: 760px) {
-  .page {
-    background: #f8f5ef;
-    background-image: none;
-  }
-
-  .mobileImagesContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 150px;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 145px 16px 0;
-  }
-
-  .mobileImageWrapper {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 16px;
-  }
-
-  .mobileImage {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 16px;
-  }
-
-  .mobileImageImg {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 16px;
-  }
-
-  .mobileTextCard {
-    background: #fff;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 10px 24px rgba(23, 62, 98, 0.14);
-    padding: 14px 14px 16px;
-    text-align: center;
-  }
-
-  .mobileTextCard h2 {
-    color: #173e62;
-    margin: 0;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .mobileTextCard p {
-    display: none;
-  }
-
   .hero {
     min-height: 240px;
     padding: 72px 20px;
@@ -458,42 +313,85 @@
     font-size: 10px;
     letter-spacing: 2.2px;
     line-height: 1.5;
-    margin-bottom: 14px;
   }
 
   .hero h1 {
     font-size: 32px;
   }
 
-  .services {
+  .servicesSection {
+    padding: 42px 16px 62px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 24px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 30px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .rowDivider {
     display: none;
   }
 
-  .cardContent h2 {
-    font-size: 28px;
+  .featuredDivider {
+    display: none;
   }
 
-  .cardContent p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 520px) {
   .serviceCard {
-    border-radius: 24px;
+    padding: 16px;
+    min-height: 0;
   }
 
-  .cardMedia {
-    padding: 32px 18px;
+  .featuredCard {
+    margin-top: 50px;
   }
 
   .iconCircle {
-    width: 170px;
-    height: 170px;
+    position: static;
   }
 
-  .iconBg {
-    width: 110px;
-    height: 110px;
+  .cardWatermark {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 29px;
+  }
+
+  .cardDescription {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .ctaSection {
+    padding: 0 16px 64px;
+  }
+
+  .ctaPanel {
+    min-height: 0;
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ctaPanel h3 {
+    font-size: 24px;
+  }
+
+  .ctaActions {
+    width: 100%;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    text-align: center;
+    flex: 1;
+    padding: 10px 16px;
   }
 }

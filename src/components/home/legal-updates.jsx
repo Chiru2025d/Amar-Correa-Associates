@@ -10,7 +10,7 @@ const legalUpdates = [
     alt: "Legal update 1",
     meta: "Blog/Legal Update 01",
     author: "Amar Correa",
-    date: "August 28, 2025",
+    date: "May 08, 2019",
     heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
     title: "An Incorrect View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
@@ -20,7 +20,7 @@ const legalUpdates = [
     alt: "Legal update 2",
     meta: "Blog/Legal Update 02",
     author: "Amar Correa",
-    date: "August 28, 2025",
+    date: "May 08, 2019",
     heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
     title: "The Correct View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
@@ -30,7 +30,7 @@ const legalUpdates = [
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
     author: "Amar Correa",
-    date: "August 28, 2025",
+    date: "",
     heading: "Counsel-accused Video Conference",
     title: "Counsel-accused Video Conference",
   },
@@ -62,7 +62,7 @@ export default function LegalUpdatesPreview() {
                   <span className="update-divider" aria-hidden="true" />
                   <div className="update-footer">
                     <span>{`Author : ${update.author}`}</span>
-                    <span>{update.date}</span>
+                    {update.date ? <span>{update.date}</span> : null}
                   </div>
                 </div>
               </div>

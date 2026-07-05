@@ -77,10 +77,11 @@
 }
 
 .agreeRow {
+  display: flex;
   margin-top: 6px;
   align-items: center;
   gap: 10px;
-  color: #6f7780;
+  color: #1f2a35;
   font-family: "Be Vietnam", sans-serif;
   font-size: 15px;
   cursor: pointer;

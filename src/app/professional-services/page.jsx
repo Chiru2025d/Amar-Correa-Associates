@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
 import Header from "../../components/header.jsx";
 import { formatAcaJuris } from "../../components/aca-juris.jsx";
 import styles from "./professional-services.module.css";
@@ -31,7 +33,7 @@ const professionalServices = [
   {
     slug: "legal-services-on-retainer",
     title: "Legal Services on Retainer",
-    icon: "/icons/PracticeList/Legal-Services-on-Retainer.png",
+    icon: "/icons/PracticeList/REtainers.png",
     image: "/images/Professional services - web/P4-Web.png",
     description:
       "ACAJuris offers legal services on a retainer basis, providing clients with immediate and continuous access to legal support. This arrangement ensures ongoing consultation, counsel, document review, legal opinions, and urgent professional assistance as needed.",
@@ -94,110 +96,98 @@ const professionalServices = [
   },
 ];
 
-const boxImageDesignTitles = new Set([
-  "Legal Consultation & Counsel Services",
-  "Legal Drafting & Initiation",
-  "Representative Services before Trial Courts",
-  "Senior Advocate Engagements",
-  "Criminal Trials",
-  "Police Station - Assistance",
-]);
-
 export default function ProfessionalServicesPage() {
+  const regularServices = professionalServices.slice(0, -1);
+  const featuredService = professionalServices[professionalServices.length - 1];
+
   return (
     <>
       <Header />
 
       <main className={styles.page}>
         <section className={styles.hero} aria-labelledby="professional-services-title">
+          <p>Our Services</p>
           <h1 id="professional-services-title">Professional Services</h1>
-          <p>What Professional Legal Services We Offer</p>
         </section>
 
-        <section className={styles.services} id="professional-services-list">
-          {professionalServices.map((service) => {
-            const isBoxImageDesign = boxImageDesignTitles.has(service.title);
-            return (
-              <article
-                id={service.slug}
-                className={`${styles.serviceCard} ${isBoxImageDesign ? styles.imageLeft : ""}`}
-                key={service.slug}
-                style={{ backgroundImage: `url("${encodeURI(service.image)}")` }}
-              >
-                {isBoxImageDesign && (
-                  <div className={styles.cardMedia}>
+        <section className={styles.servicesSection} id="professional-services-list">
+          <div className={styles.sectionHeader}>
+            <h2>Comprehensive Legal Expertise</h2>
+          </div>
+
+          <div className={styles.servicesGrid}>
+            {regularServices.map((service, index) => (
+              <Fragment key={service.slug}>
+                <article id={service.slug} className={styles.serviceCard}>
+                  <div className={styles.cardTop}>
                     <div className={styles.iconCircle}>
-                      <div className={styles.iconBg}>
-                        <Image
-                          src={service.icon}
-                          alt=""
-                          width={64}
-                          height={64}
-                          className={styles.cardIcon}
-                        />
-                      </div>
-                    </div>
-                    <div className={styles.cardLogo}>
                       <Image
-                        src="/icons/ACA_Dark.png"
-                        alt="ACA"
-                        width={56}
-                        height={56}
-                        className={styles.cardLogoImg}
+                        src={service.icon}
+                        alt=""
+                        width={22}
+                        height={22}
+                        className={styles.cardIcon}
                       />
                     </div>
-                  </div>
-                )}
 
-                {isBoxImageDesign && <div className={styles.cardDivider} aria-hidden="true" />}
-
-                <div className={styles.cardContent}>
-                  <h2>{service.title}</h2>
-                  <p>{formatAcaJuris(service.description)}</p>
-                </div>
-
-                {!isBoxImageDesign && <div className={styles.cardDivider} aria-hidden="true" />}
-
-                {!isBoxImageDesign && (
-                  <div className={styles.cardMedia}>
-                    <div className={styles.iconCircle}>
-                      <div className={styles.iconBg}>
-                        <Image
-                          src={service.icon}
-                          alt=""
-                          width={64}
-                          height={64}
-                          className={styles.cardIcon}
-                        />
-                      </div>
-                    </div>
-                    <div className={styles.cardLogo}>
-                      <Image
-                        src="/icons/ACA_Dark.png"
-                        alt="ACA"
-                        width={56}
-                        height={56}
-                        className={styles.cardLogoImg}
-                      />
+                    <div className={styles.titleWrap}>
+                      <span className={styles.titleRule} aria-hidden="true" />
+                      <h3>{service.title}</h3>
                     </div>
                   </div>
-                )}
-              </article>
-            );
-          })}
-        </section>
 
-        <section className={styles.mobileImagesContainer}>
-          {professionalServices.map((service, index) => (
-            <div key={service.slug} className={styles.mobileImageWrapper}>
-              <img
-                src={`/images/Professional services - Mobile/P${index + 1}.png`}
-                alt={service.title}
-                className={styles.mobileImageImg}
-                loading="lazy"
-              />
+                  <p className={styles.cardDescription}>{formatAcaJuris(service.description)}</p>
+                  <span className={styles.cardWatermark}>ACA</span>
+                </article>
+
+                {index % 2 === 1 && index < regularServices.length - 1 ? (
+                  <div className={styles.rowDivider} aria-hidden="true" key={`${service.slug}-divider`} />
+                ) : null}
+              </Fragment>
+            ))}
+          </div>
+
+          <div className={styles.featuredDivider} aria-hidden="true" />
+
+          <article id={featuredService.slug} className={`${styles.serviceCard} ${styles.featuredCard}`}>
+            <div className={styles.cardTop}>
+              <div className={styles.iconCircle}>
+                <Image
+                  src={featuredService.icon}
+                  alt=""
+                  width={22}
+                  height={22}
+                  className={styles.cardIcon}
+                />
+              </div>
+
+              <div className={styles.titleWrap}>
+                <span className={styles.titleRule} aria-hidden="true" />
+                <h3>{featuredService.title}</h3>
+              </div>
             </div>
-          ))}
+
+            <p className={styles.cardDescription}>{formatAcaJuris(featuredService.description)}</p>
+            <span className={styles.cardWatermark}>ACA</span>
+          </article>
+        </section>
+
+        <section className={styles.ctaSection} aria-label="Contact Call To Action">
+          <div className={styles.ctaPanel}>
+            <div>
+              <h3>Ready to discuss your needs?</h3>
+              <p>Tell us about your matter and we will guide you to the right service and next steps.</p>
+            </div>
+
+            <div className={styles.ctaActions}>
+              <Link href="/contact#leave-message" className={styles.primaryAction}>
+                Get in touch
+              </Link>
+              <Link href="/contact" className={styles.secondaryAction}>
+                Contact
+              </Link>
+            </div>
+          </div>
         </section>
       </main>
     </>

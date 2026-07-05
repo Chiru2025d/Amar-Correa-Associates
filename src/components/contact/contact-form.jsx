@@ -82,77 +82,85 @@ export default function ContactForm() {
 
       {/* FORM */}
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          className={styles.formInput}
-          suppressHydrationWarning
-          required
-        />
+        <p className={styles.formNote}>
+          Please note: You may use this form solely to request an appointment for an online or offline meeting.
+          Kindly ensure all fields are completed. The message box may contain a concise description of your
+          issue. We respectfully request that you do not seek legal counsel or consultation through this form.
+        </p>
 
-        <div className={styles.fieldGroup}>
+        <div className={styles.formFields}>
           <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            onBlur={() => setTouched((current) => ({ ...current, email: true }))}
-            placeholder="Gmail ID"
-            className={`${styles.formInput} ${touched.email && !isEmailValid ? styles.invalidInput : ""}`}
-            aria-invalid={touched.email && !isEmailValid}
-            aria-describedby="email-error"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            className={styles.formInput}
             suppressHydrationWarning
             required
           />
-          {touched.email && !isEmailValid && (
-            <span id="email-error" className={styles.fieldError}>
-              Incorrect email. Enter a valid @gmail.com address.
-            </span>
-          )}
-        </div>
 
-        <div className={styles.fieldGroup}>
-          <input
-            type="tel"
-            name="phone"
-            value={phone}
-            onChange={(event) => setPhone(event.target.value)}
-            onBlur={() => setTouched((current) => ({ ...current, phone: true }))}
-            placeholder="10-digit mobile number"
-            className={`${styles.formInput} ${touched.phone && !isPhoneValid ? styles.invalidInput : ""}`}
-            aria-invalid={touched.phone && !isPhoneValid}
-            aria-describedby="phone-error"
-            inputMode="numeric"
-            autoComplete="tel"
+          <div className={styles.fieldGroup}>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              onBlur={() => setTouched((current) => ({ ...current, email: true }))}
+              placeholder="Gmail ID"
+              className={`${styles.formInput} ${touched.email && !isEmailValid ? styles.invalidInput : ""}`}
+              aria-invalid={touched.email && !isEmailValid}
+              aria-describedby="email-error"
+              suppressHydrationWarning
+              required
+            />
+            {touched.email && !isEmailValid && (
+              <span id="email-error" className={styles.fieldError}>
+                Incorrect email. Enter a valid @gmail.com address.
+              </span>
+            )}
+          </div>
+
+          <div className={styles.fieldGroup}>
+            <input
+              type="tel"
+              name="phone"
+              value={phone}
+              onChange={(event) => setPhone(event.target.value)}
+              onBlur={() => setTouched((current) => ({ ...current, phone: true }))}
+              placeholder="10-digit mobile number"
+              className={`${styles.formInput} ${touched.phone && !isPhoneValid ? styles.invalidInput : ""}`}
+              aria-invalid={touched.phone && !isPhoneValid}
+              aria-describedby="phone-error"
+              inputMode="numeric"
+              autoComplete="tel"
+              suppressHydrationWarning
+              required
+            />
+            {touched.phone && !isPhoneValid && (
+              <span id="phone-error" className={styles.fieldError}>
+                Incorrect phone number. Enter a valid 10-digit Indian mobile number.
+              </span>
+            )}
+          </div>
+
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="5"
+            className={styles.formTextarea}
             suppressHydrationWarning
             required
-          />
-          {touched.phone && !isPhoneValid && (
-            <span id="phone-error" className={styles.fieldError}>
-              Incorrect phone number. Enter a valid 10-digit Indian mobile number.
-            </span>
+          ></textarea>
+
+          {status.message && (
+            <p className={`${styles.formStatus} ${status.type === "error" ? styles.formStatusError : ""}`}>
+              {status.message}
+            </p>
           )}
+
+          <button type="submit" className={styles.submitBtn} disabled={!canSubmit}>
+            {isSubmitting ? "SENDING..." : "SUBMIT"}
+          </button>
         </div>
-
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows="5"
-          className={styles.formTextarea}
-          suppressHydrationWarning
-          required
-        ></textarea>
-
-        {status.message && (
-          <p className={`${styles.formStatus} ${status.type === "error" ? styles.formStatusError : ""}`}>
-            {status.message}
-          </p>
-        )}
-
-        <button type="submit" className={styles.submitBtn} disabled={!canSubmit}>
-          {isSubmitting ? "SENDING..." : "SUBMIT"}
-        </button>
       </form>
     </section>
   );

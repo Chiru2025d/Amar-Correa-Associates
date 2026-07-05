@@ -177,7 +177,7 @@
 /* CONTACT FORM WRAPPER */
 
 .contactForm {
-  max-width: 520px;
+  max-width: 100%;
   scroll-margin-top: 120px;
 }
 
@@ -195,7 +195,25 @@
 /* FORM ELEMENTS */
 
 .form {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 520px);
+  column-gap: 84px;
+  align-items: start;
   margin-top: 10px;
+}
+
+.formNote {
+  margin: 0;
+  max-width: 360px;
+  color: #4f5b65;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.formFields {
+  width: 100%;
 }
 
 /* ===============================
@@ -468,6 +486,11 @@
     font-size: 30px;
     line-height: 38px;
     margin-bottom: 24px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
   }
 
   /* INPUTS */

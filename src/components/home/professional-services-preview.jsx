@@ -189,7 +189,7 @@ export default function ProfessionalServicesPreview() {
                 className={`expertise-tab${activeTab === "advisory" ? " exp-tab-active" : ""}`}
                 onClick={() => switchTab("advisory")}
               >
-                Advisory Services
+                Professional Services
               </button>
             </div>
             <div className="expertise-tab-divider" />

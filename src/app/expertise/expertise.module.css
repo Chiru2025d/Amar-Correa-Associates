@@ -121,13 +121,13 @@
 }
 
 .cardIcon {
-  width: 95px;
-  height: 95px;
-  max-width: 95px;
-  max-height: 95px;
   object-fit: contain;
+  opacity: .92;
+  width: 95px;
+  max-width: 62px;
+  height: 95px;
+  max-height: 95px;
   display: block;
-  opacity: 0.92;
 }
 
 /* ── Card Content ── */
@@ -154,8 +154,8 @@
 }
 
 .cardExcerpt {
-  color: #3c3e40;
-  text-align: left;
+  color: #3c3e40ad;
+  text-align: center;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;

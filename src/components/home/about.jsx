@@ -12,7 +12,7 @@ export default function About() {
               Amar Correa Associates, Juris - <span style={{ fontWeight: 600 }}>ACA</span>
               <span style={{ fontWeight: 400 }}>Juris</span>, is a Bangalore - based
               multidisciplinary law chambers with a core focus on criminal law. Established
-              in 2002, it brings over 25 years of experience in advising and representing
+              in 2002, it brings practically 25 years of experience in advising and representing
               individual and corporate clients across all stages of criminal litigation -
               from Magistrate and Sessions Courts to the High Court.
             </p>
@@ -24,7 +24,7 @@ export default function About() {
 
             <ul>
               <li>
-                Criminal & corporate litigation : IPC offences, Companies Act prosecutions,
+                General Criminal & Corporate Criminal litigation covering : IPC offences, Companies Act prosecutions,
                 cheque dishonour, defamation, and Enforcement Directorate investigations.
               </li>
               <li>
