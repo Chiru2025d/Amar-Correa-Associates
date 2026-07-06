@@ -139,8 +139,8 @@ export default function ExpertisePage() {
 
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
-        <p className={styles.heroLabel}>Criminal Law Specialised Multi - Disciplinary Law Chambers</p>
         <h1 className={styles.heroTitle}>AREAS OF PRACTICE</h1>
+        <p className={styles.heroLabel}>Criminal Law Specialised Multi - Disciplinary Law Chambers</p>
       </section>
 
       {/* Practice Cards Grid */}

@@ -7,8 +7,8 @@ export default function CounselAccusedVideoConferencePage() {
       <Header />
 
       <section className={styles.heroBanner}>
-        <p className={styles.heroLabel}>Legal Landscape: Recent Developments</p>
         <h1 className={styles.heroTitle}>LEGAL UPDATES & BLOG</h1>
+        <p className={styles.heroLabel}>Legal Landscape: Recent Developments</p>
       </section>
 
       <main className={styles.page}>

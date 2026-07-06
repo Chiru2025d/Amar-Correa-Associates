@@ -106,8 +106,8 @@ export default function ProfessionalServicesPage() {
 
       <main className={styles.page}>
         <section className={styles.hero} aria-labelledby="professional-services-title">
-          <p>Our Services</p>
           <h1 id="professional-services-title">Professional Services</h1>
+          <p>What Professional Legal Services We Offer</p>
         </section>
 
         <section className={styles.servicesSection} id="professional-services-list">
