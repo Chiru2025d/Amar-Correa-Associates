@@ -3,7 +3,8 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
 
-const recipientEmail = "office@acajuris.com";
+const defaultFormSubmitTarget = "office@acajuris.com";
+const formSubmitTarget = process.env.NEXT_PUBLIC_FORMSUBMIT_TARGET || defaultFormSubmitTarget;
 const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
 const indianPhonePattern = /^[6-9]\d{9}$/;
 
@@ -34,12 +35,14 @@ export default function ContactForm() {
     formData.set("phone", `+91 ${normalizedPhone}`);
     formData.append("_subject", "New enquiry from ACA Juris website");
     formData.append("_template", "table");
+    formData.append("_captcha", "false");
+    formData.append("_replyto", email.trim());
 
     setIsSubmitting(true);
     setStatus({ type: "idle", message: "" });
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${formSubmitTarget}`, {
         method: "POST",
         headers: {
           Accept: "application/json",

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Fragment } from "react";
 import Header from "../../components/header.jsx";
 import { formatAcaJuris } from "../../components/aca-juris.jsx";
@@ -28,7 +27,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Legal-Drafting-&-Initiation.png",
     image: "/images/Professional services - web/P3-Web.png",
     description:
-      "We provide drafting and assistance in initiating legal processes, including preparing and lodging complaints before the police, drafting complaints to be presented before the Court, and offering representation and appearance before the Court.",
+      "This legal service structure is designed to ensure immediate and continuous access to law chambers' expertise and availability. It establishes a retainer arrangement for the provision of comprehensive legal support, including consultation and counsel services, advisory assistance, document review, preparation of legal opinions, and related professional services, particularly in urgent or time sensitive matters.",
   },
   {
     slug: "legal-services-on-retainer",
@@ -36,7 +35,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/REtainers.png",
     image: "/images/Professional services - web/P4-Web.png",
     description:
-      "ACAJuris offers legal services on a retainer basis, providing clients with immediate and continuous access to legal support. This arrangement ensures ongoing consultation, counsel, document review, legal opinions, and urgent professional assistance as needed.",
+      "We provide drafting and assistance in initiating legal processes, including preparing and lodging complaints before the police, drafting complaints to be presented before the Court, and offering representation and appearance before the Court.",
   },
   {
     slug: "representative-services-before-trial-courts",
@@ -84,7 +83,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Criminal-Appeals-&-Revisions.png",
     image: "/images/Professional services - web/P10-Web.png",
     description:
-      "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
+      "The services of a lawyer are often indispensable before the police in a variety of circumstances. These may include submitting representations, initiating complaints, responding to inquiries when summoned, or addressing allegations and charges. ACAJuris provides professional representation in such matters, ensuring effective legal support and guidance throughout these interactions.",
   },
   {
     slug: "police-station-assistance",
@@ -92,7 +91,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Police-Station---Assistance.png",
     image: "/images/Professional services - web/P11-Web.png",
     description:
-      "The services of a lawyer are often indispensable before the police in a variety of circumstances. These may include submitting representations, initiating complaints, responding to inquiries when summoned, or addressing allegations and charges. ACAJuris provides professional representation in such matters, ensuring effective legal support and guidance throughout these interactions.",
+      "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
   },
 ];
 
@@ -111,10 +110,6 @@ export default function ProfessionalServicesPage() {
         </section>
 
         <section className={styles.servicesSection} id="professional-services-list">
-          <div className={styles.sectionHeader}>
-            <h2>Comprehensive Legal Expertise</h2>
-          </div>
-
           <div className={styles.servicesGrid}>
             {regularServices.map((service, index) => (
               <Fragment key={service.slug}>
@@ -170,24 +165,6 @@ export default function ProfessionalServicesPage() {
             <p className={styles.cardDescription}>{formatAcaJuris(featuredService.description)}</p>
             <span className={styles.cardWatermark}>ACA</span>
           </article>
-        </section>
-
-        <section className={styles.ctaSection} aria-label="Contact Call To Action">
-          <div className={styles.ctaPanel}>
-            <div>
-              <h3>Ready to discuss your needs?</h3>
-              <p>Tell us about your matter and we will guide you to the right service and next steps.</p>
-            </div>
-
-            <div className={styles.ctaActions}>
-              <Link href="/contact#leave-message" className={styles.primaryAction}>
-                Get in touch
-              </Link>
-              <Link href="/contact" className={styles.secondaryAction}>
-                Contact
-              </Link>
-            </div>
-          </div>
         </section>
       </main>
     </>

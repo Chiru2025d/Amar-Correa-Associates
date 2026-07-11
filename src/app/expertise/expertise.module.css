@@ -25,13 +25,13 @@
 }
 
 .heroLabel {
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 11px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #bda588;
-  margin: 0 0 var(--spacing-label-bottom);
   max-width: 90%;
+  margin: -7px 0 var(--spacing-label-bottom);
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11px;
 }
 
 .heroTitle {
@@ -214,10 +214,6 @@
   }
   .acaWatermark {
     font-size: 54px;
-  }
-  .cardIcon {
-    /* width: 46px; */
-    /* height: 46px; */
   }
   .cardContent {
     padding: 4px 18px 24px;

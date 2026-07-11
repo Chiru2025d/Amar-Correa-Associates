@@ -9,7 +9,6 @@ const DISCLAIMER_KEY = "aca_disclaimer_accepted";
 
 export default function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hasAgreed, setHasAgreed] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,7 +20,6 @@ export default function DisclaimerModal() {
 
     const accepted = window.localStorage.getItem(DISCLAIMER_KEY);
     if (accepted !== "true") {
-      setHasAgreed(false);
       setIsOpen(true);
       return;
     }
@@ -42,7 +40,6 @@ export default function DisclaimerModal() {
   }, [isOpen]);
 
   const handleProceed = () => {
-    if (!hasAgreed) return;
     window.localStorage.setItem(DISCLAIMER_KEY, "true");
     setIsOpen(false);
   };
@@ -82,22 +79,7 @@ export default function DisclaimerModal() {
             </p>
           </div>
 
-          <label className={styles.agreeRow} htmlFor="disclaimer-agree">
-            <input
-              id="disclaimer-agree"
-              type="checkbox"
-              checked={hasAgreed}
-              onChange={(event) => setHasAgreed(event.target.checked)}
-            />
-            I have read and agree to this disclaimer.
-          </label>
-
-          <button
-            type="button"
-            className={styles.proceedBtn}
-            onClick={handleProceed}
-            disabled={!hasAgreed}
-          >
+          <button type="button" className={styles.proceedBtn} onClick={handleProceed}>
             I Agree
           </button>
         </div>

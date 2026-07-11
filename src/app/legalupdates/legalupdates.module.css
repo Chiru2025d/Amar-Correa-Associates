@@ -21,12 +21,12 @@
 
 .heroLabel {
   color: #bda588;
-  margin: 0 0 10px;
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 11px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   max-width: 90%;
+  margin: -7px 0 10px;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 11px;
 }
 
 .heroTitle {
