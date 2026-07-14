@@ -2348,14 +2348,26 @@
     gap: 24px;
 }
 
-.update-heading {
-    font-family: 'Be Vietnam', sans-serif;
-    font-weight: 500;
-    font-size: clamp(18px, 2.1vw, 21px);
-    line-height: 1.15;
+.update-label {
+    letter-spacing: .5px;
     color: #ffffff;
-    margin: 0px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    font-family: Be Vietnam, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Adjust heading position - modify margin to move text up/down */
+.update-heading {
+    color: #fff;
     max-width: 430px;
+    margin: -154px 0 0;
+    font-family: Be Vietnam, sans-serif;
+    font-size: clamp(18px, 2.1vw, 21px);
+    font-weight: 500;
+    line-height: 1.15;
 }
 
 .update-title {

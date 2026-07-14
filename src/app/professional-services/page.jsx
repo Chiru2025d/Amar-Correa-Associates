@@ -93,12 +93,17 @@ const professionalServices = [
     description:
       "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
   },
+  {
+    slug: "mediation-arbitration",
+    title: "Mediation & Arbitration",
+    icon: "/icons/PracticeList/Legal-Consultation-&-Counsel-Services.png",
+    image: "/images/Professional services - web/P1-Web.png",
+    description:
+      "ACAJuris offers alternative dispute resolution services including mediation and arbitration. Our experienced mediators and arbitrators facilitate resolution of disputes outside the traditional court system, providing faster, cost-effective, and confidential resolution mechanisms for parties seeking amicable settlements.",
+  },
 ];
 
 export default function ProfessionalServicesPage() {
-  const regularServices = professionalServices.slice(0, -1);
-  const featuredService = professionalServices[professionalServices.length - 1];
-
   return (
     <>
       <Header />
@@ -111,7 +116,7 @@ export default function ProfessionalServicesPage() {
 
         <section className={styles.servicesSection} id="professional-services-list">
           <div className={styles.servicesGrid}>
-            {regularServices.map((service, index) => (
+            {professionalServices.map((service, index) => (
               <Fragment key={service.slug}>
                 <article id={service.slug} className={styles.serviceCard}>
                   <div className={styles.cardTop}>
@@ -135,36 +140,12 @@ export default function ProfessionalServicesPage() {
                   <span className={styles.cardWatermark}>ACA</span>
                 </article>
 
-                {index % 2 === 1 && index < regularServices.length - 1 ? (
+                {index % 2 === 1 && index < professionalServices.length - 1 ? (
                   <div className={styles.rowDivider} aria-hidden="true" key={`${service.slug}-divider`} />
                 ) : null}
               </Fragment>
             ))}
           </div>
-
-          <div className={styles.featuredDivider} aria-hidden="true" />
-
-          <article id={featuredService.slug} className={`${styles.serviceCard} ${styles.featuredCard}`}>
-            <div className={styles.cardTop}>
-              <div className={styles.iconCircle}>
-                <Image
-                  src={featuredService.icon}
-                  alt=""
-                  width={22}
-                  height={22}
-                  className={styles.cardIcon}
-                />
-              </div>
-
-              <div className={styles.titleWrap}>
-                <span className={styles.titleRule} aria-hidden="true" />
-                <h3>{featuredService.title}</h3>
-              </div>
-            </div>
-
-            <p className={styles.cardDescription}>{formatAcaJuris(featuredService.description)}</p>
-            <span className={styles.cardWatermark}>ACA</span>
-          </article>
         </section>
       </main>
     </>

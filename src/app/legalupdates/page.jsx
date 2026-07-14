@@ -3,7 +3,7 @@ import styles from "./legalupdates.module.css";
 
 const articles = [
   {
-    updateNumber: "Blog/Legal Update 01",
+    updateNumber: "Blog 001",
     author: "Amar Correa",
     title: "\u201c An Incorrect View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
     subheading: "Understanding the Misconception",
@@ -14,7 +14,7 @@ const articles = [
     bullets: [],
   },
   {
-    updateNumber: "Blog/Legal Update 02",
+    updateNumber: "Blog 002",
     author: "Amar Correa",
     title: "\u201c The Correct View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
     subheading: "A Clarified and Legally Supported Interpretation",
@@ -23,6 +23,18 @@ const articles = [
       "This interpretation aligns with judicial precedents that emphasize the court\u2019s duty to discover the truth and ensure a fair trial. Empowering the trial court to order further investigation strengthens the justice system by correcting investigative lapses, promoting transparency, and supporting the larger goals of justice and effective advocacy.",
     ],
     bullets: [],
+  },
+  {
+    updateNumber: "Legal Updates 001",
+    author: "Amar Correa",
+    title: "Counsel-accused Video Conference",
+    subheading: "Amenities Counsel-accused Video Conference",
+    paragraphs: [
+      "The Supreme Court has made mandatory and issued directions to Legal Services Committees / Authorities of every State, to extend the facility for video conferencing between the counsel and the accused lodged in jail, in matters entrusted by the Legal Services Committee.",
+      "Considering and commending earlier direction of the Supreme Court Legal Services Committee, and noting that very often the Court sees that the Advocates who appear in matters entrusted by the Supreme Court Legal Services Committee, do not have the advantage of having had a dialogue with either the accused or those who are in the know of the details about the case, which at times seriously hampers the efforts on part of the Advocates, the Supreme Court reiterating that, all such attempts to facilitate dialogue between the counsel and his client would further the cause of justice and make legal aid meaningful, has directed all Legal Services Authorities/Committees in every State to extend similar such facility in every criminal case wherever the accused is lodged in jail and shall extend the facility of video conferencing between the counsel on one hand and the accused or anybody in the know of the matter on the other, so that the cause of justice is well served.",
+    ],
+    bullets: [],
+    readLink: "https://www.supremecourtofindia.nic.in/supremecourt/2018/20446/20446_2018_Judgement_14-Aug-2018.pdf",
   },
 ];
 
@@ -44,8 +56,11 @@ export default function LegalUpdatesPage() {
             <div className={styles.articleInner}>
               {/* Meta row */}
               <div className={styles.articleMeta}>
-                <span className={styles.articleDate}>{article.updateNumber},</span>
-                <span className={styles.articleDateLabel}>{article.author}</span>
+                <span className={styles.articleDate}>
+                  {article.updateNumber}
+                  {idx < 2 ? "," : ""}
+                </span>
+                {idx < 2 && <span className={styles.articleDateLabel}>{article.author}</span>}
               </div>
 
               <div className={styles.articleContent}>
@@ -77,9 +92,18 @@ export default function LegalUpdatesPage() {
                   <p key={i} className={styles.articleBody}>{p}</p>
                 ))}
 
-                <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
-                  Read More
-                </a>
+                {article.readLink ? (
+                  <div>
+                    <p className={styles.articleBody}>Read here :</p>
+                    <a href={article.readLink} target="_blank" rel="noopener noreferrer" className={styles.readMore}>
+                      {article.readLink}
+                    </a>
+                  </div>
+                ) : (
+                  <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
+                    Read More
+                  </a>
+                )}
               </div>
             </div>
           </article>

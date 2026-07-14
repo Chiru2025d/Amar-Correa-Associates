@@ -53,10 +53,10 @@
 }
 
 .servicesGrid {
-  position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 34px 50px;
+  gap: 34px 64px;
   display: grid;
+  position: relative;
 }
 
 .servicesGrid::before {
@@ -80,13 +80,13 @@
 
 .rowDivider::after {
   content: "";
-  position: absolute;
-  left: calc(51% - 10px);
-  top: 0;
+  background: #0a2640;
   width: 40px;
   height: 40px;
+  position: absolute;
+  top: 0;
+  left: calc(51% - 13px);
   transform: translate(-50%, -55%);
-  background: #0a2640;
 }
 
 .featuredDivider {
@@ -97,14 +97,14 @@
 }
 
 .serviceCard {
-  position: relative;
   background: #f0f2f5;
-  border-radius: 8px;
   border-bottom: 0;
-  min-height: 191px;
-  padding: 16px 56px 24px 82px;
-  box-shadow: 0 1px #08121c33;
+  border-radius: 8px;
+  min-height: 240px;
+  padding: 16px 56px 24px 90px;
+  position: relative;
   overflow: hidden;
+  box-shadow: 0 1px #08121c33;
 }
 
 .serviceCard::after {
@@ -120,7 +120,7 @@
 
 .featuredCard {
   margin-top: 0;
-  min-height: 158px;
+  min-height: 240px;
 }
 
 .cardTop {
@@ -184,6 +184,10 @@
   font-size: 13px;
   line-height: 1.7;
   padding-right: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .cardWatermark {
@@ -195,6 +199,12 @@
   font-size: 23px;
   letter-spacing: 2px;
   line-height: 1;
+}
+
+/* Police Station - Assistance and Mediation & Arbitration boxes - default full width */
+#police-station-assistance,
+#mediation-arbitration {
+  grid-column: span 1;
 }
 
 @media (min-width: 1500px) and (max-width: 1620px) and (min-height: 940px) and (max-height: 1040px) {
@@ -236,6 +246,9 @@
 
   .titleWrap h3 {
     font-size: 19px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
   }
 
   .rowDivider {
@@ -273,7 +286,7 @@
 
   .servicesGrid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 60px;
   }
 
   .servicesGrid::before {
@@ -292,28 +305,37 @@
   .serviceCard {
     padding: 14px 14px 20px 76px;
     min-height: 0;
-  }
-
-  .serviceCard + .serviceCard {
-    border-top: 4px solid #d8e6f533;
+    height: auto;
   }
 
   .featuredCard {
-    margin-top: 0;
+    min-height: 0;
+    height: auto;
   }
 
-  .cardWatermark {
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+    top: 15px;
     left: 14px;
-    bottom: 32px;
-    font-size: 20px;
+  }
+
+  .cardIcon {
+    width: 28px;
+    height: 28px;
   }
 
   .titleWrap h3 {
     font-size: 17px;
+    min-height: unset;
   }
 
   .cardDescription {
     font-size: 12px;
     line-height: 1.55;
+  }
+
+  .cardWatermark {
+    font-size: 14px;
   }
 }

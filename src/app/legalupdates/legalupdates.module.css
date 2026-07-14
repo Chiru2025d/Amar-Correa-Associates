@@ -64,10 +64,10 @@
 
 /* timestamp row */
 .articleMeta {
-  display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   margin-bottom: 22px;
+  display: flex;
 }
 
 .articleDate {

@@ -9,6 +9,7 @@ const legalUpdates = [
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20A.png",
     alt: "Legal update 1",
     meta: "Blog/Legal Update 01",
+    label: "Blog - 001",
     author: "Amar Correa",
     date: "May 08, 2019",
     heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
@@ -19,6 +20,7 @@ const legalUpdates = [
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20B.png",
     alt: "Legal update 2",
     meta: "Blog/Legal Update 02",
+    label: "Blog - 002",
     author: "Amar Correa",
     date: "May 08, 2019",
     heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
@@ -29,6 +31,7 @@ const legalUpdates = [
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
+    label: "Legal Updates - 001",
     author: "Amar Correa",
     date: "",
     heading: "Counsel-accused Video Conference",
@@ -56,6 +59,7 @@ export default function LegalUpdatesPreview() {
                 />
               </div>
               <div className="legal-content">
+                <span className="update-label">{update.label}</span>
                 <h3 className="update-heading">{update.heading}</h3>
                 <div className="update-bottom">
                   <h4 className="update-title">{update.title}</h4>
