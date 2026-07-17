@@ -3,12 +3,13 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
 
-const defaultFormSubmitTarget = "office@acajuris.com";
-const formSubmitTarget = process.env.NEXT_PUBLIC_FORMSUBMIT_TARGET || defaultFormSubmitTarget;
-const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
+const recipientEmail = "office@acajuris.com";
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const indianPhonePattern = /^[6-9]\d{9}$/;
 
 export default function ContactForm() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [touched, setTouched] = useState({ email: false, phone: false });
@@ -16,61 +17,77 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const normalizedPhone = phone.replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "");
-  const isEmailValid = gmailPattern.test(email.trim());
+  const isEmailValid = emailPattern.test(email.trim());
   const isPhoneValid = indianPhonePattern.test(normalizedPhone);
   const canSubmit = isEmailValid && isPhoneValid && !isSubmitting;
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (!canSubmit) {
-      setTouched({ email: true, phone: true });
-      return;
+  if (!canSubmit) {
+    setTouched({
+      email: true,
+      phone: true,
+    });
+    return;
+  }
+
+  setIsSubmitting(true);
+  setStatus({
+    type: "idle",
+    message: "",
+  });
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        name: name.trim(),
+        email: email.trim(),
+        phone: `+91 ${normalizedPhone}`,
+        message: message.trim(),
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Unable to send email");
     }
 
-    const form = event.currentTarget;
-    const formData = new FormData(form);
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
 
-    formData.set("email", email.trim());
-    formData.set("phone", `+91 ${normalizedPhone}`);
-    formData.append("_subject", "New enquiry from ACA Juris website");
-    formData.append("_template", "table");
-    formData.append("_captcha", "false");
-    formData.append("_replyto", email.trim());
+    setTouched({
+      email: false,
+      phone: false,
+    });
 
-    setIsSubmitting(true);
-    setStatus({ type: "idle", message: "" });
+    setStatus({
+      type: "success",
+      message: "Thank you. Your message has been sent successfully.",
+    });
 
-    try {
-      const response = await fetch(`https://formsubmit.co/ajax/${formSubmitTarget}`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      });
+  } catch (err) {
 
-      if (!response.ok) {
-        throw new Error("Message could not be sent");
-      }
+    setStatus({
+      type: "error",
+      message: "Unable to send your message. Please try again later.",
+    });
 
-      form.reset();
-      setEmail("");
-      setPhone("");
-      setTouched({ email: false, phone: false });
-      setStatus({
-        type: "success",
-        message: "Thank you. Your message has been sent to ACA Juris.",
-      });
-    } catch (error) {
-      setStatus({
-        type: "error",
-        message: "Sorry, we could not send your message. Please email office@acajuris.com.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  } finally {
+
+    setIsSubmitting(false);
+
+  }
+};
 
   return (
     <section id="leave-message" className={styles.contactForm}>
@@ -95,6 +112,8 @@ export default function ContactForm() {
           <input
             type="text"
             name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             placeholder="Your Name"
             className={styles.formInput}
             suppressHydrationWarning
@@ -108,7 +127,7 @@ export default function ContactForm() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               onBlur={() => setTouched((current) => ({ ...current, email: true }))}
-              placeholder="Gmail ID"
+              placeholder="Email Address"
               className={`${styles.formInput} ${touched.email && !isEmailValid ? styles.invalidInput : ""}`}
               aria-invalid={touched.email && !isEmailValid}
               aria-describedby="email-error"
@@ -117,7 +136,7 @@ export default function ContactForm() {
             />
             {touched.email && !isEmailValid && (
               <span id="email-error" className={styles.fieldError}>
-                Incorrect email. Enter a valid @gmail.com address.
+                Please enter a valid email address.
               </span>
             )}
           </div>
@@ -148,6 +167,8 @@ export default function ContactForm() {
           <textarea
             name="message"
             placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             rows="5"
             className={styles.formTextarea}
             suppressHydrationWarning
@@ -160,7 +181,7 @@ export default function ContactForm() {
             </p>
           )}
 
-          <button type="submit" className={styles.submitBtn} disabled={!canSubmit}>
+          <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
             {isSubmitting ? "SENDING..." : "SUBMIT"}
           </button>
         </div>
