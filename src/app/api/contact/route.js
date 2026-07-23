@@ -16,7 +16,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"${requesterName}" <${process.env.EMAIL_USER}>`,
-      to: "chiranjeevir12@gmail.com", // Change to your test recipient
+      to: "nandha020999@gmail.com", // Change to your test recipient
       replyTo: email,
       subject: `New enquiry from ${requesterName}`,
       html: `
