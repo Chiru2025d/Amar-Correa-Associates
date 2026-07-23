@@ -2,30 +2,59 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./disclaimer-modal.module.css";
 
 const DISCLAIMER_KEY = "aca_disclaimer_accepted";
 
 export default function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [pendingDestination, setPendingDestination] = useState(null);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     // Avoid showing on home route, including initial unresolved pathname.
-    if (!pathname || pathname === "/" || pathname === "/home") {
-      setIsOpen(false);
-      return;
-    }
+    const timer = window.setTimeout(() => {
+      const isHome = !pathname || pathname === "/" || pathname === "/home";
+      const accepted = window.localStorage.getItem(DISCLAIMER_KEY);
+      setIsOpen(!isHome && accepted !== "true");
+    }, 0);
 
-    const accepted = window.localStorage.getItem(DISCLAIMER_KEY);
-    if (accepted !== "true") {
-      setIsOpen(true);
-      return;
-    }
-
-    setIsOpen(false);
+    return () => window.clearTimeout(timer);
   }, [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/" && pathname !== "/home") return;
+
+    const showDisclaimerBeforeLeavingHome = (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      if (!(event.target instanceof Element)) return;
+
+      const link = event.target.closest("a[href]");
+      if (!link || link.target === "_blank" || link.hasAttribute("download")) return;
+
+      const destination = new URL(link.href, window.location.href);
+      const current = new URL(window.location.href);
+      const isInternalNavigation = destination.origin === current.origin
+        && destination.pathname !== "/"
+        && destination.pathname !== "/home";
+
+      if (!isInternalNavigation || window.localStorage.getItem(DISCLAIMER_KEY) === "true") return;
+
+      event.preventDefault();
+      setPendingDestination(`${destination.pathname}${destination.search}${destination.hash}`);
+      setIsOpen(true);
+    };
+
+    // Capture the click before Next.js handles the link, so visitors see the
+    // disclaimer before leaving the home page.
+    document.addEventListener("click", showDisclaimerBeforeLeavingHome, true);
+    return () => document.removeEventListener("click", showDisclaimerBeforeLeavingHome, true);
+  }, [pathname, router]);
 
   useEffect(() => {
     if (isOpen) {
@@ -42,6 +71,11 @@ export default function DisclaimerModal() {
   const handleProceed = () => {
     window.localStorage.setItem(DISCLAIMER_KEY, "true");
     setIsOpen(false);
+
+    if (pendingDestination) {
+      router.push(pendingDestination);
+      setPendingDestination(null);
+    }
   };
 
   if (!isOpen) return null;

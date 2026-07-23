@@ -95,11 +95,11 @@ const professionalServices = [
   },
   {
     slug: "mediation-arbitration",
-    title: "Mediation & Arbitration",
-    icon: "/icons/PracticeList/Legal-Consultation-&-Counsel-Services.png",
+    title: "Legal Aid - Pro Bono Services",
+    icon: "/icons/PracticeList/Mediation.png.png",
     image: "/images/Professional services - web/P1-Web.png",
     description:
-      "ACAJuris offers alternative dispute resolution services including mediation and arbitration. Our experienced mediators and arbitrators facilitate resolution of disputes outside the traditional court system, providing faster, cost-effective, and confidential resolution mechanisms for parties seeking amicable settlements.",
+      "ACAJuris takes up pro bono - free of charge, legal services in deserving cases and to individuals or NGOs or community groups, who cannot afford legal fees. We do take it up, also in a case of public interest. We ensure same high standards of practice as our fee-paying clients...",
   },
 ];
 
