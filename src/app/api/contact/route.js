@@ -5,18 +5,25 @@ export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
     const requesterName = (name || "Requester").trim();
+    const senderEmail = process.env.EMAIL_USER;
+    const senderPassword = process.env.EMAIL_PASS;
+    const recipientEmail = process.env.CONTACT_RECEIVER_EMAIL || senderEmail;
+
+    if (!senderEmail || !senderPassword) {
+      throw new Error("Missing EMAIL_USER or EMAIL_PASS in environment variables");
+    }
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: senderEmail,
+        pass: senderPassword,
       },
     });
 
     await transporter.sendMail({
-      from: `"${requesterName}" <${process.env.EMAIL_USER}>`,
-      to: "nandha020999@gmail.com", // Change to your test recipient
+      from: `"${requesterName}" <${senderEmail}>`,
+      to: recipientEmail,
       replyTo: email,
       subject: `New enquiry from ${requesterName}`,
       html: `
