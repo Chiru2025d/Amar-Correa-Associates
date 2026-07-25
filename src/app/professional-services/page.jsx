@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Header from "../../components/header.jsx";
 import { formatAcaJuris } from "../../components/aca-juris.jsx";
 import styles from "./professional-services.module.css";
@@ -104,6 +106,12 @@ const professionalServices = [
 ];
 
 export default function ProfessionalServicesPage() {
+  const [expandedSlug, setExpandedSlug] = useState(null);
+
+  const handleToggleDescription = (slug) => {
+    setExpandedSlug((prev) => (prev === slug ? null : slug));
+  };
+
   return (
     <>
       <Header />
@@ -136,7 +144,24 @@ export default function ProfessionalServicesPage() {
                     </div>
                   </div>
 
-                  <p className={styles.cardDescription}>{formatAcaJuris(service.description)}</p>
+                  <p
+                    className={`${styles.cardDescription} ${
+                      expandedSlug === service.slug ? styles.cardDescriptionExpanded : ""
+                    }`}
+                  >
+                    {formatAcaJuris(service.description)}
+                  </p>
+                  <button
+                    type="button"
+                    className={styles.readMoreBtn}
+                    onClick={() => handleToggleDescription(service.slug)}
+                    aria-expanded={expandedSlug === service.slug}
+                    aria-label={`${expandedSlug === service.slug ? "Collapse" : "Expand"} ${
+                      service.title
+                    } description`}
+                  >
+                    {expandedSlug === service.slug ? "Read Less" : "Read More"}
+                  </button>
                   <span className={styles.cardWatermark}>ACA</span>
                 </article>
 

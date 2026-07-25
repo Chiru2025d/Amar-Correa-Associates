@@ -184,10 +184,19 @@
   font-size: 13px;
   line-height: 1.7;
   padding-right: 4px;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+.readMoreBtn {
+  display: none;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #193854;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  text-underline-offset: 2px;
+  cursor: pointer;
 }
 
 .cardWatermark {
@@ -262,6 +271,24 @@
 
   .cardDescription {
     margin: 15px;
+    line-clamp: 6;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cardDescriptionExpanded {
+    line-clamp: unset;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
+    overflow: visible;
+  }
+
+  .readMoreBtn {
+    display: inline-block;
+    margin: 0 15px;
   }
 }
 
