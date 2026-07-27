@@ -27,7 +27,7 @@ const legalUpdates = [
     title: "The Correct View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
   {
-    href: "/legalupdates/counsel-accused-video-conference",
+    href: "/legalupdates",
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
