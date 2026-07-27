@@ -103,7 +103,7 @@ export default function ContactForm() {
       {/* FORM */}
       <form className={styles.form} onSubmit={handleSubmit}>
         <p className={styles.formNote}>
-          Please note: You may use this form solely to request an appointment for an online or offline meeting.
+          <strong>Please note:</strong> You may use this form solely to request an appointment for an online or offline meeting.
           Kindly ensure all fields are completed. The message box may contain a concise description of your
           issue. We respectfully request that you do not seek legal counsel or consultation through this form.
         </p>

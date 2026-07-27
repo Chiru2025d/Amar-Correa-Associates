@@ -32,7 +32,7 @@ const legalUpdates = [
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
     label: "Legal Updates - 001",
-    author: "Amar Correa",
+    author: "",
     date: "",
     heading: "Counsel-accused Video Conference",
     title: "Counsel-accused Video Conference",
@@ -65,7 +65,7 @@ export default function LegalUpdatesPreview() {
                   <h4 className="update-title">{update.title}</h4>
                   <span className="update-divider" aria-hidden="true" />
                   <div className="update-footer">
-                    <span>{`Author : ${update.author}`}</span>
+                    {update.author ? <span>{`Author : ${update.author}`}</span> : null}
                     {update.date ? <span>{update.date}</span> : null}
                   </div>
                 </div>
