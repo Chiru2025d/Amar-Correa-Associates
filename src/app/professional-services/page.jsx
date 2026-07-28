@@ -13,7 +13,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Legal-Consultation-&-Counsel-Services.png",
     image: "/images/Professional services - web/P1-Web.png",
     description:
-      "From distinguishing and identifying a crime or civil wrong to determining the appropriate legal remedy, the process involves study, discussion, meetings, fact-finding, assessment, and counsel - guiding whether to act or abstain, and if to act, what legal remedy to pursue, ACAJuris provides these comprehensive services.",
+      "From distinguishing and identifying a crime or civil wrong to determining the appropriate legal remedy, the process involves study, discussion, meetings, fact-finding, assessment, and counsel — guiding whether to act or abstain, and if to act, what legal remedy to pursue, ACAJuris provides these comprehensive services.",
   },
   {
     slug: "legal-opinion",
@@ -21,7 +21,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Legal-Opinion.png",
     image: "/images/Professional services - web/P2-Web.png",
     description:
-      "Through meetings, review of documents and communications, and assessment of facts and circumstances, then applying prevailing laws, statutes, and case precedents, ACAJuris provides a considered Legal Opinion - advising clients on their legal standing, litigation risks, and likely dispute outcomes.",
+      "Through meetings, review of documents and communications, and assessment of facts and circumstances, then applying prevailing laws, statutes, and case precedents, ACAJuris provides a considered Legal Opinion — advising clients on their legal standing, litigation risks, and likely dispute outcomes.",
   },
   {
     slug: "legal-drafting-initiation",
@@ -29,7 +29,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Legal-Drafting-&-Initiation.png",
     image: "/images/Professional services - web/P3-Web.png",
     description:
-      "This legal service structure is designed to ensure immediate and continuous access to law chambers' expertise and availability. It establishes a retainer arrangement for the provision of comprehensive legal support, including consultation and counsel services, advisory assistance, document review, preparation of legal opinions, and related professional services, particularly in urgent or time sensitive matters.",
+      "We provide drafting and assistance in initiating legal processes, including preparing and lodging complaints before the police, drafting complaints to be presented before the Court, and offering representation and appearance before the Court.",
   },
   {
     slug: "legal-services-on-retainer",
@@ -37,7 +37,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/REtainers.png",
     image: "/images/Professional services - web/P4-Web.png",
     description:
-      "We provide drafting and assistance in initiating legal processes, including preparing and lodging complaints before the police, drafting complaints to be presented before the Court, and offering representation and appearance before the Court.",
+      "This legal service structure is designed to ensure immediate and continuous access to a law chambers' expertise and availability. It establishes a retainer arrangement for the provision of comprehensive legal support, including consultation and counsel services, advisory assistance, document review, preparation of legal opinions, and related professional services, particularly in urgent or time-sensitive matters.",
   },
   {
     slug: "representative-services-before-trial-courts",
@@ -85,7 +85,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Criminal-Appeals-&-Revisions.png",
     image: "/images/Professional services - web/P10-Web.png",
     description:
-      "The services of a lawyer are often indispensable before the police in a variety of circumstances. These may include submitting representations, initiating complaints, responding to inquiries when summoned, or addressing allegations and charges. ACAJuris provides professional representation in such matters, ensuring effective legal support and guidance throughout these interactions.",
+      "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
   },
   {
     slug: "police-station-assistance",
@@ -93,7 +93,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Police-Station---Assistance.png",
     image: "/images/Professional services - web/P11-Web.png",
     description:
-      "ACAJuris represents clients in filing Criminal Appeals and Criminal Revisions before the District Courts as well as the High Court. These services encompass a thorough study of the trial court records, preparation and drafting of appeals or revisions, and effective representation through appearances and arguments before the appellate or revision courts.",
+      "The services of a lawyer are often indispensable before the police in a variety of circumstances. These may include submitting representations, initiating complaints, responding to inquiries when summoned, or addressing allegations and charges. ACAJuris provides professional representation in such matters, ensuring effective legal support and guidance throughout these interactions.",
   },
   {
     slug: "mediation-arbitration",
@@ -101,7 +101,7 @@ const professionalServices = [
     icon: "/icons/PracticeList/Mediation.png.png",
     image: "/images/Professional services - web/P1-Web.png",
     description:
-      "ACAJuris takes up pro bono - free of charge, legal services in deserving cases and to individuals or NGOs or community groups, who cannot afford legal fees. We do take it up, also in a case of public interest. We ensure same high standards of practice as our fee-paying clients...",
+      "ACAJuris takes up pro bono - free of charge, legal services in deserving cases and to individuals or NGOs or community groups, who cannot afford legal fees. We do take it up, also in a case of public interest. We ensure same high standards of practice as our fee-paying clients.",
   },
 ];
 

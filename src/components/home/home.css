@@ -230,6 +230,54 @@
     bottom: 137px;
     left: 20px;
     transform: none;
+    flex-wrap: wrap;
+}
+
+.hero-cta-btn {
+    width: auto;
+    min-width: 170px;
+    padding-inline: 18px;
+    text-align: center;
+}
+
+.hero-hover-menu {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.hero-hover-trigger {
+    width: 126px;
+    height: 47px;
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hero-hover-menu-list {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    min-width: 190px;
+}
+
+.hero-hover-menu-item {
+    padding: 12px 14px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: var(--font-body);
+    transition: background 0.2s ease;
+}
+
+.hero-hover-menu-item:hover {
+    background: #f2e9db;
 }
 
 .hero-text-overlay {
@@ -525,7 +573,7 @@
         border-radius: 10px;
         justify-content: center;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 4px;
         padding: 0;
         font-size: 12px;
         font-weight: 500;
@@ -548,13 +596,18 @@
         flex-direction: row;
         gap: 20px;
     }
-    .hero-cta-group{
-                bottom: 30px;
-                left: 50%;
-                transform: translateX(-50%);
-                justify-content: center;
-                width: auto;
-        }
+    .hero-cta-group {
+        justify-content: center;
+        width: auto;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-cta-btn {
+        width: 134px;
+        min-width: 134px;
+    }
 }
 
 /* iPad Air (581px) */
@@ -1729,6 +1782,11 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.75;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .expertise-card-read-more {
@@ -2092,6 +2150,7 @@
 
 .team-card {
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* width: 267px; */
 }
 
@@ -2135,8 +2194,13 @@
     transition: color 0.3s ease;
 }
 
-.team-card:hover .team-member-name {
+.team-card-hovered .team-member-name {
     color: #bda588;
+}
+
+.team-card-hovered .team-img-wrapper {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .team-img-wrapper {
@@ -2147,6 +2211,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-img {
@@ -2170,14 +2235,16 @@
     justify-content: end;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
 }
 
-.team-img-wrapper:hover .team-overlay {
+.team-card-hovered .team-overlay {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .team-phone,
@@ -2345,25 +2412,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    gap: 18px;
 }
 
 .update-label {
     letter-spacing: .5px;
-    color: #ffffff;
+    color: #111111;
     text-transform: uppercase;
     margin: 0 0 8px;
     font-family: Be Vietnam, sans-serif;
     font-size: 12px;
     font-weight: 500;
-    display: inline-block;
+    display: block;
+    width: 100%;
+    text-align: right;
 }
 
-/* Adjust heading position - modify margin to move text up/down */
 .update-heading {
     color: #fff;
     max-width: 430px;
-    margin: -154px 0 0;
+    margin: 0;
     font-family: Be Vietnam, sans-serif;
     font-size: clamp(18px, 2.1vw, 21px);
     font-weight: 500;
@@ -2384,6 +2452,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: auto;
 }
 
 .update-divider {
@@ -2403,6 +2472,7 @@
     font-size: clamp(14px, .25vw, 18px);
     font-weight: 300;
     line-height: 1.2;
+    min-height: 20px;
 }
 
 /* --- Tablet (Max Width: 1024px) --- */

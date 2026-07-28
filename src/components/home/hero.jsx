@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ContactFloating from "../ContactFloating/ContactFloating.jsx";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="hero-section" className="hero-wrapper">
       <div className="hero-bg-art" aria-hidden="true">
@@ -63,8 +66,8 @@ export default function Hero() {
         </div>
 
         <div className="hero-cta-group">
-          <Link href="/expertise" className="hero-btn primary">
-            View All
+          <Link href="/expertise" className="hero-btn primary hero-cta-btn">
+            Areas of Practice
           </Link>
         </div>
       </div>

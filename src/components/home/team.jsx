@@ -12,6 +12,8 @@ export default function TeamPreview() {
     { name: "Yathish L Kumar", role: "Office Clerk", img: "/images/Yathish L Kumar.png", phone: "+91 98809 99559", email: "" },
   ];
 
+  const [hoveredMember, setHoveredMember] = useState(null);
+
   /* 
     Responsive State
   */
@@ -107,8 +109,16 @@ export default function TeamPreview() {
                     padding: '0 10px'
                   }}
                 >
-                  <div className="team-card">
-                    <div className="team-img-wrapper">
+                  <div
+                    className={`team-card${hoveredMember === member.name ? " team-card-hovered" : ""}`}
+                    onMouseEnter={() => setHoveredMember(member.name)}
+                    onMouseLeave={() => setHoveredMember(null)}
+                  >
+                    <div
+                      className="team-img-wrapper"
+                      onMouseEnter={() => setHoveredMember(member.name)}
+                      onMouseLeave={() => setHoveredMember(null)}
+                    >
                       <Image
                         src={member.img}
                         alt={member.name}
@@ -122,7 +132,11 @@ export default function TeamPreview() {
                         {member.email && <p className="team-email">{member.email}</p>}
                       </div>
                     </div>
-                    <div className="team-info-box">
+                    <div
+                      className="team-info-box"
+                      onMouseEnter={() => setHoveredMember(member.name)}
+                      onMouseLeave={() => setHoveredMember(null)}
+                    >
                       <p className="team-member-role">{member.role}</p>
                       <p className="team-member-name">{member.name}</p>
                     </div>
