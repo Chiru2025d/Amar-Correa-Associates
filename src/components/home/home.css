@@ -1518,7 +1518,7 @@
     flex: 0 0 450px;
     margin-right: auto;
     align-self: flex-start;
-    padding-top: 0;
+    padding-top: 7px;
 }
 
 .expertise-left h3 {
@@ -1900,10 +1900,6 @@
 
     .expertise-inner {
         padding: 0 20px;
-    }
-
-    .expertise-left {
-        /* margin-bottom: 40px; */
     }
 
     .image-card {
