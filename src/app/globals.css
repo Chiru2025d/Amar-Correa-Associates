@@ -524,21 +524,21 @@ main {
 }
 
 .newsletter-input {
-  display: flex;
+  color: #ffffff4f;
+  cursor: pointer;
+  background: none;
+  border: 1.8px solid #ffffffb8;
+  border-radius: 28px;
+  outline: none;
   align-items: center;
   width: 430px;
   max-width: 100%;
   height: 54px;
-  border-radius: 28px;
-  border: 0.3px solid #ffffffbf;
-  background: none;
-  color: #ffffff4f;
   padding: 0 18px;
-  font-family: 'Be Vietnam', sans-serif;
+  font-family: Be Vietnam, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  outline: none;
-  cursor: pointer;
+  display: flex;
 }
 
 .newsletter-input::placeholder {
