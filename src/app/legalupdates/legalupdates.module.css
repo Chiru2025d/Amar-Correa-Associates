@@ -191,9 +191,6 @@
   .articleTitle {
     font-size: 24px;
   }
-  .articleContent {
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 480px) {

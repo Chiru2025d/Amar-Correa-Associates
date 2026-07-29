@@ -25,12 +25,6 @@
   transition: color 0.2s;
 }
 
-.backBtn:hover {
-  color: #bda588;
-}
-
-
-
 .practiceTitle {
   font-family: "Be Vietnam", sans-serif;
   font-size: 36px;

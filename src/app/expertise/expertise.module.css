@@ -1,9 +1,3 @@
-/* ── Spacing Configuration ── */
-/* Adjust these values to control spacing between heading and subheading */
-:root {
-  --spacing-label-bottom: 4px; /* Space between subheading and main heading */
-}
-
 /* ── Hero Banner ── */
 .heroBanner {
   position: relative;

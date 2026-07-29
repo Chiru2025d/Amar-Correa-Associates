@@ -3,6 +3,8 @@
 :root {
   --font-heading: 'Be Vietnam', sans-serif;
   --font-body: 'Be Vietnam', sans-serif;
+  --header-offset-desktop: 92.5px;
+  --header-offset-mobile: 72.5px;
 
   --color-bg: #FDFBF7;
   /* Unified light cream/beige */
@@ -131,7 +133,7 @@ main {
 }
 /* Apply padding ONLY when header is visible (desktop) */
 .header-visible-padding {
-  margin-top: 90px;
+  margin-top: var(--header-offset-desktop);
 }
 
 .hero-wrapper {
@@ -209,6 +211,10 @@ main {
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 1024px) {
+  .header-visible-padding {
+    margin-top: var(--header-offset-mobile);
+  }
+
   .logo-img {
     width: 160px;
     height: auto;
