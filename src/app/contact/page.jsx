@@ -11,7 +11,7 @@ export default function ContactPage() {
       <Header />
 
       <section className={styles.heroBanner}>
-        <h1 className={styles.heroTitle}>CONTACT US</h1>
+        <h1 className={styles.heroTitle}>CONTACT</h1>
       </section>
 
       <section className={styles.contactPage}>
