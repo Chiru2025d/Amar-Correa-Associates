@@ -628,3 +628,14 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
+
+@media (max-width: 760px) {
+  .heroBanner {
+    min-height: 126px;
+    padding: 16px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+}

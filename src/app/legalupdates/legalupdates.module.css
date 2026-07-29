@@ -172,7 +172,7 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .heroLabel {
     font-size: 9px;
     letter-spacing: 2.4px;
@@ -197,9 +197,6 @@
 }
 
 @media (max-width: 480px) {
-  .heroTitle {
-    font-size: 28px;
-  }
   .articleTitle {
     font-size: 20px;
   }

@@ -152,6 +152,21 @@
 }
 
 @media (max-width: 768px) {
+  .heroBanner {
+    min-height: 126px;
+    padding: 16px;
+  }
+
+  .heroLabel {
+    font-size: 9px;
+    letter-spacing: 2.4px;
+    line-height: 1.5;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+  }
+
   .hero {
     min-height: 240px;
     padding: 92px 20px 66px;

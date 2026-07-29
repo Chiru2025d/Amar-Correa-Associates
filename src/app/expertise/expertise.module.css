@@ -191,7 +191,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .practiceGrid {
     grid-template-columns: 1fr;
     gap: 18px;
