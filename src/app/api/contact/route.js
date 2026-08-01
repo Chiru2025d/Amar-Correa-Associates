@@ -4,45 +4,59 @@ import nodemailer from "nodemailer";
 export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
-    const requesterName = (name || "Requester").trim();
-    const senderEmail = process.env.EMAIL_USER;
-    const senderPassword = process.env.EMAIL_PASS;
-    const recipientEmail = process.env.CONTACT_RECEIVER_EMAIL || senderEmail;
-
-    if (!senderEmail || !senderPassword) {
-      throw new Error("Missing EMAIL_USER or EMAIL_PASS in environment variables");
-    }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: true, // Port 465 uses SSL
       auth: {
-        user: senderEmail,
-        pass: senderPassword,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
+    // await transporter.verify();
+    // console.log("SMTP connection successful");
+
     await transporter.sendMail({
-      from: `"${requesterName}" <${senderEmail}>`,
-      to: recipientEmail,
+      from: `"ACA Juris" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_TO,
       replyTo: email,
-      subject: `New enquiry from ${requesterName}`,
+      subject: "New enquiry from ACA Juris website",
       html: `
-        <h2>New Contact Enquiry from ${requesterName}</h2>
-        <table border="1" cellpadding="8">
-          <tr><td><b>Name</b></td><td>${name}</td></tr>
-          <tr><td><b>Email</b></td><td>${email}</td></tr>
-          <tr><td><b>Phone</b></td><td>${phone}</td></tr>
-          <tr><td><b>Message</b></td><td>${message}</td></tr>
+        <h2>New Contact Enquiry</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;">
+          <tr>
+            <td><strong>Name</strong></td>
+            <td>${name}</td>
+          </tr>
+
+          <tr>
+            <td><strong>Email</strong></td>
+            <td>${email}</td>
+          </tr>
+
+          <tr>
+            <td><strong>Phone</strong></td>
+            <td>${phone}</td>
+          </tr>
+
+          <tr>
+            <td><strong>Message</strong></td>
+            <td>${message}</td>
+          </tr>
         </table>
       `,
     });
 
     return NextResponse.json({
       success: true,
-      message: "Email sent successfully",
+      message: "Email sent successfully.",
     });
+
   } catch (error) {
-    console.error(error);
+    console.error("Mail Error:", error);
 
     return NextResponse.json(
       {
