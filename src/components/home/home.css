@@ -2400,6 +2400,13 @@
     font-size: clamp(18px, 2.1vw, 21px);
     font-weight: 500;
     line-height: 1.15;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.update-heading-secondary {
+    display: block;
 }
 
 .update-title {

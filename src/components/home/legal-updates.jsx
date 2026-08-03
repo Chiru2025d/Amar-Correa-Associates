@@ -12,7 +12,8 @@ const legalUpdates = [
     label: "Blog - 001",
     author: "Amar Correa",
     date: "May 08, 2019",
-    heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
+    headingPrimary: "Code of Criminal Procedure",
+    headingSecondary: "Section 173(8) - Further Investigation",
     title: "An Incorrect View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
   {
@@ -23,7 +24,8 @@ const legalUpdates = [
     label: "Blog - 002",
     author: "Amar Correa",
     date: "May 08, 2019",
-    heading: "Code of Criminal Procedure Section 173(8) - Further Investigation",
+    headingPrimary: "Code of Criminal Procedure",
+    headingSecondary: "Section 173(8) - Further Investigation",
     title: "The Correct View on Trial Court's Powers U/S 173(8) Cr.P.C",
   },
   {
@@ -31,10 +33,10 @@ const legalUpdates = [
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
     alt: "Legal update 3",
     meta: "Blog/Legal Update 03",
-    label: "Legal Updates - 001",
+    label: "Legal Update - 001",
     author: "",
     date: "",
-    heading: "Counsel-accused Video Conference",
+    headingPrimary: "Counsel-accused Video Conference",
     title: "Counsel-accused Video Conference",
   },
 ];
@@ -60,7 +62,12 @@ export default function LegalUpdatesPreview() {
               </div>
               <div className="legal-content">
                 <span className="update-label">{update.label}</span>
-                <h3 className="update-heading">{update.heading}</h3>
+                <h3 className="update-heading">
+                  <span>{update.headingPrimary}</span>
+                  {update.headingSecondary ? (
+                    <span className="update-heading-secondary">{update.headingSecondary}</span>
+                  ) : null}
+                </h3>
                 <div className="update-bottom">
                   <h4 className="update-title">{update.title}</h4>
                   <span className="update-divider" aria-hidden="true" />
