@@ -2326,6 +2326,20 @@
     padding: 0 20px;
 }
 
+.legal-carousel {
+    align-items: center;
+}
+
+.legal-carousel-track {
+    width: 100%;
+}
+
+.legal-carousel-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
 .legal-card {
     min-width: 0;
     max-width: 100%;
@@ -2341,9 +2355,19 @@
     position: relative;
 }
 
+.legal-card-placeholder {
+    background: linear-gradient(160deg, #173040 0%, #24475f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .legal-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.legal-card-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .legal-img-wrap {
@@ -2377,6 +2401,34 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 18px;
+}
+
+.legal-placeholder-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    padding: 24px 28px 34px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.legal-placeholder-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
 }
 
 .update-label {
@@ -2446,14 +2498,40 @@
     min-height: 20px;
 }
 
+.update-footer-date-only {
+    justify-content: flex-end;
+}
+
+.legal-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.legal-view-all {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #c4ad8d;
+    border: 1px solid #c4ad8d;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    width: 140px;
+    height: 48px;
+    border-radius: 12px;
+    padding: 0 20px;
+}
+
+.legal-view-all:hover {
+    background-color: #b79f7f;
+    border-color: #b79f7f;
+    color: #ffffff;
+}
+
 /* --- Tablet (Max Width: 1024px) --- */
 @media screen and (max-width: 1024px) {
     .legal-title {
         font-size: 40px;
-    }
-
-    .legal-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .legal-card {
@@ -2471,12 +2549,11 @@
         font-size: 32px;
     }
 
-    .legal-grid {
-        grid-template-columns: 1fr;
-        max-width: 534px;
+    .legal-content {
+        padding: 24px 26px 32px;
     }
 
-    .legal-content {
+    .legal-placeholder-content {
         padding: 24px 26px 32px;
     }
 
@@ -2487,6 +2564,10 @@
 
     .update-footer {
         font-size: 16px;
+    }
+
+    .legal-actions {
+        margin-top: 28px;
     }
 }
 

@@ -2,83 +2,123 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const legalUpdates = [
-  {
-    href: "/legalupdates",
-    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20A.png",
-    alt: "Legal update 1",
-    meta: "Blog/Legal Update 01",
-    label: "Blog - 001",
-    author: "Amar Correa",
-    date: "May 08, 2019",
-    headingPrimary: "Code of Criminal Procedure",
-    headingSecondary: "Section 173(8) - Further Investigation",
-    title: "An Incorrect View on Trial Court's Powers U/S 173(8) Cr.P.C",
-  },
-  {
-    href: "/legalupdates",
-    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20B.png",
-    alt: "Legal update 2",
-    meta: "Blog/Legal Update 02",
-    label: "Blog - 002",
-    author: "Amar Correa",
-    date: "May 08, 2019",
-    headingPrimary: "Code of Criminal Procedure",
-    headingSecondary: "Section 173(8) - Further Investigation",
-    title: "The Correct View on Trial Court's Powers U/S 173(8) Cr.P.C",
-  },
-  {
-    href: "/legalupdates",
-    image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
-    alt: "Legal update 3",
-    meta: "Blog/Legal Update 03",
-    label: "Legal Update - 001",
-    author: "",
-    date: "",
-    headingPrimary: "Counsel-accused Video Conference",
-    title: "Counsel-accused Video Conference",
-  },
-];
+import { legalUpdates } from "./legal-updates-data";
 
 export default function LegalUpdatesPreview() {
+  const [itemsVisible, setItemsVisible] = useState(3);
+  const [startIndex, setStartIndex] = useState(0);
+
+  const maxIndex = Math.max(0, legalUpdates.length - itemsVisible);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let nextItemsVisible = 3;
+
+      if (width <= 768) {
+        nextItemsVisible = 1;
+      } else if (width <= 1024) {
+        nextItemsVisible = 2;
+      }
+
+      setItemsVisible(nextItemsVisible);
+      setStartIndex((prev) => Math.min(prev, Math.max(0, legalUpdates.length - nextItemsVisible)));
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handlePrev = () => {
+    setStartIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setStartIndex((prev) => Math.min(maxIndex, prev + 1));
+  };
+
   return (
     <section className="legal-preview">
       <div className="container">
         <h2 className="legal-title">
-          <Link href="/legalupdates">Legal Updates & Blog</Link>
+          <Link href="/blog">Legal Updates & Blog</Link>
         </h2>
 
-        <div className="legal-grid">
-          {legalUpdates.map((update) => (
-            <Link key={update.meta} href={update.href} className="legal-card">
-              <div className="legal-img-wrap">
-                <Image
-                  src={update.image}
-                  alt={update.alt}
-                  width={534}
-                  height={309}
-                />
-              </div>
-              <div className="legal-content">
-                <span className="update-label">{update.label}</span>
-                <h3 className="update-heading">
-                  <span>{update.headingPrimary}</span>
-                  {update.headingSecondary ? (
-                    <span className="update-heading-secondary">{update.headingSecondary}</span>
-                  ) : null}
-                </h3>
-                <div className="update-bottom">
-                  <h4 className="update-title">{update.title}</h4>
-                  <span className="update-divider" aria-hidden="true" />
-                  <div className="update-footer">
-                    {update.author ? <span>{`Author : ${update.author}`}</span> : null}
-                    {update.date ? <span>{update.date}</span> : null}
-                  </div>
+        <div className="carousel-section legal-carousel">
+          {legalUpdates.length > 3 ? (
+            <button
+              className="carousel-arrow left"
+              onClick={handlePrev}
+              disabled={startIndex === 0}
+              aria-label="Previous legal update"
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+          ) : null}
+
+          <div className="carousel-container">
+            <div
+              className="carousel-track legal-carousel-track"
+              style={{ transform: `translateX(-${startIndex * (100 / itemsVisible)}%)` }}
+            >
+              {legalUpdates.map((update) => (
+                <div
+                  className="legal-carousel-item"
+                  key={update.id}
+                  style={{ flex: `0 0 ${100 / itemsVisible}%` }}
+                >
+                  <Link href={update.href} className="legal-card">
+                    <div className="legal-img-wrap">
+                      <Image
+                        src={update.image}
+                        alt={update.alt}
+                        width={534}
+                        height={309}
+                      />
+                    </div>
+                    <div className="legal-content">
+                      <span className="update-label">{update.label}</span>
+                      <h3 className="update-heading">
+                        <span>{update.headingPrimary}</span>
+                        {update.headingSecondary ? (
+                          <span className="update-heading-secondary">{update.headingSecondary}</span>
+                        ) : null}
+                      </h3>
+                      <div className="update-bottom">
+                        <h4 className="update-title">{update.title}</h4>
+                        <span className="update-divider" aria-hidden="true" />
+                        <div className={`update-footer${!update.author ? " update-footer-date-only" : ""}`}>
+                          {update.author ? <span>{`Author : ${update.author}`}</span> : null}
+                          {update.date ? <span>{update.date}</span> : null}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </div>
-            </Link>
-          ))}
+              ))}
+            </div>
+          </div>
+
+          {legalUpdates.length > 3 ? (
+            <button
+              className="carousel-arrow right"
+              onClick={handleNext}
+              disabled={startIndex >= maxIndex}
+              aria-label="Next legal update"
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          ) : null}
+        </div>
+
+        <div className="legal-actions">
+          <Link href="/blog" className="hero-btn legal-view-all">
+            View All
+          </Link>
         </div>
       </div>
     </section>

@@ -43,13 +43,56 @@
   text-align: center;
 }
 
+.filterWrap {
+  background: #fff;
+  padding: 40px 24px 40px;
+}
+
+.filterButtons {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  appearance: none;
+  border: 1px solid #c7b18d;
+  background: #ffffff;
+  color: #b79f7f;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-transform: none;
+  min-width: 140px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filterButton:hover {
+  border-color: #bda588;
+  color: #9f886b;
+}
+
+.activeFilter {
+  background: #c4ad8d;
+  border-color: #c4ad8d;
+  color: #ffffff;
+}
+
 /* ── Articles Feed ── */
 .articlesSection {
   padding: 0;
 }
 
 .article {
-  padding: 52px 24px 60px;
+  padding: 24px 24px 60px;
 }
 
 .article:nth-child(odd) {
@@ -184,6 +227,24 @@
   .heroBanner {
     min-height: 126px;
     padding: 16px;
+  }
+  .filterWrap {
+    padding: 18px 20px 0;
+  }
+  .filterButtons {
+    gap: 10px;
+  }
+  .filterButton {
+    min-width: 132px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 12.5px;
+  }
+  .readMore {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
   .article {
     padding: 40px 20px 48px;

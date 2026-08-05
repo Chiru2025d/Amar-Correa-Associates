@@ -1,8 +1,13 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
 
 const articles = [
   {
+    type: "blog",
     updateNumber: "Blog 001",
     author: "Amar Correa",
     title: "\u201c An Incorrect View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
@@ -14,6 +19,7 @@ const articles = [
     bullets: [],
   },
   {
+    type: "blog",
     updateNumber: "Blog 002",
     author: "Amar Correa",
     title: "\u201c The Correct View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
@@ -25,6 +31,61 @@ const articles = [
     bullets: [],
   },
   {
+    type: "legal",
+    updateNumber: "Legal Updates 002",
+    author: "Amar Correa",
+    title: "Complainant's Right to Appeal u/s 372 Cr.P.C in a Private Complaint",
+    subheading:
+      "New precedent on whether an appeal under Section 372 CrPC lies against acquittal in a private complaint under Section 138 NI Act, treating the complainant as a victim under Section 2(wa) CrPC.",
+    paragraphs: [
+      "Case in reference: M/s. Celestium Financial v/s A. Gnanasekaran Etc. (April 2025).",
+      "Case proceedings: The Magistrate acquitted the accused under Section 138 NI Act after holding that the complainant failed to prove a legally enforceable debt and the statutory presumption under Section 139 stood rebutted.",
+      "As per the then-prevailing procedural position, the complainant approached the High Court under Section 378(4) CrPC by seeking special leave to appeal against the acquittal.",
+      "The High Court refused leave, observing that leave under Section 378(4) CrPC is a substantive safeguard for acquitted persons and requires a prima facie case warranting interference.",
+      "Supreme Court approach: The Court examined Mallikarjun Kodagali (2019) 2 SCC 752, including the majority and dissenting views, and considered divergent Full Bench and Division Bench views from multiple High Courts on the proviso to Section 372 CrPC.",
+      "The Court acknowledged the need for victim-centric access to justice while balancing the rights of the accused and the statutory procedure.",
+    ],
+    bullets: [
+      "The expression victim under Section 2(wa) CrPC includes a person who has suffered loss or injury due to the act or omission for which the accused is charged, and also includes guardian or legal heir.",
+      "In offences under Section 138 NI Act, the complainant is the aggrieved party suffering economic loss due to cheque dishonour.",
+      "Therefore, a complainant under Section 138 NI Act also qualifies as a victim under Section 2(wa) CrPC and can claim the benefit of the proviso to Section 372 CrPC.",
+      "Such a complainant-victim can maintain an appeal against acquittal in his own right under the proviso to Section 372 without seeking special leave under Section 378(4) CrPC.",
+      "The proviso to Section 372 does not distinguish between offences under penal law and deemed offences under Section 138 NI Act.",
+      "A victim of a deemed offence under Section 138 NI Act also has the right to appeal against acquittal, conviction for a lesser offence, or inadequate compensation.",
+      "The complainant under Section 138 is also the victim; filing a complaint under Section 200 CrPC does not take away victim status.",
+      "If the complainant is only an informant and not a victim in a complaint case, Section 378(4) applies and special leave is necessary.",
+      "If the complainant is also a victim and proceeds under the proviso to Section 372, the rigour of Section 378(4) requiring special leave does not apply.",
+    ],
+    afterBullets: [
+      "Conclusion of the Court: In cases under Section 138 NI Act, a victim can proceed against acquittal under the proviso to Section 372 CrPC as a matter of right, even when such victim is also the complainant.",
+      "In the absence of the proviso to Section 372, such a complainant would otherwise depend on special leave under Section 378(4). The proviso, inserted with effect from 31.12.2009, must be given full effect.",
+      "Accordingly, the Court held that the victim of an offence has a right to prefer an appeal under the proviso to Section 372 CrPC irrespective of whether the victim is also a complainant.",
+      "Note: For proper understanding and interpretation, please read the full judgment. This brief update reflects only my reading and personal understanding.",
+    ],
+    readLink: "https://api.sci.gov.in/supremecourt/2024/49668/49668_2024_6_10_60765_Judgement_08-Apr-2025.pdf",
+  },
+  {
+    type: "legal",
+    updateNumber: "Legal Updates 003",
+    author: "Amar Correa",
+    title: "No Power of Arrest in Complaint Cases - Except when Warrant Issued",
+    subheading: "An important reaffirmation of law in protecting liberty.",
+    paragraphs: [
+      "The Supreme Court, recently (April 2026), in Om Prakash Chhawnika v. State of Jharkhand and Another, held that in a complaint case, the police have no power to arrest an individual unless an arrest warrant has been issued by the court.",
+      "While discussing procedure in a private complaint after cognizance and issuance of process, the Court noted that summons, as the initial mode of process under Section 87 Cr.P.C., only require appearance before the Court. Bail would essentially be granted (refer Satender Kumar Antil v/s CBI, 2022 and Inder Mohan Goswami v. State of Uttaranchal, 2007).",
+      "The Court, by way of illustration, observed that if a Magistrate orders police inquiry under Section 202 and seeks a report, then even during such inquiry the police cannot arrest the accused. The answer was an emphatic NO: police has no power to arrest even during inquiry under Section 202 Cr.P.C.",
+      "The Court identified Bihar and Jharkhand as States where such violations occur regularly, and directed that the judgment be placed before the Chief Justices of the said High Courts.",
+    ],
+    bullets: [
+      "A private complaint filed under Section 200 CrPC cannot always be termed a complaint case.",
+      "A distinction must be made between a private complaint referred for investigation under Section 156(3) Cr.P.C. / Section 175 BNSS resulting in a charge sheet, and a case proceeding under Chapter XIX-B Cr.P.C. / Chapter XX-B BNSS, i.e., cases instituted otherwise than on police report.",
+    ],
+    afterBullets: [
+      "Note: For proper understanding and interpretation, please read the full judgment. This brief update reflects only my reading and personal understanding.",
+    ],
+  },
+  {
+    type: "legal",
     updateNumber: "Legal Updates 001",
     author: "Amar Correa",
     title: "Counsel-accused Video Conference",
@@ -39,6 +100,47 @@ const articles = [
 ];
 
 export default function LegalUpdatesPage() {
+  const searchParams = useSearchParams();
+  const [activeFilter, setActiveFilter] = useState("legal");
+
+  const getOrderNumber = (label) => {
+    const match = label.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  };
+
+  const getArticleAnchorId = (article) => {
+    const orderNumber = getOrderNumber(article.updateNumber);
+    const paddedOrder = String(orderNumber).padStart(3, "0");
+
+    if (article.type === "blog") {
+      return `blog-${paddedOrder}`;
+    }
+
+    return `legal-updates-${paddedOrder}`;
+  };
+
+  useEffect(() => {
+    const queryType = searchParams.get("type");
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+
+    if (queryType === "legal" || queryType === "blog") {
+      setActiveFilter(queryType);
+      return;
+    }
+
+    if (hash.startsWith("#blog-")) {
+      setActiveFilter("blog");
+    } else if (hash.startsWith("#legal-updates-")) {
+      setActiveFilter("legal");
+    }
+  }, [searchParams]);
+
+  const filteredArticles = useMemo(() => {
+    return articles
+      .filter((article) => article.type === activeFilter)
+      .sort((a, b) => getOrderNumber(a.updateNumber) - getOrderNumber(b.updateNumber));
+  }, [activeFilter]);
+
   return (
     <>
       <Header />
@@ -49,18 +151,37 @@ export default function LegalUpdatesPage() {
         <p className={styles.heroLabel}>Legal Landscape: Recent Developments</p>
       </section>
 
+      <div className={styles.filterWrap}>
+        <div className={styles.filterButtons}>
+          <button
+            type="button"
+            onClick={() => setActiveFilter("legal")}
+            className={`${styles.filterButton} ${activeFilter === "legal" ? styles.activeFilter : ""}`}
+          >
+            Legal Updates
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveFilter("blog")}
+            className={`${styles.filterButton} ${activeFilter === "blog" ? styles.activeFilter : ""}`}
+          >
+            Blogs
+          </button>
+        </div>
+      </div>
+
       {/* Articles */}
       <div className={styles.articlesSection}>
-        {articles.map((article, idx) => (
-          <article id={`article-${idx + 1}`} key={idx} className={styles.article}>
+        {filteredArticles.map((article, idx) => (
+          <article id={getArticleAnchorId(article)} key={getArticleAnchorId(article)} className={styles.article}>
             <div className={styles.articleInner}>
               {/* Meta row */}
               <div className={styles.articleMeta}>
                 <span className={styles.articleDate}>
                   {article.updateNumber}
-                  {idx < 2 ? "," : ""}
+                  {article.type === "blog" ? "," : ""}
                 </span>
-                {idx < 2 && <span className={styles.articleDateLabel}>{article.author}</span>}
+                {article.type === "blog" && <span className={styles.articleDateLabel}>{article.author}</span>}
               </div>
 
               <div className={styles.articleContent}>
@@ -92,17 +213,13 @@ export default function LegalUpdatesPage() {
                   <p key={i} className={styles.articleBody}>{p}</p>
                 ))}
 
-                {article.readLink ? (
+                {article.readLink && (
                   <div>
                     <p className={styles.articleBody}>Read here :</p>
                     <a href={article.readLink} target="_blank" rel="noopener noreferrer" className={styles.readMore}>
                       {article.readLink}
                     </a>
                   </div>
-                ) : (
-                  <a href="/legalupdates/counsel-accused-video-conference" className={styles.readMore}>
-                    Read More
-                  </a>
                 )}
               </div>
             </div>
