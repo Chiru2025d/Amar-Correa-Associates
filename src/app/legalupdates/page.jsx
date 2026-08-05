@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
 
@@ -100,7 +99,6 @@ const articles = [
 ];
 
 export default function LegalUpdatesPage() {
-  const searchParams = useSearchParams();
   const [activeFilter, setActiveFilter] = useState("legal");
 
   const getOrderNumber = (label) => {
@@ -120,8 +118,13 @@ export default function LegalUpdatesPage() {
   };
 
   useEffect(() => {
-    const queryType = searchParams.get("type");
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const queryType = params.get("type");
+    const hash = window.location.hash;
 
     if (queryType === "legal" || queryType === "blog") {
       setActiveFilter(queryType);
@@ -133,7 +136,7 @@ export default function LegalUpdatesPage() {
     } else if (hash.startsWith("#legal-updates-")) {
       setActiveFilter("legal");
     }
-  }, [searchParams]);
+  }, []);
 
   const filteredArticles = useMemo(() => {
     return articles
