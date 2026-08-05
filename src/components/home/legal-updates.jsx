@@ -45,7 +45,7 @@ export default function LegalUpdatesPreview() {
     <section className="legal-preview">
       <div className="container">
         <h2 className="legal-title">
-          <Link href="/blog">Legal Updates & Blog</Link>
+          <Link href="/legalupdates">Legal Updates & Blog</Link>
         </h2>
 
         <div className="carousel-section legal-carousel">
@@ -116,7 +116,7 @@ export default function LegalUpdatesPreview() {
         </div>
 
         <div className="legal-actions">
-          <Link href="/blog" className="hero-btn legal-view-all">
+          <Link href="/legalupdates" className="hero-btn legal-view-all">
             View All
           </Link>
         </div>
