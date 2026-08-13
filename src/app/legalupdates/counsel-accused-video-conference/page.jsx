@@ -52,11 +52,11 @@ export default function CounselAccusedVideoConferencePage() {
           <div className={styles.readBlock}>
             <p>Read here :</p>
             <a
-              href="https://www.supremecourtofindia.nic.in/supremecourt/2018/20446/20446_2018_Judgement_14-Aug-2018.pdf"
+              href="https://api.sci.gov.in/supremecourt/2018/20446/20446_2018_Judgement_14-Aug-2018.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.supremecourtofindia.nic.in/supremecourt/2018/20446/20446_2018_Judgement_14-Aug-2018.pdf
+              https://api.sci.gov.in/supremecourt/2018/20446/20446_2018_Judgement_14-Aug-2018.pdf
             </a>
           </div>
         </article>

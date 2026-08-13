@@ -2338,6 +2338,7 @@
     display: flex;
     justify-content: center;
     padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .legal-card {
@@ -2446,19 +2447,36 @@
 
 .update-heading {
     color: #fff;
+    flex-direction: column;
+    gap: 6px;
     max-width: 430px;
     margin: 0;
     font-family: Be Vietnam, sans-serif;
-    font-size: clamp(18px, 2.1vw, 21px);
+    font-size: clamp(18px, 2.1vw, 20px);
     font-weight: 500;
     line-height: 1.15;
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+}
+
+.update-heading-primary,
+.update-heading-secondary {
+    display: block;
+}
+
+.update-heading-primary {
+    margin: 0;
+    font-weight: 700;
 }
 
 .update-heading-secondary {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 0.70em;
+    font-weight: 400;
+    line-height: 1.5;
     display: block;
+    overflow: hidden;
 }
 
 .update-title {
@@ -2496,6 +2514,16 @@
     font-weight: 300;
     line-height: 1.2;
     min-height: 20px;
+}
+
+.update-footer-author {
+    color: #141414;
+    font-weight: 400;
+}
+
+.update-footer-date {
+    margin-left: auto;
+    color: #141414;
 }
 
 .update-footer-date-only {

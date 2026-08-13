@@ -182,9 +182,9 @@ export default function ExpertisePreview() {
         <div className="expertise-left">
           <h3>Practice Areas</h3>
           <p className="expertise-lead">
-            Criminal Law Specialised Multi
+            Criminal Law Specialised
             <br />
-            -Disciplinary Law Chambers.
+            Multi-Disciplinary Law Chambers.
           </p>
           <Link href="/expertise" className="hero-btn primary expertise-view-more-btn">
             View All

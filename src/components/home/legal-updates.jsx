@@ -10,7 +10,13 @@ export default function LegalUpdatesPreview() {
   const [itemsVisible, setItemsVisible] = useState(3);
   const [startIndex, setStartIndex] = useState(0);
 
-  const maxIndex = Math.max(0, legalUpdates.length - itemsVisible);
+  const sortedUpdates = [...legalUpdates].sort((a, b) => {
+    const aNumber = Number(a.id.match(/(\d+)$/)?.[1] ?? 0);
+    const bNumber = Number(b.id.match(/(\d+)$/)?.[1] ?? 0);
+    return bNumber - aNumber;
+  });
+
+  const maxIndex = Math.max(0, sortedUpdates.length - itemsVisible);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,7 +30,7 @@ export default function LegalUpdatesPreview() {
       }
 
       setItemsVisible(nextItemsVisible);
-      setStartIndex((prev) => Math.min(prev, Math.max(0, legalUpdates.length - nextItemsVisible)));
+      setStartIndex((prev) => Math.min(prev, Math.max(0, sortedUpdates.length - nextItemsVisible)));
     };
 
     handleResize();
@@ -49,7 +55,7 @@ export default function LegalUpdatesPreview() {
         </h2>
 
         <div className="carousel-section legal-carousel">
-          {legalUpdates.length > 3 ? (
+          {sortedUpdates.length > 3 ? (
             <button
               className="carousel-arrow left"
               onClick={handlePrev}
@@ -65,11 +71,14 @@ export default function LegalUpdatesPreview() {
               className="carousel-track legal-carousel-track"
               style={{ transform: `translateX(-${startIndex * (100 / itemsVisible)}%)` }}
             >
-              {legalUpdates.map((update) => (
+              {sortedUpdates.map((update) => (
                 <div
                   className="legal-carousel-item"
                   key={update.id}
-                  style={{ flex: `0 0 ${100 / itemsVisible}%` }}
+                  style={{
+                    flex: `0 0 calc((100% - ${itemsVisible * 20}px) / ${itemsVisible})`,
+                    maxWidth: `calc((100% - ${itemsVisible * 20}px) / ${itemsVisible})`,
+                  }}
                 >
                   <Link href={update.href} className="legal-card">
                     <div className="legal-img-wrap">
@@ -83,7 +92,7 @@ export default function LegalUpdatesPreview() {
                     <div className="legal-content">
                       <span className="update-label">{update.label}</span>
                       <h3 className="update-heading">
-                        <span>{update.headingPrimary}</span>
+                        <span className="update-heading-primary">{update.headingPrimary}</span>
                         {update.headingSecondary ? (
                           <span className="update-heading-secondary">{update.headingSecondary}</span>
                         ) : null}
@@ -91,9 +100,9 @@ export default function LegalUpdatesPreview() {
                       <div className="update-bottom">
                         <h4 className="update-title">{update.title}</h4>
                         <span className="update-divider" aria-hidden="true" />
-                        <div className={`update-footer${!update.author ? " update-footer-date-only" : ""}`}>
-                          {update.author ? <span>{`Author : ${update.author}`}</span> : null}
-                          {update.date ? <span>{update.date}</span> : null}
+                        <div className={update.author ? "update-footer" : "update-footer update-footer-date-only"}>
+                          {update.author ? <span className="update-footer-author">Author: {update.author}</span> : null}
+                          {update.date ? <span className="update-footer-date">{update.date}</span> : null}
                         </div>
                       </div>
                     </div>
@@ -103,7 +112,7 @@ export default function LegalUpdatesPreview() {
             </div>
           </div>
 
-          {legalUpdates.length > 3 ? (
+          {sortedUpdates.length > 3 ? (
             <button
               className="carousel-arrow right"
               onClick={handleNext}

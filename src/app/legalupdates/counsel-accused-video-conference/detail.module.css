@@ -102,6 +102,23 @@
   margin: 0 auto;
 }
 
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #bda588;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  margin: 0 0 16px;
+  transition: color 0.25s ease;
+}
+
+.backLink:hover {
+  color: #173e62;
+}
+
 .article h1 {
   color: #173e62;
   font-family: "Be Vietnam", sans-serif;

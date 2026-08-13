@@ -1,4 +1,4 @@
-/* ── Hero Banner ── */
+/* Hero Banner */
 .heroBanner {
   position: relative;
   display: flex;
@@ -6,17 +6,13 @@
   align-items: center;
   justify-content: center;
   min-height: 140px;
-  background-color: #F4F2EE;
+  background-color: #f4f2ee;
   background-image: url("/Page banner/Frame 1984078307.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
-  background-origin: padding-box;
-  background-clip: border-box;
   padding: 20px;
   text-align: center;
-  overflow: hidden;
 }
 
 .heroLabel {
@@ -45,7 +41,7 @@
 
 .filterWrap {
   background: #fff;
-  padding: 40px 24px 40px;
+  padding: 40px 24px 28px;
 }
 
 .filterButtons {
@@ -73,6 +69,10 @@
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .filterButton:hover {
@@ -86,69 +86,92 @@
   color: #ffffff;
 }
 
-/* ── Articles Feed ── */
+/* FAQ Layout */
 .articlesSection {
-  padding: 0;
+  padding: 44px 24px 56px;
+  background: #f7f5f2;
 }
 
-.article {
-  padding: 24px 24px 60px;
-}
-
-.article:nth-child(odd) {
-  background: #ffffff;
-}
-
-.article:nth-child(even) {
-  background: #F5F3EF;
-}
-
-.articleInner {
+.faqSection {
   max-width: 860px;
-  margin: 0 auto;
+  margin: 50px auto 36px;
 }
 
-/* timestamp row */
-.articleMeta {
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
+.sectionTitle {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #173e62;
+  margin: 0 0 14px;
+}
+
+.faqList {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.articleDate {
+.faqCard {
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(12, 18, 28, 0.04);
+  overflow: hidden;
+}
+
+.faqTrigger {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  padding: 22px 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.faqHeadingWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faqTag {
   font-family: "Be Vietnam", sans-serif;
-  font-size: 11.5px;
-  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8f8a82;
   letter-spacing: 0.4px;
-  white-space: nowrap;
+  text-transform: uppercase;
 }
 
-.articleDateLine {
-  flex: 0 0 56px;
-  height: 1px;
-  background: #aaa;
-}
-
-.articleDateLabel {
+.faqTitle {
+  color: #1b1b1b;
   font-family: "Be Vietnam", sans-serif;
-  font-size: 11.5px;
-  color: #888;
-  letter-spacing: 0.3px;
-}
-
-.articleContent {
-  margin-left: 0;
-}
-
-/* quoted title */
-.articleTitle {
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  color: #173E62;
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: 500;
   line-height: 1.3;
-  margin: 0 0 20px;
+}
+
+.faqIcon {
+  color: #2a2a2a;
+  border: 1px solid #ddd7cf;
+  border-radius: 999px;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.faqContent {
+  padding: 0 26px 24px;
 }
 
 .articleSubheading {
@@ -156,7 +179,16 @@
   font-size: 14px;
   font-weight: 600;
   color: #222;
-  margin: 0 37px 12px;
+  margin: 0 0 12px;
+}
+
+.articleMetaInline {
+  margin: 0 0 12px;
+  color: #7f7a72;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
 .articleBody {
@@ -164,16 +196,36 @@
   font-size: 13.5px;
   line-height: 1.85;
   color: #555;
-  margin: 0 37px 18px;
+  margin: 0 0 16px;
 }
 
 .articleBody:last-child {
   margin-bottom: 0;
 }
 
+.readMoreBlock {
+  margin: 2px 0 16px;
+}
+
+.readMoreLink {
+  display: inline-flex;
+  align-items: center;
+  color: #bda588;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.readMoreLink:hover {
+  color: #173e62;
+}
+
 .readMore {
   display: inline-block;
-  margin: 8px 37px 0;
+  margin: 6px 0 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -184,13 +236,14 @@
   line-height: 1.4;
   text-decoration: none;
   transition: color 0.25s ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .readMore:hover {
   color: #173e62;
 }
 
-/* Bullet within article body */
 .articleBullet {
   display: flex;
   align-items: flex-start;
@@ -214,48 +267,58 @@
   color: #555;
 }
 
-/* ── Responsive ── */
 @media (max-width: 760px) {
+  .filterWrap {
+    padding: 50px 20px 8px;
+  }
+
   .heroLabel {
     font-size: 9px;
     letter-spacing: 2.4px;
     line-height: 1.5;
   }
+
   .heroTitle {
     font-size: 30px;
   }
+
   .heroBanner {
     min-height: 126px;
     padding: 16px;
   }
-  .filterWrap {
-    padding: 18px 20px 0;
-  }
+
   .filterButtons {
     gap: 10px;
   }
+
   .filterButton {
     min-width: 132px;
     height: 44px;
     padding: 0 16px;
     font-size: 12.5px;
   }
-  .readMore {
-    display: block;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+
+  .articlesSection {
+    padding: 0 20px 42px;
   }
-  .article {
-    padding: 40px 20px 48px;
+
+  .faqTrigger {
+    padding: 18px 18px;
   }
-  .articleTitle {
-    font-size: 24px;
+
+  .faqContent {
+    padding: 0 18px 18px;
+  }
+
+  .faqIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 480px) {
-  .articleTitle {
-    font-size: 20px;
+  .faqTitle {
+    font-size: 16px;
   }
 }

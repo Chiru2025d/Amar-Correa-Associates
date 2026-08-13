@@ -29,7 +29,6 @@ export const legalUpdates = [
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20C.png",
     alt: "Legal update 3",
     label: "Legal Update - 001",
-    author: "Amar Correa",
     date: "Aug 14, 2018",
     headingPrimary: "Counsel-accused Video Conference",
     title: "Counsel-accused Video Conference",
