@@ -2558,6 +2558,12 @@
 
 /* --- Tablet (Max Width: 1024px) --- */
 @media screen and (max-width: 1024px) {
+    .contact-link-title {
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        line-height: 1.15;
+    }
+
     .legal-title {
         font-size: 40px;
     }
