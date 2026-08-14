@@ -169,7 +169,6 @@ export default function LegalUpdatesPage() {
   const renderAccordionItem = (article) => {
     const itemId = getArticleAnchorId(article);
     const isOpen = expandedItemId === itemId;
-    const typeLabel = article.type === "blog" ? "Blog" : "Legal Update";
 
     return (
       <div className={styles.cardGroup} key={itemId}>
@@ -186,15 +185,15 @@ export default function LegalUpdatesPage() {
           >
             <span className={styles.faqHeadingWrap}>
               <span className={styles.faqMetaStrip}>
+                <span className={styles.faqTag}>{article.updateNumber}</span>
+                <span className={styles.faqMetaDelimiter}>|</span>
+                <span className={styles.faqMetaText}>August 2026</span>
                 {article.type === "blog" ? (
                   <>
-                    <span className={styles.faqTag}>{article.updateNumber}</span>
                     <span className={styles.faqMetaDelimiter}>|</span>
+                    <span className={styles.faqMetaText}>Author: {article.author}</span>
                   </>
                 ) : null}
-                <span className={styles.faqMetaText}>August 2026</span>
-                <span className={styles.faqMetaDelimiter}>|</span>
-                <span className={styles.faqMetaText}>Author: {article.author}</span>
               </span>
 
               <span className={styles.faqTitleRow}>
