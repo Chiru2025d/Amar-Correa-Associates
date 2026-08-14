@@ -22,7 +22,7 @@ export default function CounselAccusedVideoConferencePage() {
             lodged in jail, in matters entrusted by the Legal Services Committee.
           </p>
 
-          <h2>Amenities Counsel-accused Video Conference</h2>
+          <h2>Counsel-accused Video Conference</h2>
 
           <p>
             The Supreme Court has made mandatory and issued directions to Legal

@@ -22,6 +22,7 @@ const teamMembers = [
     name: "Yathish L Kumar",
     role: "Office Clerk",
     phone: "+91 98809 99559",
+    email: "yathish.k@acajuris.com",
     image: "/images/Yathish L Kumar.png",
   },
 ];

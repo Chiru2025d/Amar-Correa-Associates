@@ -59,7 +59,7 @@ export default function Footer() {
 
               <div className="contact-link-group">
                 <div className="contact-link-title">
-                  Our Practice Areas{" "}
+                  <span className="contact-link-title-text">Our Practice Areas</span>
                   <Link href="/expertise" className="explore-more">
                     Explore More
                   </Link>
@@ -71,7 +71,7 @@ export default function Footer() {
 
               <div className="contact-link-group">
                 <div className="contact-link-title">
-                  Our Professional Services{" "}
+                  <span className="contact-link-title-text">Our Professional Services</span>
                   <Link href="/professional-services" className="explore-more">
                     Explore More
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
 
               <div className="contact-link-group">
                 <div className="contact-link-title">
-                  Legal Development{" "}
+                  <span className="contact-link-title-text">Legal Development</span>
                   <Link href="/legalupdates" className="explore-more">
                     Explore More
                   </Link>

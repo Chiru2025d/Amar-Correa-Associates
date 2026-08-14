@@ -2213,7 +2213,7 @@
 
 .team-phone,
 .team-email {
-    margin: 5px 0;
+    margin: 2px 0;
     font-family: 'Be Vietnam', sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
@@ -2448,7 +2448,7 @@
 .update-heading {
     color: #fff;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
     max-width: 430px;
     margin: 0;
     font-family: Be Vietnam, sans-serif;
@@ -2469,12 +2469,12 @@
 }
 
 .update-heading-secondary {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     text-overflow: ellipsis;
     margin: 0;
-    font-size: 0.70em;
+    font-size: medium;
     font-weight: 400;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     display: block;
     overflow: hidden;
 }
@@ -2560,6 +2560,7 @@
 @media screen and (max-width: 1024px) {
     .contact-link-title {
         flex-wrap: wrap;
+        align-items: baseline;
         gap: 4px 12px;
         line-height: 1.15;
     }
@@ -2858,7 +2859,7 @@
 
     .contact-link-title {
         flex-wrap: wrap;
-        align-items: center;
+        align-items: baseline;
         gap: 4px 12px;
         line-height: 1.15;
     }

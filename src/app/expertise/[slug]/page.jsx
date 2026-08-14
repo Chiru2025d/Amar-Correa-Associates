@@ -36,7 +36,7 @@ const expertiseContent = {
     title: "CBI PROSECUTIONS - DEFENCE OF",
     icon: "/icons/PracticeList/CBI_Icon.png",
     description:
-      "The Central Bureau of Investigation (CBI) is often tasked with probing major financial crimes and scams. The scale of such cases can create systemic biases within the criminal justice process. Effective defence, therefore, requires a meticulous and comprehensive review of the extensive documentation contained in CBI charge sheets—a domain in which ACAJuris has extensive experience.",
+      "The Central Bureau of Investigation (CBI) is often tasked with probing major financial crimes and scams. The scale of such cases can create systemic biases within the criminal justice process. Effective defence, therefore, requires a meticulous and comprehensive review of the extensive documentation contained in CBI charge sheets - a domain in which ACAJuris has extensive experience.",
     bullets: [],
   },
   "frauds-financial-business-bank": {

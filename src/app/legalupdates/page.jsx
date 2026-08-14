@@ -108,7 +108,7 @@ const articles = [
     updateNumber: "Legal Updates 001",
     author: "Amar Correa",
     title: "Counsel-accused Video Conference",
-    subheading: "Amenities Counsel-accused Video Conference",
+    subheading: "Counsel-accused Video Conference",
     paragraphs: [
       "The Supreme Court has made mandatory and issued directions to Legal Services Committees / Authorities of every State, to extend the facility for video conferencing between the counsel and the accused lodged in jail, in matters entrusted by the Legal Services Committee.",
       "Considering and commending earlier direction of the Supreme Court Legal Services Committee, and noting that very often the Court sees that the Advocates who appear in matters entrusted by the Supreme Court Legal Services Committee, do not have the advantage of having had a dialogue with either the accused or those who are in the know of the details about the case, which at times seriously hampers the efforts on part of the Advocates, the Supreme Court reiterating that, all such attempts to facilitate dialogue between the counsel and his client would further the cause of justice and make legal aid meaningful, has directed all Legal Services Authorities/Committees in every State to extend similar such facility in every criminal case wherever the accused is lodged in jail and shall extend the facility of video conferencing between the counsel on one hand and the accused or anybody in the know of the matter on the other, so that the cause of justice is well served.",
@@ -137,7 +137,7 @@ export default function LegalUpdatesPage() {
 
     return "legal";
   });
-  const [openItems, setOpenItems] = useState({});
+  const [expandedItemId, setExpandedItemId] = useState(null);
 
   const getOrderNumber = (label) => {
     const match = label.match(/\d+/);
@@ -163,78 +163,94 @@ export default function LegalUpdatesPage() {
   const blogArticles = useMemo(() => sortedArticles.filter((article) => article.type === "blog"), [sortedArticles]);
 
   const toggleItem = (itemId) => {
-    setOpenItems((prev) => ({
-      ...prev,
-      [itemId]: !prev[itemId],
-    }));
+    setExpandedItemId((prev) => (prev === itemId ? null : itemId));
   };
 
   const renderAccordionItem = (article) => {
     const itemId = getArticleAnchorId(article);
-    const isOpen = Boolean(openItems[itemId]);
+    const isOpen = expandedItemId === itemId;
+    const typeLabel = article.type === "blog" ? "Blog" : "Legal Update";
 
     return (
-      <article id={itemId} key={itemId} className={styles.faqCard}>
-        <button
-          type="button"
-          className={styles.faqTrigger}
-          onClick={() => toggleItem(itemId)}
-          aria-expanded={isOpen}
-          aria-controls={`${itemId}-content`}
+      <div className={styles.cardGroup} key={itemId}>
+        <article
+          id={itemId}
+          className={`${styles.faqCard} ${article.type === "blog" ? styles.blogCard : styles.legalCard} ${isOpen ? styles.faqCardOpen : ""}`}
         >
-          <span className={styles.faqHeadingWrap}>
-            <span className={styles.faqTag}>{article.updateNumber}</span>
-            <span className={styles.faqTitle}>{article.title}</span>
-          </span>
-          <span className={styles.faqIcon} aria-hidden="true">{isOpen ? "−" : "+"}</span>
-        </button>
+          <button
+            type="button"
+            className={styles.faqTrigger}
+            onClick={() => toggleItem(itemId)}
+            aria-expanded={isOpen}
+            aria-controls={`${itemId}-content`}
+          >
+            <span className={styles.faqHeadingWrap}>
+              <span className={styles.faqMetaStrip}>
+                {article.type === "blog" ? (
+                  <>
+                    <span className={styles.faqTag}>{article.updateNumber}</span>
+                    <span className={styles.faqMetaDelimiter}>|</span>
+                  </>
+                ) : null}
+                <span className={styles.faqMetaText}>August 2026</span>
+                <span className={styles.faqMetaDelimiter}>|</span>
+                <span className={styles.faqMetaText}>Author: {article.author}</span>
+              </span>
 
-        {isOpen ? (
-          <div id={`${itemId}-content`} className={styles.faqContent}>
-            {article.subheading ? <p className={styles.articleSubheading}>{article.subheading}</p> : null}
+              <span className={styles.faqTitleRow}>
+                <span className={styles.faqTitle}>{article.title}</span>
+                <span className={styles.faqIcon} aria-hidden="true">{isOpen ? "−" : "+"}</span>
+              </span>
+            </span>
+          </button>
 
-            {article.type === "blog" ? (
-              <p className={styles.articleMetaInline}>Author: {article.author}</p>
-            ) : null}
+          {isOpen ? (
+            <div id={`${itemId}-content`} className={styles.faqContent}>
+              {article.subheading ? <p className={styles.articleSubheading}>{article.subheading}</p> : null}
 
-            {article.paragraphs.map((paragraph, index) => (
-              <p key={`${itemId}-paragraph-${index}`} className={styles.articleBody}>{paragraph}</p>
-            ))}
+              {article.type === "blog" ? (
+                <p className={styles.articleMetaInline}>Author: {article.author}</p>
+              ) : null}
 
-            {article.type === "blog" && article.slug ? (
-              <div className={styles.readMoreBlock}>
-                <Link href={`/legalupdates/${article.slug}`} className={styles.readMoreLink}>
-                  Read More
-                </Link>
-              </div>
-            ) : null}
+              {article.paragraphs.map((paragraph, index) => (
+                <p key={`${itemId}-paragraph-${index}`} className={styles.articleBody}>{paragraph}</p>
+              ))}
 
-            {article.bullets && article.bullets.length > 0 ? (
-              <div>
-                {article.bullets.map((bullet, index) => (
-                  <div key={`${itemId}-bullet-${index}`} className={styles.articleBullet}>
-                    <span className={styles.bulletDot} />
-                    <span className={styles.bulletText}>{bullet}</span>
-                  </div>
-                ))}
-              </div>
-            ) : null}
+              {article.type === "blog" && article.slug ? (
+                <div className={styles.readMoreBlock}>
+                  <Link href={`/legalupdates/${article.slug}`} className={styles.readMoreLink}>
+                    Read More
+                  </Link>
+                </div>
+              ) : null}
 
-            {article.afterBullets && article.afterBullets.map((paragraph, index) => (
-              <p key={`${itemId}-after-${index}`} className={styles.articleBody}>{paragraph}</p>
-            ))}
+              {article.bullets && article.bullets.length > 0 ? (
+                <div>
+                  {article.bullets.map((bullet, index) => (
+                    <div key={`${itemId}-bullet-${index}`} className={styles.articleBullet}>
+                      <span className={styles.bulletDot} />
+                      <span className={styles.bulletText}>{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
 
-            {article.readLink ? (
-              <div>
-                <p className={styles.articleBody}>Read here :</p>
-                <a href={article.readLink} target="_blank" rel="noopener noreferrer" className={styles.readMore}>
-                  {article.readLink}
-                </a>
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-      </article>
+              {article.afterBullets && article.afterBullets.map((paragraph, index) => (
+                <p key={`${itemId}-after-${index}`} className={styles.articleBody}>{paragraph}</p>
+              ))}
+
+              {article.readLink ? (
+                <div>
+                  <p className={styles.articleBody}>Read here :</p>
+                  <a href={article.readLink} target="_blank" rel="noopener noreferrer" className={styles.readMore}>
+                    {article.readLink}
+                  </a>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+        </article>
+      </div>
     );
   };
 

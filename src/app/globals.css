@@ -485,6 +485,11 @@ main {
   gap: 10px;
 }
 
+.contact-link-title-text {
+  display: inline-block;
+  line-height: 1.2;
+}
+
 .explore-more {
   font-size: 10px;
   color: #bda588;
@@ -492,6 +497,11 @@ main {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: baseline;
+  align-self: baseline;
 }
 
 .explore-more:hover {
@@ -738,9 +748,14 @@ main {
 
   .contact-link-title {
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     gap: 4px 12px;
     line-height: 1.15;
+  }
+
+  .contact-link-title-text {
+    display: inline-block;
+    line-height: 1.2;
   }
 
   .newsletter-wrapper {

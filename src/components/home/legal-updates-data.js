@@ -30,8 +30,8 @@ export const legalUpdates = [
     alt: "Legal update 3",
     label: "Legal Update - 001",
     date: "Aug 14, 2018",
-    headingPrimary: "Counsel-accused Video Conference",
-    title: "Counsel-accused Video Conference",
+    headingPrimary: "Counsel-Accused Video Conference",
+    title: "Counsel-Accused Video Conference",
   },
   {
     id: "legal-update-002",
@@ -40,8 +40,8 @@ export const legalUpdates = [
     alt: "Legal update 4",
     label: "Legal Update - 002",
     date: "August, 2026",
-    headingPrimary: "Code of criminal procedure",
-    headingSecondary: "Section 372 appeal - private complaint",
+    headingPrimary: "Code of Criminal Procedure",
+    headingSecondary: "Section 372 Appeal - Private Complaint",
     title: "Complainant’s right to appeal u/s 372 Cr.P.C. in a private complaint",
   },
   {
@@ -51,8 +51,8 @@ export const legalUpdates = [
     alt: "Legal update 5",
     label: "Legal Update - 003",
     date: "August, 2026",
-    headingPrimary: "Code of criminal procedure",
-    headingSecondary: "Arrests - warrant - complaint case",
+    headingPrimary: "Code of Criminal Procedure",
+    headingSecondary: "Arrests - Warrant - Complaint Case",
     title: "No power of arrest in complaint cases - except when warrant issued.",
   },
 ];
