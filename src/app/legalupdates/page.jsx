@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
 
@@ -120,24 +119,28 @@ const articles = [
 
 export default function LegalUpdatesPage() {
   const [activeSection, setActiveSection] = useState("legal");
-  const searchParams = useSearchParams();
   const [expandedItemId, setExpandedItemId] = useState(null);
 
   useEffect(() => {
-    const requestedType = searchParams.get("type");
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const url = new URL(window.location.href);
+    const requestedType = url.searchParams.get("type");
 
     if (requestedType === "blog" || requestedType === "legal") {
       setActiveSection(requestedType);
       return;
     }
 
-    if (typeof window !== "undefined" && window.location.hash === "#blog-section") {
+    if (window.location.hash === "#blog-section") {
       setActiveSection("blog");
       return;
     }
 
     setActiveSection("legal");
-  }, [searchParams]);
+  }, []);
 
   const getOrderNumber = (label) => {
     const match = label.match(/\d+/);
