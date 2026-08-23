@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
 
@@ -11,11 +12,10 @@ const articles = [
     slug: "incorrect-view-on-trial-courts-powers-under-section-173-8-crpc",
     updateNumber: "Blog 001",
     author: "Amar Correa",
-    title: "\u201c An Incorrect View on Trial Court\u2019s Powers Under Section 173(8) Cr.P.C \u201d",
+    title: "\u201c Part - I : An Incorrect View on S. 173(8) Cr.P.C \u201d",
     subheading: "Understanding the Misconception",
     paragraphs: [
-      "A prevalent but incorrect interpretation suggests that, once cognizance is taken, the trial court has no authority to direct further investigation under Section 173(8) of the Criminal Procedure Code. According to this view, the court is barred from acting suo motu or from initiating further investigation at the request of the complainant.",
-      "This perspective significantly restricts the court\u2019s ability to ensure a fair and complete investigation, often leading to gaps in evidence and possible miscarriage of justice. In this section, we examine why this interpretation is flawed and how it contradicts the broader principles of criminal jurisprudence.",
+      "Before a two Judge Bench of the Hon\u2019ble Supreme Court, presided by J.Dipak Misra and J.Amitava Roy, in the case of Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others, reported in (2017) 4 SCC 177, was an issue whether, after cognizance had been taken and the accused had appeared pursuant to the process issued, the Magistrate/Trial Court could, either suo motu or at the instance of the informant, direct further investigation under Section 173(8) Cr.P.C., in the absence of any request by the investigating agency.",
     ],
     bullets: [],
   },
@@ -119,25 +119,25 @@ const articles = [
 ];
 
 export default function LegalUpdatesPage() {
-  const [activeSection, setActiveSection] = useState(() => {
-    if (typeof window === "undefined") {
-      return "legal";
-    }
+  const [activeSection, setActiveSection] = useState("legal");
+  const searchParams = useSearchParams();
+  const [expandedItemId, setExpandedItemId] = useState(null);
 
-    const url = new URL(window.location.href);
-    const requestedType = url.searchParams.get("type");
+  useEffect(() => {
+    const requestedType = searchParams.get("type");
 
     if (requestedType === "blog" || requestedType === "legal") {
-      return requestedType;
+      setActiveSection(requestedType);
+      return;
     }
 
-    if (url.hash === "#blog-section") {
-      return "blog";
+    if (typeof window !== "undefined" && window.location.hash === "#blog-section") {
+      setActiveSection("blog");
+      return;
     }
 
-    return "legal";
-  });
-  const [expandedItemId, setExpandedItemId] = useState(null);
+    setActiveSection("legal");
+  }, [searchParams]);
 
   const getOrderNumber = (label) => {
     const match = label.match(/\d+/);

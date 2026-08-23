@@ -1,4 +1,5 @@
 import Header from "../../../components/header.jsx";
+import Link from "next/link";
 import styles from "./detail.module.css";
 
 export default function CounselAccusedVideoConferencePage() {
@@ -13,6 +14,10 @@ export default function CounselAccusedVideoConferencePage() {
 
       <main className={styles.page}>
         <article className={styles.article}>
+          <Link href="/legalupdates?type=legal#legal-updates-section" className={styles.backLink}>
+            ← Back to Legal Updates
+          </Link>
+
           <h1>Counsel-accused Video Conference</h1>
 
           <p>
