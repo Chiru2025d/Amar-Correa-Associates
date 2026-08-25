@@ -197,7 +197,7 @@ export default function LegalUpdatesPage() {
               <span className={styles.faqMetaStrip}>
                 <span className={styles.faqTag}>{article.updateNumber}</span>
                 <span className={styles.faqMetaDelimiter}>|</span>
-                <span className={styles.faqMetaText}>August 2026</span>
+                <span className={styles.faqMetaText}>May 2019</span>
                 {article.type === "blog" ? (
                   <>
                     <span className={styles.faqMetaDelimiter}>|</span>
