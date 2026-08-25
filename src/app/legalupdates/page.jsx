@@ -128,6 +128,13 @@ export default function LegalUpdatesPage() {
 
     const url = new URL(window.location.href);
     const requestedType = url.searchParams.get("type");
+    const requestedHash = url.hash.replace("#", "");
+
+    if (requestedHash && (requestedHash.startsWith("blog-") || requestedHash.startsWith("legal-updates-"))) {
+      setExpandedItemId(requestedHash);
+      setActiveSection(requestedHash.startsWith("blog-") ? "blog" : "legal");
+      return;
+    }
 
     if (requestedType === "blog" || requestedType === "legal") {
       setActiveSection(requestedType);
