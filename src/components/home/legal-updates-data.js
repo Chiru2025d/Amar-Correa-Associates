@@ -1,7 +1,7 @@
 export const legalUpdates = [
   {
     id: "blog-001",
-    href: "/legalupdates?type=blog#blog-001",
+    href: "/legalupdates/incorrect-view-on-trial-courts-powers-under-section-173-8-crpc",
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20A.png",
     alt: "Legal update 1",
     label: "Blog - 001",
@@ -13,7 +13,7 @@ export const legalUpdates = [
   },
   {
     id: "blog-002",
-    href: "/legalupdates?type=blog#blog-002",
+    href: "/legalupdates/correct-view-on-trial-courts-powers-under-section-173-8-crpc",
     image: "/images/Legal%20Updates%20%26%20Blog/Legal%20Updates%20Card%20B.png",
     alt: "Legal update 2",
     label: "Blog - 002",
