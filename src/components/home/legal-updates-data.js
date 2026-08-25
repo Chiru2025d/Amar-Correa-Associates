@@ -9,7 +9,7 @@ export const legalUpdates = [
     date: "May 08, 2019",
     headingPrimary: "Code of Criminal Procedure",
     headingSecondary: "Section 173(8) - Further Investigation",
-    title: "An Incorrect View on Trial Court's Powers U/S 173(8) Cr.P.C",
+    title: "Part - I : An Incorrect View on\nS. 173(8) Cr.P.C",
   },
   {
     id: "blog-002",
@@ -30,8 +30,8 @@ export const legalUpdates = [
     alt: "Legal update 3",
     label: "Legal Update - 001",
     date: "Aug 14, 2018",
-    headingPrimary: "Counsel-Accused Video Conference",
-    title: "Counsel-Accused Video Conference",
+    headingPrimary: "Counsel - Accused Video Conference",
+    title: "Counsel - Accused Video Conference",
   },
   {
     id: "legal-update-002",
