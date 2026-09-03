@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
+import { startTransition } from "react";
 
 const articles = [
   {
@@ -28,6 +29,19 @@ const articles = [
     paragraphs: [
       "The more accurate and legally sound position is that the trial court does possess the authority, even after taking cognizance, to order further investigation under Section 173(8) Cr.P.C. This authority may be exercised suo motu or at the instance of the complainant when the facts of the case reveal gaps in investigation or the need for additional material.",
       "This interpretation aligns with judicial precedents that emphasize the court\u2019s duty to discover the truth and ensure a fair trial. Empowering the trial court to order further investigation strengthens the justice system by correcting investigative lapses, promoting transparency, and supporting the larger goals of justice and effective advocacy.",
+    ],
+    bullets: [],
+  },
+  {
+    type: "blog",
+    slug: "blog-003",
+    updateNumber: "Blog 003",
+    author: "Amar Correa",
+    title: "\u201c Part - II : The Correct View on S. 173(8) Cr.P.C \u201d",
+    subheading: "S. 173(8) - Further Investigation",
+    paragraphs: [
+      "In the preceding article, titled “Part I – An Incorrect View on S. 173(8) Cr.P.C.”, I had examined the judgments of the Supreme Court in Amruthbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others, (2017) 4 SCC 177, and Reeta Nag v. State of West Bengal and Others, (2009) 9 SCC 129, and analysed why the view expressed therein does not advance, and is in fact inconsistent with, the legislative intent underlying the introduction of Section 173(8) Cr.P.C.",
+      "In this article, I examine the purpose and legislative background leading to the introduction of Section 173(8) Cr.P.C. by the 1973 Amendment, and contend that the power of the Trial Court to direct further investigation extends even to the post-cognizance stage, whether exercised suo motu or at the instance of the Complainant. I then examine certain judgments of the Supreme Court which have taken a view contrary to that expressed in Reeta Nag and Amruthbhai Patel, and explain why such contrary views are more acceptable, having regard to the purpose of criminal investigation and, more particularly, the legislative intent underlying the introduction of Section 173(8).",
     ],
     bullets: [],
   },
@@ -131,25 +145,37 @@ export default function LegalUpdatesPage() {
     const requestedHash = url.hash.replace("#", "");
 
     if (requestedHash && (requestedHash.startsWith("blog-") || requestedHash.startsWith("legal-updates-"))) {
-      setExpandedItemId(requestedHash);
-      setActiveSection(requestedHash.startsWith("blog-") ? "blog" : "legal");
+      startTransition(() => {
+        setExpandedItemId(requestedHash);
+        setActiveSection(requestedHash.startsWith("blog-") ? "blog" : "legal");
+      });
       return;
     }
 
     if (requestedType === "blog" || requestedType === "legal") {
-      setActiveSection(requestedType);
+      startTransition(() => {
+        setActiveSection(requestedType);
+      });
       return;
     }
 
     if (window.location.hash === "#blog-section") {
-      setActiveSection("blog");
+      startTransition(() => {
+        setActiveSection("blog");
+      });
       return;
     }
 
-    setActiveSection("legal");
+    startTransition(() => {
+      setActiveSection("legal");
+    });
   }, []);
 
   const getOrderNumber = (label) => {
+    if (typeof label !== "string") {
+      return 0;
+    }
+
     const match = label.match(/\d+/);
     return match ? parseInt(match[0], 10) : 0;
   };
