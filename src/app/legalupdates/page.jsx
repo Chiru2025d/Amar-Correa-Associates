@@ -13,7 +13,7 @@ const articles = [
     updateNumber: "Blog 001",
     author: "Amar Correa",
     title: "\u201c Part - I : An Incorrect View on S. 173(8) Cr.P.C \u201d",
-    subheading: "Understanding the Misconception",
+    subheading: "Trial Court Is Not Empowered, Post Cognizance, to Direct Further Investigation u/s 173(8) Cr.P.C, Suo Motu or at Complainant\u2019s Instance.",
     paragraphs: [
       "Before a two Judge Bench of the Hon\u2019ble Supreme Court, presided by J.Dipak Misra and J.Amitava Roy, in the case of Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others, reported in (2017) 4 SCC 177, was an issue whether, after cognizance had been taken and the accused had appeared pursuant to the process issued, the Magistrate/Trial Court could, either suo motu or at the instance of the informant, direct further investigation under Section 173(8) Cr.P.C., in the absence of any request by the investigating agency.",
     ],
@@ -47,7 +47,7 @@ const articles = [
   },
   {
     type: "legal",
-    updateNumber: "Legal Updates 002",
+    updateNumber: "Legal Update 002",
     author: "Amar Correa",
     title: "Complainant’s Right to Appeal u/s 372 Cr.P.C in a Private Complaint",
     subheading:
@@ -99,7 +99,7 @@ const articles = [
   },
   {
     type: "legal",
-    updateNumber: "Legal Updates 003",
+    updateNumber: "Legal Update 003",
     author: "Amar Correa",
     title: "No Power of Arrest in Complaint Cases - Except when Warrant Issued",
     subheading: "An Important Reaffirmation of Law in Protecting Liberty :",
@@ -118,7 +118,7 @@ const articles = [
   },
   {
     type: "legal",
-    updateNumber: "Legal Updates 001",
+    updateNumber: "Legal Update 001",
     author: "Amar Correa",
     title: "Counsel-accused Video Conference",
     subheading: "Counsel-accused Video Conference",

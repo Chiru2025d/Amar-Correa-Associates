@@ -6,6 +6,71 @@ export const metadata = {
   title: "Part - I : An Incorrect View on S. 173(8) Cr.P.C",
 };
 
+const emphasisPhrases = [
+  "Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others, reported in (2017) 4 SCC 177",
+  "Reeta Nag v/s State of West Bengal, reported in (2009) 9 SCC 129",
+  "suo motu",
+  "Reeta Nag",
+  "Amrutbhai Patel",
+  "Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others",
+  "Ram Lal Narang v. State (Delhi Administration), (1979) 2 SCC 322",
+  "H.N. Rishbud",
+  "Bhagwant Singh v/s Commissioner of Police and another reported in (1985) 2 SCC 537",
+  "Amrutbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others or Reeta Nag v. State of West Bengal and Others",
+];
+
+const renderParagraph = (text) => {
+  const segments = [];
+  let remaining = text;
+  let cursor = 0;
+
+  while (remaining.length > 0) {
+    let earliestIndex = -1;
+    let earliestValue = "";
+
+    for (const phrase of emphasisPhrases) {
+      const index = remaining.indexOf(phrase);
+      if (index >= 0 && (earliestIndex === -1 || index < earliestIndex)) {
+        earliestIndex = index;
+        earliestValue = phrase;
+      }
+    }
+
+    const openQuoteIndex = remaining.indexOf("“");
+    const closeQuoteIndex = remaining.indexOf("”");
+    const quotedText = openQuoteIndex >= 0 && closeQuoteIndex >= 0 && openQuoteIndex < closeQuoteIndex
+      ? remaining.slice(openQuoteIndex, closeQuoteIndex + 1)
+      : null;
+
+    if (quotedText && (earliestIndex === -1 || openQuoteIndex < earliestIndex)) {
+      if (openQuoteIndex > 0) {
+        segments.push(<span key={`text-${cursor}`}>{remaining.slice(0, openQuoteIndex)}</span>);
+        cursor += 1;
+      }
+      segments.push(<em key={`em-${cursor}`}>{quotedText}</em>);
+      cursor += 1;
+      remaining = remaining.slice(openQuoteIndex + quotedText.length);
+      continue;
+    }
+
+    if (earliestIndex === -1) {
+      segments.push(<span key={`text-${cursor}`}>{remaining}</span>);
+      break;
+    }
+
+    if (earliestIndex > 0) {
+      segments.push(<span key={`text-${cursor}`}>{remaining.slice(0, earliestIndex)}</span>);
+      cursor += 1;
+    }
+
+    segments.push(<em key={`em-${cursor}`}>{earliestValue}</em>);
+    cursor += 1;
+    remaining = remaining.slice(earliestIndex + earliestValue.length);
+  }
+
+  return segments;
+};
+
 const blogContent = String.raw`
 
 Part - I : An Incorrect View on S. 173(8) Cr.P.C
@@ -128,7 +193,7 @@ export default function IncorrectViewBlogPage() {
 
     return segments.map((segment, index) => {
       if (typeof segment === "string") {
-        return <span key={`text-${index}`}>{segment}</span>;
+        return <span key={`text-${index}`}>{renderParagraph(segment)}</span>;
       }
 
       return <span key={`link-${index}`}>{segment}</span>;
@@ -150,7 +215,12 @@ export default function IncorrectViewBlogPage() {
             &larr; Back to Blogs
           </Link>
           <h1>Part - I : An Incorrect View on S. 173(8) Cr.P.C</h1>
-          <p style={{ whiteSpace: "pre-wrap" }}>{renderContentWithLinks()}</p>
+          <p style={{ whiteSpace: "pre-wrap" }}>{renderContentWithLinks().map((segment, index) => {
+            if (typeof segment === "string") {
+              return <span key={`text-${index}`}>{renderEmphasis(segment)}</span>;
+            }
+            return <span key={`link-${index}`}>{segment}</span>;
+          })}</p>
         </article>
       </main>
     </>

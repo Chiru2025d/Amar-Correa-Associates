@@ -6,6 +6,75 @@ export const metadata = {
   title: "Part - II : The Correct View on S. 173(8) Cr.P.C",
 };
 
+const emphasisPhrases = [
+  "Part I – An Incorrect View on S. 173(8) Cr.P.C.",
+  "Amruthbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others, (2017) 4 SCC 177",
+  "Reeta Nag v. State of West Bengal and Others, (2009) 9 SCC 129",
+  "N. Krishnaswamy & others v/s State, AIR 1956 Mad 592",
+  "suo motu",
+  "Reeta Nag",
+  "Amruthbhai Patel",
+  "Amrutbhai Patel",
+  "per incuriam",
+  "stare decisis",
+  "Kishan Lal v/s Dharmendra Bafna (2009) 7 SCC 685",
+  "Ram Lal Narang v. State (Delhi Administration), (1979) 2 SCC 322",
+  "H.N. Rishbud and Inder Singh v. State of Delhi, (1955) 1 SCR 1150 – AIR 1955 SC 196",
+  "Amrutbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others or Reeta Nag v. State of West Bengal and Others",
+];
+
+const renderParagraph = (text) => {
+  const segments = [];
+  let remaining = text;
+  let cursor = 0;
+
+  while (remaining.length > 0) {
+    let earliestIndex = -1;
+    let earliestValue = "";
+
+    for (const phrase of emphasisPhrases) {
+      const index = remaining.indexOf(phrase);
+      if (index >= 0 && (earliestIndex === -1 || index < earliestIndex)) {
+        earliestIndex = index;
+        earliestValue = phrase;
+      }
+    }
+
+    const openQuoteIndex = remaining.indexOf("“");
+    const closeQuoteIndex = remaining.indexOf("”");
+    const quoteMatch = openQuoteIndex >= 0 && closeQuoteIndex >= 0 && openQuoteIndex < closeQuoteIndex
+      ? { index: openQuoteIndex, value: remaining.slice(openQuoteIndex, closeQuoteIndex + 1) }
+      : null;
+
+    if (quoteMatch && (earliestIndex === -1 || quoteMatch.index < earliestIndex)) {
+      if (quoteMatch.index > 0) {
+        segments.push(<span key={`text-${cursor}`}>{remaining.slice(0, quoteMatch.index)}</span>);
+        cursor += 1;
+      }
+      segments.push(<em key={`em-${cursor}`}>{quoteMatch.value}</em>);
+      cursor += 1;
+      remaining = remaining.slice(quoteMatch.index + quoteMatch.value.length);
+      continue;
+    }
+
+    if (earliestIndex === -1) {
+      segments.push(<span key={`text-${cursor}`}>{remaining}</span>);
+      break;
+    }
+
+    if (earliestIndex > 0) {
+      segments.push(<span key={`text-${cursor}`}>{remaining.slice(0, earliestIndex)}</span>);
+      cursor += 1;
+    }
+
+    segments.push(<em key={`em-${cursor}`}>{earliestValue}</em>);
+    cursor += 1;
+    remaining = remaining.slice(earliestIndex + earliestValue.length);
+  }
+
+  return segments;
+};
+
 const paragraphs = [
   "In the preceding article, titled “Part I – An Incorrect View on S. 173(8) Cr.P.C.”, I had examined the judgments of the Supreme Court in Amruthbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others, (2017) 4 SCC 177, and Reeta Nag v. State of West Bengal and Others, (2009) 9 SCC 129, and analysed why the view expressed therein does not advance, and is in fact inconsistent with, the legislative intent underlying the introduction of Section 173(8) Cr.P.C.",
   "In this article, I examine the purpose and legislative background leading to the introduction of Section 173(8) Cr.P.C. by the 1973 Amendment, and contend that the power of the Trial Court to direct further investigation extends even to the post-cognizance stage, whether exercised suo motu or at the instance of the Complainant. I then examine certain judgments of the Supreme Court which have taken a view contrary to that expressed in Reeta Nag and Amruthbhai Patel, and explain why such contrary views are more acceptable, having regard to the purpose of criminal investigation and, more particularly, the legislative intent underlying the introduction of Section 173(8).",
@@ -79,7 +148,7 @@ export default function Blog003Page() {
           <h1>Part - II : The Correct View on S. 173(8) Cr.P.C</h1>
 
           {paragraphs.map((paragraph, index) => (
-            <p key={`blog-003-paragraph-${index}`}>{paragraph}</p>
+            <p key={`blog-003-paragraph-${index}`}>{renderParagraph(paragraph)}</p>
           ))}
         </article>
       </main>
