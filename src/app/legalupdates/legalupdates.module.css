@@ -249,6 +249,23 @@
   margin: 0 0 16px;
 }
 
+.articleBody em {
+  color: #173e62;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.articleBody u,
+.articleBullet u {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.articleBody strong,
+.articleBullet strong {
+  font-weight: 700;
+}
+
 .articleBody:last-child {
   margin-bottom: 0;
 }

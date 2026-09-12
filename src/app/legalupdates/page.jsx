@@ -6,6 +6,159 @@ import Header from "../../components/header.jsx";
 import styles from "./legalupdates.module.css";
 import { startTransition } from "react";
 
+const emphasisPhrases = [
+  "Part I – An Incorrect View on S. 173(8) Cr.P.C.",
+  "Amruthbhai Shambhubhai Patel v. Sumanbhai Kantibhai Patel and Others, (2017) 4 SCC 177",
+  "Reeta Nag v. State of West Bengal and Others, (2009) 9 SCC 129",
+  "Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others, reported in (2017) 4 SCC 177",
+  "Reeta Nag v/s State of West Bengal, reported in (2009) 9 SCC 129",
+  "Amrutbhai Shambhubhai Patel v/s Sumanbhai Kantibhai Patel and Others",
+  "suo motu",
+  "Reeta Nag",
+  "Amruthbhai Patel",
+  "Amrutbhai Patel",
+];
+
+const renderEmphasis = (text) => {
+  const segments = [];
+  let remaining = text;
+  let segmentIndex = 0;
+
+  while (remaining.length > 0) {
+    let earliestIndex = -1;
+    let earliestValue = "";
+
+    for (const phrase of emphasisPhrases) {
+      const index = remaining.indexOf(phrase);
+      if (index >= 0 && (earliestIndex === -1 || index < earliestIndex)) {
+        earliestIndex = index;
+        earliestValue = phrase;
+      }
+    }
+
+    const openQuoteIndex = remaining.indexOf("“");
+    const closeQuoteIndex = remaining.indexOf("”");
+    const quotedText = openQuoteIndex >= 0 && closeQuoteIndex >= 0 && openQuoteIndex < closeQuoteIndex
+      ? remaining.slice(openQuoteIndex, closeQuoteIndex + 1)
+      : null;
+
+    if (quotedText && (earliestIndex === -1 || openQuoteIndex < earliestIndex)) {
+      if (openQuoteIndex > 0) {
+        segments.push(<span key={`text-${segmentIndex}`}>{remaining.slice(0, openQuoteIndex)}</span>);
+        segmentIndex += 1;
+      }
+      segments.push(<em key={`em-${segmentIndex}`}>{quotedText}</em>);
+      segmentIndex += 1;
+      remaining = remaining.slice(openQuoteIndex + quotedText.length);
+      continue;
+    }
+
+    if (earliestIndex === -1) {
+      segments.push(<span key={`text-${segmentIndex}`}>{remaining}</span>);
+      break;
+    }
+
+    if (earliestIndex > 0) {
+      segments.push(<span key={`text-${segmentIndex}`}>{remaining.slice(0, earliestIndex)}</span>);
+      segmentIndex += 1;
+    }
+
+    segments.push(<em key={`em-${segmentIndex}`}>{earliestValue}</em>);
+    segmentIndex += 1;
+    remaining = remaining.slice(earliestIndex + earliestValue.length);
+  }
+
+  return segments;
+};
+
+const legalUpdateFormatting = {
+  "Legal Update 002": [
+    { phrase: "M/s. Celestium Financial v/s A. Gnanasekaran Etc.", styles: ["em", "u"] },
+    { phrase: "(April 2025)", styles: ["em"] },
+    { phrase: "Case Proceedings", styles: ["u"] },
+    { phrase: "Supreme Court’s approach", styles: ["u"] },
+    { phrase: "Mallikarjun Kodagali (dead) represented through Legal representative vs. State of Karnataka, (2019) 2 SCC 752 (“Mallikarjun Kodagali”)", styles: ["em"] },
+    { phrase: "Please Note", styles: ["em"] },
+    { phrase: "Mallikarjun Kodagali", styles: ["em"] },
+    { phrase: "can proceed", styles: ["u"] },
+    { phrase: "may", styles: ["u"] },
+    { phrase: "need not", styles: ["u"] },
+    { phrase: "If the complainant is not a victim", styles: ["u"] },
+    { phrase: "complaint", styles: ["u"] },
+    { phrase: "inter alia", styles: ["em"] },
+    { phrase: "if the complainant is also a victim, he could proceed under the proviso to Section 372, in which case the rigour of sub-section (4) of Section 378, which mandates obtaining special leave to appeal, would not arise at all", styles: ["u"] },
+    { phrase: "Thus, if a victim who is a complainant, proceeds under Section 378, the necessity of seeking special leave to appeal would arise but if a victim whether he is a complainant or not, files an appeal in terms of proviso to Section 372, then the mandate of seeking special leave to appeal would not arise", styles: ["u"] },
+    { phrase: "if acquitted,", styles: ["u"] },
+    { phrase: "can be proceeded against", styles: ["strong", "u"] },
+    { phrase: "victim", styles: ["strong", "u"] },
+    { phrase: "in terms of the proviso to Section 372 of the CrPC, as a victim", styles: ["u"] },
+    { phrase: "an appeal can be preferred", styles: ["u"] },
+    { phrase: "the victim of an offence has the right to prefer an appeal under the proviso to Section 372 of the CrPC, irrespective of whether he is a complainant or not", styles: ["u"] },
+    { phrase: "Even if the victim of an offence is a complainant, he can still proceed under the proviso to Section 372 and need not advert to sub-section (4) of Section 378 of the CrPC", styles: ["u"] },
+    { phrase: "Note: For proper understanding and interpretation, please read the full judgment. This brief update reflects only my reading and personal understanding.", styles: ["em"] },
+  ],
+  "Legal Update 003": [
+    { phrase: "An Important Reaffirmation of Law in Protecting Liberty", styles: ["u"] },
+    { phrase: "Om Prakash Chhawnika v. State of Jharkhand and Another", styles: ["em"] },
+    { phrase: "in a Complaint case", styles: ["u"] },
+    { phrase: "Satender Kumar Antil v/s CBI, 2022&Inder Mohan Goswami v. State of Uttaranchal, 2007", styles: ["em"] },
+    { phrase: "“If a magistrate orders a Police inquiry under Section 202 and asks the police to give a report, then whether in the course of such inquiry, the police canarrest the accused. The answer is an emphatic “NO”, Police hasno powers to arrest even during the course of the inquiry underSection 202 of the Cr.PC.”", styles: ["em"] },
+    { phrase: "A Closing Note", styles: ["u"] },
+    { phrase: "Note: For proper understanding and interpretation, please read the full judgment. This brief update reflects only my reading and personal understanding.", styles: ["em"] },
+  ],
+};
+
+const renderFormattedText = (text, formatting = []) => {
+  const matches = [];
+
+  formatting.forEach(({ phrase, styles }) => {
+    let startIndex = text.indexOf(phrase);
+    while (startIndex >= 0) {
+      matches.push({ startIndex, endIndex: startIndex + phrase.length, styles, phrase });
+      startIndex = text.indexOf(phrase, startIndex + phrase.length);
+    }
+  });
+
+  const segments = [];
+  let cursor = 0;
+  let segmentIndex = 0;
+
+  while (cursor < text.length) {
+    const match = matches
+      .filter(({ startIndex, endIndex }) => startIndex >= cursor && endIndex > cursor)
+      .sort((first, second) => first.startIndex - second.startIndex || second.endIndex - first.endIndex)[0];
+
+    if (!match) {
+      segments.push(<span key={`text-${segmentIndex}`}>{text.slice(cursor)}</span>);
+      break;
+    }
+
+    if (match.startIndex > cursor) {
+      segments.push(<span key={`text-${segmentIndex}`}>{text.slice(cursor, match.startIndex)}</span>);
+      segmentIndex += 1;
+    }
+
+    let formattedSegment = match.phrase;
+    [...match.styles].reverse().forEach((style) => {
+      const Component = style === "em" ? "em" : style === "strong" ? "strong" : "u";
+      formattedSegment = <Component key={`${style}-${segmentIndex}`}>{formattedSegment}</Component>;
+    });
+    segments.push(<span key={`formatted-${segmentIndex}`}>{formattedSegment}</span>);
+    segmentIndex += 1;
+    cursor = match.endIndex;
+  }
+
+  return segments;
+};
+
+const renderArticleText = (article, text) => {
+  if (article.type === "blog") {
+    return renderEmphasis(text);
+  }
+
+  return renderFormattedText(text, legalUpdateFormatting[article.updateNumber]);
+};
+
 const articles = [
   {
     type: "blog",
@@ -241,14 +394,18 @@ export default function LegalUpdatesPage() {
 
           {isOpen ? (
             <div id={`${itemId}-content`} className={styles.faqContent}>
-              {article.subheading ? <p className={styles.articleSubheading}>{article.subheading}</p> : null}
+              {article.subheading ? (
+                <p className={styles.articleSubheading}>{renderArticleText(article, article.subheading)}</p>
+              ) : null}
 
               {article.type === "blog" ? (
                 <p className={styles.articleMetaInline}>Author: {article.author}</p>
               ) : null}
 
               {article.paragraphs.map((paragraph, index) => (
-                <p key={`${itemId}-paragraph-${index}`} className={styles.articleBody}>{paragraph}</p>
+                <p key={`${itemId}-paragraph-${index}`} className={styles.articleBody}>
+                  {renderArticleText(article, paragraph)}
+                </p>
               ))}
 
               {article.type === "blog" && article.slug ? (
@@ -264,14 +421,14 @@ export default function LegalUpdatesPage() {
                   {article.bullets.map((bullet, index) => (
                     <div key={`${itemId}-bullet-${index}`} className={styles.articleBullet}>
                       <span className={styles.bulletDot} />
-                      <span className={styles.bulletText}>{bullet}</span>
+                      <span className={styles.bulletText}>{renderArticleText(article, bullet)}</span>
                     </div>
                   ))}
                 </div>
               ) : null}
 
               {article.afterBullets && article.afterBullets.map((paragraph, index) => (
-                <p key={`${itemId}-after-${index}`} className={styles.articleBody}>{paragraph}</p>
+                <p key={`${itemId}-after-${index}`} className={styles.articleBody}>{renderArticleText(article, paragraph)}</p>
               ))}
 
               {article.readLink ? (
